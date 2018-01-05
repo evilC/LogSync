@@ -1,0 +1,285 @@
+2018-01-05 19:37:21,915 INFO  Tachyon.Server.Api.Core.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:37:21,931 INFO  Tachyon.Server.Api.Core.WebApiApplication - 1E Tachyon
+2018-01-05 19:37:21,931 INFO  Tachyon.Server.Api.Core.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:37:21,931 INFO  Tachyon.Server.Api.Core.WebApiApplication - Version 3.2.0.571
+2018-01-05 19:37:21,947 INFO  Tachyon.Server.Api.Core.WebApiApplication - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication - Culture: en-GB, UICulture: en-US
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Api.Core, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Common, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Data, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.DataProvider, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Instrumentation, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Linq.Dynamic, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.MSSQLDataProvider, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Services.Core, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.SwitchServices, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  App_global.asax.d1ri9b71, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Autofac, Version=4.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Autofac.Integration.WebApi, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Data.Services.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.ServiceModel.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.DynamicData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.RegularExpressions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.WorkflowServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:21,947 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  websocket-sharp, Version=1.0.2.59611, Culture=neutral, PublicKeyToken=5660b08a1845a91e
+2018-01-05 19:37:22,947 INFO  Tachyon.Server.Api.Core.WebApiApplication - Starting core Server...
+2018-01-05 19:37:27,884 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - InitializeService triggered from /Core, AppId=/LM/W3SVC/20010305/ROOT/Core
+2018-01-05 19:37:27,884 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - Instrumentation upload using CoreApi id : 1
+2018-01-05 19:37:27,900 INFO  Tachyon.Server.Api.Core.ServiceInitialisation - MaxRequestLength : 262144KB
+2018-01-05 19:37:27,900 INFO  Tachyon.Server.Api.Core.ServiceInitialisation - ProcessorCount : 4
+2018-01-05 19:37:53,690 INFO  Tachyon.Server.Api.Core.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:37:53,708 INFO  Tachyon.Server.Api.Core.WebApiApplication - 1E Tachyon
+2018-01-05 19:37:53,708 INFO  Tachyon.Server.Api.Core.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:37:53,708 INFO  Tachyon.Server.Api.Core.WebApiApplication - Version 3.2.0.571
+2018-01-05 19:37:53,713 INFO  Tachyon.Server.Api.Core.WebApiApplication - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:37:53,713 DEBUG Tachyon.Server.Api.Core.WebApiApplication - Culture: en-GB, UICulture: en-US
+2018-01-05 19:37:53,714 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Api.Core, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:53,714 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Common, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:53,714 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Data, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:53,714 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.DataProvider, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:53,714 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Instrumentation, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:53,714 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Linq.Dynamic, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.MSSQLDataProvider, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Services.Core, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.SwitchServices, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  App_global.asax.icrjsdaa, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Autofac, Version=4.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Autofac.Integration.WebApi, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Data.Services.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.ServiceModel.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.DynamicData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.RegularExpressions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:53,715 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:53,722 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,722 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,722 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,722 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.WorkflowServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,722 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,722 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,722 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:53,722 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:37:53,722 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  websocket-sharp, Version=1.0.2.59611, Culture=neutral, PublicKeyToken=5660b08a1845a91e
+2018-01-05 19:37:54,737 INFO  Tachyon.Server.Api.Core.WebApiApplication - Starting core Server...
+2018-01-05 19:37:59,446 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - InitializeService triggered from /CoreInternal, AppId=/LM/W3SVC/20010305/ROOT/CoreInternal
+2018-01-05 19:37:59,447 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - Instrumentation upload using CoreApi id : -1
+2018-01-05 19:37:59,456 INFO  Tachyon.Server.Api.Core.ServiceInitialisation - MaxRequestLength : 262144KB
+2018-01-05 19:37:59,456 INFO  Tachyon.Server.Api.Core.ServiceInitialisation - ProcessorCount : 4
+2018-01-05 19:38:01,025 DEBUG Tachyon.Server.Api.Core - Found default SwitchConfiguration 1
+2018-01-05 19:38:02,080 INFO  Tachyon.Server.Api.Core - Registered Switch TST03-2012R201 10.10.0.171 4000 using SwitchConfiguration 1
+2018-01-05 19:38:20,469 INFO  Tachyon.Server.Api.Core - Registered or Updated 1 Device(s)
+2018-01-05 19:38:31,653 INFO  Tachyon.Server.Api.Core - Processing new instruction with ID 2
+2018-01-05 19:38:31,669 DEBUG Tachyon.Server.DataProvider - InitialiseResponseContainer instruction : 2 provider : System.Data.SqlClient assembly : Tachyon.Server.MSSQLDataProvider instance : Server=(local);Database=TachyonResponses;Integrated Security=True;
+2018-01-05 19:38:31,673 DEBUG Tachyon.Server.MSSQLDataProvider - New instruction id=2 notification
+2018-01-05 19:38:31,730 DEBUG Tachyon.Server.MSSQLDataProvider - Created tables for instruction 2 using Schema [{"Name":"Message","Type":"string","Length":256,"RenderAs":null}] and Aggregation 
+2018-01-05 19:38:31,730 DEBUG Tachyon.Server.DataProvider - InitialiseResponseContainer instruction : 2 provider : System.Data.SqlClient assembly : Tachyon.Server.MSSQLDataProvider instance : Server=(local);Database=TachyonResponses;Integrated Security=True; - completed
+2018-01-05 19:38:31,730 DEBUG Tachyon.Server.Api.Core - Enum Switch TST03-2012R201 10.10.0.171 4000
+2018-01-05 19:38:31,734 DEBUG Tachyon.Server.Api.Core - Socket connected to 10.10.0.171:4001
+2018-01-05 19:38:31,734 INFO  Tachyon.Server.Api.Core - Poked Switch 10.10.0.171:4001
+2018-01-05 19:38:31,734 DEBUG Tachyon.Server.Api.Core - Socket closed
+2018-01-05 19:38:31,784 DEBUG Tachyon.Server.Api.Core - Instruction ID 2 - payload uncompressed is 61 bytes, compressed is 88 bytes; sending uncompressed payload
+2018-01-05 19:38:32,291 DEBUG Tachyon.Server.DataProvider - Adding responses provider : System.Data.SqlClient assembly : Tachyon.Server.MSSQLDataProvider instance : Server=(local);Database=TachyonResponses;Integrated Security=True;
+2018-01-05 19:38:32,314 INFO  Tachyon.Server.MSSQLDataProvider - Actual batch size of 1 for 2(2). Using = Multirow
+2018-01-05 19:38:32,366 INFO  Tachyon.Server.MSSQLDataProvider - Adding 1 row(s) into Response_2(2) from 1 device(s)
+2018-01-05 19:38:32,371 INFO  Tachyon.Server.MSSQLDataProvider - as 1 insert(s)
+2018-01-05 19:38:32,382 INFO  Tachyon.Server.MSSQLDataProvider - Adding 0 row(s) into Error_2(2) from 0 device(s)
+2018-01-05 19:38:32,382 DEBUG Tachyon.Server.MSSQLDataProvider - ignored
+2018-01-05 19:38:32,383 DEBUG Tachyon.Server.DataProvider - Added responses provider : System.Data.SqlClient assembly : Tachyon.Server.MSSQLDataProvider instance : Server=(local);Database=TachyonResponses;Integrated Security=True;
+2018-01-05 19:38:40,563 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - Instruction Statistics uploaded
+2018-01-05 19:38:40,668 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - Instruction Statistics uploaded
+2018-01-05 19:38:44,242 INFO  Tachyon.Server.Api.Core - Updated 1 Device(s)
+2018-01-05 19:38:51,703 INFO  Tachyon.Server.Api.Core - Registered or Updated 1 Device(s)
+2018-01-05 19:38:52,826 INFO  Tachyon.Server.Api.Core - Processing new instruction with ID 3
+2018-01-05 19:38:52,828 DEBUG Tachyon.Server.DataProvider - InitialiseResponseContainer instruction : 3 provider : System.Data.SqlClient assembly : Tachyon.Server.MSSQLDataProvider instance : Server=(local);Database=TachyonResponses;Integrated Security=True;
+2018-01-05 19:38:52,829 DEBUG Tachyon.Server.MSSQLDataProvider - New instruction id=3 notification
+2018-01-05 19:38:52,850 DEBUG Tachyon.Server.MSSQLDataProvider - Created tables for instruction 3 using Schema [{"Name":"BIOSVersion","Type":"string","Length":256,"RenderAs":null},{"Name":"PrimaryBIOS","Type":"bool","Length":0,"RenderAs":null},{"Name":"Version","Type":"string","Length":256,"RenderAs":null},{"Name":"Status","Type":"string","Length":256,"RenderAs":null}] and Aggregation 
+2018-01-05 19:38:52,850 DEBUG Tachyon.Server.DataProvider - InitialiseResponseContainer instruction : 3 provider : System.Data.SqlClient assembly : Tachyon.Server.MSSQLDataProvider instance : Server=(local);Database=TachyonResponses;Integrated Security=True; - completed
+2018-01-05 19:38:52,850 DEBUG Tachyon.Server.Api.Core - Enum Switch TST03-2012R201 10.10.0.171 4000
+2018-01-05 19:38:52,853 DEBUG Tachyon.Server.Api.Core - Socket connected to 10.10.0.171:4001
+2018-01-05 19:38:52,853 INFO  Tachyon.Server.Api.Core - Poked Switch 10.10.0.171:4001
+2018-01-05 19:38:52,854 DEBUG Tachyon.Server.Api.Core - Socket closed
+2018-01-05 19:38:52,873 DEBUG Tachyon.Server.Api.Core - Instruction ID 3 - payload uncompressed is 128 bytes, compressed is 164 bytes; sending uncompressed payload
+2018-01-05 19:38:53,036 DEBUG Tachyon.Server.DataProvider - Adding responses provider : System.Data.SqlClient assembly : Tachyon.Server.MSSQLDataProvider instance : Server=(local);Database=TachyonResponses;Integrated Security=True;
+2018-01-05 19:38:53,041 INFO  Tachyon.Server.MSSQLDataProvider - Actual batch size of 1 for 3(3). Using = Multirow
+2018-01-05 19:38:53,042 INFO  Tachyon.Server.MSSQLDataProvider - Adding 1 row(s) into Response_3(3) from 1 device(s)
+2018-01-05 19:38:53,046 INFO  Tachyon.Server.MSSQLDataProvider - as 1 insert(s)
+2018-01-05 19:38:53,048 INFO  Tachyon.Server.MSSQLDataProvider - Adding 0 row(s) into Error_3(3) from 0 device(s)
+2018-01-05 19:38:53,049 DEBUG Tachyon.Server.MSSQLDataProvider - ignored
+2018-01-05 19:38:53,049 DEBUG Tachyon.Server.DataProvider - Added responses provider : System.Data.SqlClient assembly : Tachyon.Server.MSSQLDataProvider instance : Server=(local);Database=TachyonResponses;Integrated Security=True;
+2018-01-05 19:39:00,574 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - Instruction Statistics uploaded
+2018-01-05 19:39:00,681 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - Instruction Statistics uploaded
+2018-01-05 19:39:02,028 INFO  Tachyon.Server.Api.Core - Updated 1 Device(s)
+2018-01-05 19:39:10,299 INFO  Tachyon.Server.Api.Core - Registered or Updated 1 Device(s)
+2018-01-05 19:39:11,497 INFO  Tachyon.Server.Api.Core - Processing new instruction with ID 4
+2018-01-05 19:39:11,500 DEBUG Tachyon.Server.DataProvider - InitialiseResponseContainer instruction : 4 provider : System.Data.SqlClient assembly : Tachyon.Server.MSSQLDataProvider instance : Server=(local);Database=TachyonResponses;Integrated Security=True;
+2018-01-05 19:39:11,500 DEBUG Tachyon.Server.MSSQLDataProvider - New instruction id=4 notification
+2018-01-05 19:39:11,512 DEBUG Tachyon.Server.MSSQLDataProvider - Created tables for instruction 4 using Schema [{"Name":"CrashDumpsCollected","Type":"int32","Length":0,"RenderAs":null},{"Name":"BytesReceived","Type":"int64","Length":0,"RenderAs":null},{"Name":"BytesSent","Type":"int64","Length":0,"RenderAs":null},{"Name":"ConnectionsSuccessful","Type":"int32","Length":0,"RenderAs":null},{"Name":"ConnectionsFailed","Type":"int32","Length":0,"RenderAs":null},{"Name":"ExecutionsSuccessful","Type":"int32","Length":0,"RenderAs":null},{"Name":"ExecutionsErrored","Type":"int32","Length":0,"RenderAs":null},{"Name":"ExecutionsNotImplemented","Type":"int32","Length":0,"RenderAs":null},{"Name":"ExecutionsPayloadTooLarge","Type":"int32","Length":0,"RenderAs":null},{"Name":"StartupTimeUtc","Type":"datetime","Length":0,"RenderAs":null}] and Aggregation 
+2018-01-05 19:39:11,513 DEBUG Tachyon.Server.DataProvider - InitialiseResponseContainer instruction : 4 provider : System.Data.SqlClient assembly : Tachyon.Server.MSSQLDataProvider instance : Server=(local);Database=TachyonResponses;Integrated Security=True; - completed
+2018-01-05 19:39:11,513 DEBUG Tachyon.Server.Api.Core - Enum Switch TST03-2012R201 10.10.0.171 4000
+2018-01-05 19:39:11,513 DEBUG Tachyon.Server.Api.Core - Socket connected to 10.10.0.171:4001
+2018-01-05 19:39:11,513 INFO  Tachyon.Server.Api.Core - Poked Switch 10.10.0.171:4001
+2018-01-05 19:39:11,514 DEBUG Tachyon.Server.Api.Core - Socket closed
+2018-01-05 19:39:11,534 DEBUG Tachyon.Server.Api.Core - Instruction ID 4 - payload uncompressed is 25 bytes, compressed is 44 bytes; sending uncompressed payload
+2018-01-05 19:39:11,656 DEBUG Tachyon.Server.DataProvider - Adding responses provider : System.Data.SqlClient assembly : Tachyon.Server.MSSQLDataProvider instance : Server=(local);Database=TachyonResponses;Integrated Security=True;
+2018-01-05 19:39:11,662 INFO  Tachyon.Server.MSSQLDataProvider - Actual batch size of 1 for 4(4). Using = Multirow
+2018-01-05 19:39:11,669 INFO  Tachyon.Server.MSSQLDataProvider - Adding 1 row(s) into Response_4(4) from 1 device(s)
+2018-01-05 19:39:11,673 INFO  Tachyon.Server.MSSQLDataProvider - as 1 insert(s)
+2018-01-05 19:39:11,675 INFO  Tachyon.Server.MSSQLDataProvider - Adding 0 row(s) into Error_4(4) from 0 device(s)
+2018-01-05 19:39:11,675 DEBUG Tachyon.Server.MSSQLDataProvider - ignored
+2018-01-05 19:39:11,675 DEBUG Tachyon.Server.DataProvider - Added responses provider : System.Data.SqlClient assembly : Tachyon.Server.MSSQLDataProvider instance : Server=(local);Database=TachyonResponses;Integrated Security=True;
+2018-01-05 19:39:20,588 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - Instruction Statistics uploaded
+2018-01-05 19:39:20,694 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - Instruction Statistics uploaded
+2018-01-05 19:39:21,853 INFO  Tachyon.Server.Api.Core - Updated 1 Device(s)
+2018-01-05 19:39:28,560 DEBUG Tachyon.Server.Api.Core - Deleted Switch 1
+2018-01-05 19:39:36,433 DEBUG Tachyon.Server.Api.Core - Found default SwitchConfiguration 1
+2018-01-05 19:39:36,635 INFO  Tachyon.Server.Api.Core - Registered Switch TST03-2012R201 10.10.0.171 4000 using SwitchConfiguration 1
+2018-01-05 19:39:39,973 DEBUG Tachyon.Server.Api.Core - Instruction ID 2 - payload uncompressed is 61 bytes, compressed is 88 bytes; sending uncompressed payload
+2018-01-05 19:39:47,069 INFO  Tachyon.Server.Api.Core - Registered or Updated 1 Device(s)
+2018-01-05 19:39:56,360 DEBUG Tachyon.Server.Api.Core - Deleted Switch 2
+2018-01-05 19:40:20,688 INFO  Tachyon.Server.Api.Core.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:40:20,703 INFO  Tachyon.Server.Api.Core.WebApiApplication - 1E Tachyon
+2018-01-05 19:40:20,703 INFO  Tachyon.Server.Api.Core.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:40:20,703 INFO  Tachyon.Server.Api.Core.WebApiApplication - Version 3.2.0.571
+2018-01-05 19:40:20,703 INFO  Tachyon.Server.Api.Core.WebApiApplication - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication - Culture: en-GB, UICulture: en-US
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Api.Core, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Common, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  App_global.asax.d1ri9b71, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:20,703 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:20,985 INFO  Tachyon.Server.Api.Core.WebApiApplication - Starting core Server...
+2018-01-05 19:40:24,953 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - InitializeService triggered from /Core, AppId=/LM/W3SVC/20010305/ROOT/Core
+2018-01-05 19:40:24,953 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - Instrumentation upload using CoreApi id : 1
+2018-01-05 19:40:24,953 INFO  Tachyon.Server.Api.Core.ServiceInitialisation - MaxRequestLength : 262144KB
+2018-01-05 19:40:24,953 INFO  Tachyon.Server.Api.Core.ServiceInitialisation - ProcessorCount : 4
+2018-01-05 19:40:40,429 INFO  Tachyon.Server.Api.Core.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:40:40,446 INFO  Tachyon.Server.Api.Core.WebApiApplication - 1E Tachyon
+2018-01-05 19:40:40,446 INFO  Tachyon.Server.Api.Core.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:40:40,447 INFO  Tachyon.Server.Api.Core.WebApiApplication - Version 3.2.0.571
+2018-01-05 19:40:40,451 INFO  Tachyon.Server.Api.Core.WebApiApplication - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:40:40,451 DEBUG Tachyon.Server.Api.Core.WebApiApplication - Culture: en-GB, UICulture: en-US
+2018-01-05 19:40:40,452 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Api.Core, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:40:40,452 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Tachyon.Server.Common, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:40:40,452 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  App_global.asax.icrjsdaa, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+2018-01-05 19:40:40,453 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a
+2018-01-05 19:40:40,453 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:40,453 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:40,453 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:40,453 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:40,453 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:40,453 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:40,454 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:40,454 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:40,454 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:40,454 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:40,454 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:40,454 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:40,454 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:40,455 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:40,455 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:40,455 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:40,455 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:40,455 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2018-01-05 19:40:40,455 DEBUG Tachyon.Server.Api.Core.WebApiApplication -  System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:40,804 INFO  Tachyon.Server.Api.Core.WebApiApplication - Starting core Server...
+2018-01-05 19:40:45,685 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - InitializeService triggered from /CoreInternal, AppId=/LM/W3SVC/20010305/ROOT/CoreInternal
+2018-01-05 19:40:45,686 DEBUG Tachyon.Server.Api.Core.ServiceInitialisation - Instrumentation upload using CoreApi id : -1
+2018-01-05 19:40:45,691 INFO  Tachyon.Server.Api.Core.ServiceInitialisation - MaxRequestLength : 262144KB
+2018-01-05 19:40:45,692 INFO  Tachyon.Server.Api.Core.ServiceInitialisation - ProcessorCount : 4
+2018-01-05 19:40:47,232 DEBUG Tachyon.Server.Api.Core - Found default SwitchConfiguration 1
+2018-01-05 19:40:51,094 INFO  Tachyon.Server.Api.Core - Registered Switch TST03-2012R201 10.10.0.171 4000 using SwitchConfiguration 1

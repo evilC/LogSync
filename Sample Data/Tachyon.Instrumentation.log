@@ -1,0 +1,31 @@
+2018-01-05 19:37:01,025 INFO  Instrumentation - Starting Instrumentation Server
+2018-01-05 19:37:01,275 INFO  Instrumentation - Starting summarizer worker
+2018-01-05 19:37:02,087 INFO  Instrumentation - Listening on address [0.0.0.0], port 3901, and providing WebSocket services
+2018-01-05 19:37:02,087 INFO  Instrumentation - WebSocket services: /ConsumerInstrumentation, /SwitchInstrumentation, /CoreInstrumentation, /CoordinatorInstrumentation
+2018-01-05 19:37:02,087 INFO  Instrumentation - Started websocket host worker
+2018-01-05 19:37:15,697 INFO  Instrumentation - Stopping Instrumentation Server...
+2018-01-05 19:37:15,697 INFO  Instrumentation - Stopping summarizer worker
+2018-01-05 19:37:15,712 INFO  Instrumentation - Stopped websocket host worker
+2018-01-05 19:37:39,308 INFO  Instrumentation - Starting Instrumentation Server
+2018-01-05 19:37:39,587 INFO  Instrumentation - Starting summarizer worker
+2018-01-05 19:37:40,478 INFO  Instrumentation - Listening on address [0.0.0.0], port 3901, and providing WebSocket services
+2018-01-05 19:37:40,478 INFO  Instrumentation - WebSocket services: /ConsumerInstrumentation, /SwitchInstrumentation, /CoreInstrumentation, /CoordinatorInstrumentation
+2018-01-05 19:37:40,478 INFO  Instrumentation - Started websocket host worker
+2018-01-05 19:39:27,934 INFO  Instrumentation - WebSocketServer: The header of a frame cannot be read from the stream. This is to be expected whenever the service is shut down or recycled.
+2018-01-05 19:39:55,839 INFO  Instrumentation - WebSocketServer: The header of a frame cannot be read from the stream. This is to be expected whenever the service is shut down or recycled.
+2018-01-05 19:39:57,891 INFO  Instrumentation - Stopping Instrumentation Server...
+2018-01-05 19:39:57,891 INFO  Instrumentation - Stopping summarizer worker
+2018-01-05 19:39:57,906 INFO  Instrumentation - Stopped websocket host worker
+2018-01-05 19:40:11,047 INFO  Instrumentation - Starting Instrumentation Server
+2018-01-05 19:40:11,281 INFO  Instrumentation - Starting summarizer worker
+2018-01-05 19:40:12,360 INFO  Instrumentation - Listening on address [0.0.0.0], port 3901, and providing WebSocket services
+2018-01-05 19:40:12,360 INFO  Instrumentation - WebSocket services: /ConsumerInstrumentation, /SwitchInstrumentation, /CoreInstrumentation, /CoordinatorInstrumentation
+2018-01-05 19:40:12,360 INFO  Instrumentation - Started websocket host worker
+2018-01-05 19:40:17,391 INFO  Instrumentation - Stopping Instrumentation Server...
+2018-01-05 19:40:17,391 INFO  Instrumentation - Stopping summarizer worker
+2018-01-05 19:40:17,406 INFO  Instrumentation - Stopped websocket host worker
+2018-01-05 19:40:33,313 INFO  Instrumentation - Starting Instrumentation Server
+2018-01-05 19:40:33,485 INFO  Instrumentation - Starting summarizer worker
+2018-01-05 19:40:34,125 INFO  Instrumentation - Listening on address [0.0.0.0], port 3901, and providing WebSocket services
+2018-01-05 19:40:34,125 INFO  Instrumentation - WebSocket services: /ConsumerInstrumentation, /SwitchInstrumentation, /CoreInstrumentation, /CoordinatorInstrumentation
+2018-01-05 19:40:34,125 INFO  Instrumentation - Started websocket host worker

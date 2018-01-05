@@ -1,0 +1,57 @@
+2018-01-05 19:36:59,790 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:36:59,806 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - 1E Tachyon
+2018-01-05 19:36:59,821 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:36:59,821 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - Version 3.2.0.571
+2018-01-05 19:36:59,821 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:37:12,572 INFO  Tachyon.Server.Services.Consumer.ConsumerProvider - Consumer created [Id='2',Name='Automation']
+2018-01-05 19:37:12,947 INFO  Tachyon.Server.Services.Consumer.InstructionSetProvider - Instruction set created [Id=1, Name='1Default instructions for Automation', Description='']
+2018-01-05 19:37:13,072 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Processing uploaded instruction definition/product pack file 'DefaultAutomationTestQuestions.zip' for instruction set '1Default instructions for Automation'.
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=1, Name=Auto-Echo-Action, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=2, Name=Auto-Echo-Question, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=3, Name=Auto-Echo-Question-MinTtl, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=4, Name=Auto-EchoWithReplySize, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=5, Name=Auto-Echo-JsonTest, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=6, Name=Auto-Sleep, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=7, Name=Auto-Sleep-Exclusive, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=8, Name=Auto-UpdateExtensibility, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=9, Name=Auto-SystemBIOSDetails, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=10, Name=Auto-DisabledServices, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=11, Name=Auto-UninstallApplication, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=12, Name=Auto-KillProcess, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=13, Name=Auto-RunCommand-Exclusive, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=14, Name=Auto-ControlService, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=15, Name=Auto-InstructionStatsForId, Version=2.0 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=16, Name=Auto-InstructionStats, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=17, Name=Auto-AgentDiagnostics, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=18, Name=Auto-ConnectionInformation, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=19, Name=Auto-SQL-Column-Response, Version=2 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=20, Name=Auto-Echo-Action-MinTtl, Version=2.0 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=21, Name=Auto-FindFileByName, Version=3.0 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,322 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Instruction definition [Id=22, Name=Auto-DevicesConnectedToEndpoint, Version=3.0 UploadedFile=DefaultAutomationTestQuestions.zip, InstructionSet=1Default instructions for Automation] imported successfully
+2018-01-05 19:37:14,572 INFO  Tachyon.Server.Services.Consumer.ProductPackProvider - Successfully imported instruction definition(s) from uploaded instruction definition/product pack file 'DefaultAutomationTestQuestions.zip' for instruction set '1Default instructions for Automation'
+2018-01-05 19:37:17,993 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - Stopping application
+2018-01-05 19:37:33,150 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:37:33,181 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - 1E Tachyon
+2018-01-05 19:37:33,181 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:37:33,181 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - Version 3.2.0.571
+2018-01-05 19:37:33,197 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:38:16,912 WARN  Tachyon.Server.Common.WebApiExtensions.ApiControllerBase - Record not found
+2018-01-05 19:38:20,328 WARN  Tachyon.Server.Common.WebApiExtensions.ApiControllerBase - Record not found
+2018-01-05 19:38:25,753 INFO  Tachyon.Server.Services.Consumer.InstructionProvider - Action created: [Id=2, Payload='Automation - Send echo Action', Coverage='']
+2018-01-05 19:38:29,198 INFO  Tachyon.Server.Services.Consumer.ApprovalProvider - Instruction [Id=2, Payload='Automation - Send echo Action', Coverage=''] has been approved by TST03-2012R201\Administrator
+2018-01-05 19:38:32,283 ERROR Tachyon.Server.OperationalSafeGuards.OperationalSafeGuardsManager - Posting approval = True with ID 2 to Operational SafeGuards server https://Tachyon.Lab.Local:8080/api/ failed 'Forbidden'
+2018-01-05 19:38:32,283 INFO  Tachyon.Server.Services.Consumer.ApprovalProvider - Instruction [Id=2, Payload='Automation - Send echo Action', Coverage=''] has been approved by TST03-2012R201\Administrator
+2018-01-05 19:38:52,681 INFO  Tachyon.Server.Services.Consumer.InstructionProvider - Question created: [Id=3, Payload='Automation - Get System BIOS Details', Coverage='']
+2018-01-05 19:39:11,323 INFO  Tachyon.Server.Services.Consumer.InstructionProvider - Question created: [Id=4, Payload='Tachyon Agent diagnostic information detail', Coverage='']
+2018-01-05 19:39:58,157 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - Stopping application
+2018-01-05 19:40:05,266 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:40:05,281 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - 1E Tachyon
+2018-01-05 19:40:05,281 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:40:05,281 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - Version 3.2.0.571
+2018-01-05 19:40:05,281 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:40:18,672 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - Stopping application
+2018-01-05 19:40:29,531 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:40:29,531 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - 1E Tachyon
+2018-01-05 19:40:29,531 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - ---------------------------------------------------------------
+2018-01-05 19:40:29,531 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - Version 3.2.0.571
+2018-01-05 19:40:29,531 INFO  Tachyon.Server.Api.Consumer.WebApiApplication - Copyright © 1E 2000-2018. All rights reserved.

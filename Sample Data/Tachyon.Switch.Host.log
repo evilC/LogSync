@@ -1,0 +1,94 @@
+2018-01-05 19:37:48,884 INFO  Tachyon.Switch.Host.Logging - ----------------------------------------------------------------
+2018-01-05 19:37:48,916 INFO  Tachyon.Switch.Host.Logging - Tachyon.Switch.Host
+2018-01-05 19:37:48,916 INFO  Tachyon.Switch.Host.Logging - ----------------------------------------------------------------
+2018-01-05 19:37:48,916 INFO  Tachyon.Switch.Host.Logging - Version 3.2.0.571
+2018-01-05 19:37:48,916 INFO  Tachyon.Switch.Host.Logging - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:37:48,916 INFO  Tachyon.Switch.Host.Logging - Running from Service Control Manager
+2018-01-05 19:37:48,936 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'NumberOfSwitches' to 1
+2018-01-05 19:37:48,936 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'SwitchStartupDelaySeconds' to 3
+2018-01-05 19:37:48,936 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'SwitchShutdownTimeoutSeconds' to 60
+2018-01-05 19:37:48,936 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'StatisticsLogIntervalMinutes' to 60
+2018-01-05 19:37:48,936 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'SwitchRegistrationPort' to 3900
+2018-01-05 19:37:48,978 INFO  Tachyon.Switch.Host.SwitchRegistrationService - Starting SwitchRegistrationService on loopback @ port 3900
+2018-01-05 19:37:48,994 INFO  Tachyon.Switch.Host.SwitchRegistrationService - SwitchRegistrationService started
+2018-01-05 19:37:48,994 INFO  Tachyon.Switch.Host.SwitchHost - Managing 1 Switch processes
+2018-01-05 19:37:49,013 INFO  Tachyon.Switch.Host.SwitchProcess - Waiting for 3 seconds before starting Switch #1
+2018-01-05 19:37:52,025 INFO  Tachyon.Switch.Host.SwitchProcess - Starting Switch #1 with command-line args: -config=TST03-2012R201:80/CoreInternal -log=0x2000  -Port=4000  -selftest=0  -DDoSblock=0  -NoStdOut -NoSumm -Log=0
+2018-01-05 19:37:52,041 INFO  Tachyon.Switch.Host.SwitchProcess - Started Switch #1 - process ID is 2452
+2018-01-05 19:38:01,272 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: 19:37:52.087 WARNING: Domain Check "TST03-2012R201"!=""
+2018-01-05 19:38:01,272 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: 19:37:52.087 Config Server=TST03-2012R201:80/CoreInternal pServer=TST03-2012R201:80/CoreInternal
+2018-01-05 19:38:01,272 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: 19:37:52.087 Initialising Config From "http://TST03-2012R201:80/CoreInternal/configuration/switch/request/TST03-2012R201"
+2018-01-05 19:38:01,272 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: [4968] 19:38:01.272 Listener listening on 0.0.0.0:4000
+2018-01-05 19:38:01,272 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: Logging to "C:\ProgramData\1E\Tachyon\Tachyon.Switch.log"
+2018-01-05 19:38:01,272 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: 
+2018-01-05 19:38:03,236 INFO  Tachyon.Switch.Host.SwitchRegistrationServiceBehavior - Accepted incoming websocket connection from 127.0.0.1:1362
+2018-01-05 19:39:27,894 INFO  Tachyon.Switch.Host.SwitchHost - Stopping SwitchHost
+2018-01-05 19:39:27,895 INFO  Tachyon.Switch.Host.SwitchHost - Stopping all running Switch process(es)
+2018-01-05 19:39:27,895 INFO  Tachyon.Switch.Host.SwitchHost - Sending stop signal to subscribed Switch registration(s)
+2018-01-05 19:39:27,924 INFO  Tachyon.Switch.Host.SwitchProcess - Waiting for Switch #1 to terminate...
+2018-01-05 19:39:28,810 ERROR Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard error out: Shutdown Requested
+2018-01-05 19:39:28,810 ERROR Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard error out: 
+2018-01-05 19:39:28,810 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 stopped
+2018-01-05 19:39:28,810 INFO  Tachyon.Switch.Host.SwitchHost - All running Switch process(es) stopped
+2018-01-05 19:39:28,810 INFO  Tachyon.Switch.Host.SwitchHost - SwitchHost stopped
+2018-01-05 19:39:28,810 INFO  Tachyon.Switch.Host.SwitchRegistrationService - Stopping SwitchRegistrationService
+2018-01-05 19:39:28,810 INFO  Tachyon.Switch.Host.SwitchRegistrationService - SwitchRegistrationService stopped
+2018-01-05 19:39:33,296 INFO  Tachyon.Switch.Host.Logging - ----------------------------------------------------------------
+2018-01-05 19:39:33,326 INFO  Tachyon.Switch.Host.Logging - Tachyon.Switch.Host
+2018-01-05 19:39:33,326 INFO  Tachyon.Switch.Host.Logging - ----------------------------------------------------------------
+2018-01-05 19:39:33,326 INFO  Tachyon.Switch.Host.Logging - Version 3.2.0.571
+2018-01-05 19:39:33,341 INFO  Tachyon.Switch.Host.Logging - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:39:33,341 INFO  Tachyon.Switch.Host.Logging - Running from Service Control Manager
+2018-01-05 19:39:33,341 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'NumberOfSwitches' to 1
+2018-01-05 19:39:33,341 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'SwitchStartupDelaySeconds' to 3
+2018-01-05 19:39:33,341 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'SwitchShutdownTimeoutSeconds' to 60
+2018-01-05 19:39:33,341 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'StatisticsLogIntervalMinutes' to 60
+2018-01-05 19:39:33,341 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'SwitchRegistrationPort' to 3900
+2018-01-05 19:39:33,373 INFO  Tachyon.Switch.Host.SwitchRegistrationService - Starting SwitchRegistrationService on loopback @ port 3900
+2018-01-05 19:39:33,373 INFO  Tachyon.Switch.Host.SwitchRegistrationService - SwitchRegistrationService started
+2018-01-05 19:39:33,388 INFO  Tachyon.Switch.Host.SwitchHost - Managing 1 Switch processes
+2018-01-05 19:39:33,388 INFO  Tachyon.Switch.Host.SwitchProcess - Waiting for 3 seconds before starting Switch #1
+2018-01-05 19:39:36,404 INFO  Tachyon.Switch.Host.SwitchProcess - Starting Switch #1 with command-line args: -config=TST03-2012R201:80/CoreInternal -log=0x2000  -Port=4000  -selftest=0  -DDoSblock=0  -NoStdOut -NoSumm -Log=0
+2018-01-05 19:39:36,404 INFO  Tachyon.Switch.Host.SwitchProcess - Started Switch #1 - process ID is 2952
+2018-01-05 19:39:36,435 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: 19:39:36.419 WARNING: Domain Check "TST03-2012R201"!=""
+2018-01-05 19:39:36,435 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: 19:39:36.419 Config Server=TST03-2012R201:80/CoreInternal pServer=TST03-2012R201:80/CoreInternal
+2018-01-05 19:39:36,435 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: 19:39:36.419 Initialising Config From "http://TST03-2012R201:80/CoreInternal/configuration/switch/request/TST03-2012R201"
+2018-01-05 19:39:36,435 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: [3256] 19:39:36.435 Listener listening on 0.0.0.0:4000
+2018-01-05 19:39:36,435 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: Logging to "C:\ProgramData\1E\Tachyon\Tachyon.Switch.log"
+2018-01-05 19:39:36,435 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: 
+2018-01-05 19:39:37,213 INFO  Tachyon.Switch.Host.SwitchRegistrationServiceBehavior - Accepted incoming websocket connection from 127.0.0.1:1580
+2018-01-05 19:39:55,820 INFO  Tachyon.Switch.Host.SwitchHost - Stopping SwitchHost
+2018-01-05 19:39:55,820 INFO  Tachyon.Switch.Host.SwitchHost - Stopping all running Switch process(es)
+2018-01-05 19:39:55,821 INFO  Tachyon.Switch.Host.SwitchHost - Sending stop signal to subscribed Switch registration(s)
+2018-01-05 19:39:55,838 INFO  Tachyon.Switch.Host.SwitchProcess - Waiting for Switch #1 to terminate...
+2018-01-05 19:39:56,609 ERROR Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard error out: Shutdown Requested
+2018-01-05 19:39:56,609 ERROR Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard error out: 
+2018-01-05 19:39:56,609 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 stopped
+2018-01-05 19:39:56,609 INFO  Tachyon.Switch.Host.SwitchHost - All running Switch process(es) stopped
+2018-01-05 19:39:56,609 INFO  Tachyon.Switch.Host.SwitchHost - SwitchHost stopped
+2018-01-05 19:39:56,609 INFO  Tachyon.Switch.Host.SwitchRegistrationService - Stopping SwitchRegistrationService
+2018-01-05 19:39:56,609 INFO  Tachyon.Switch.Host.SwitchRegistrationService - SwitchRegistrationService stopped
+2018-01-05 19:40:36,938 INFO  Tachyon.Switch.Host.Logging - ----------------------------------------------------------------
+2018-01-05 19:40:36,953 INFO  Tachyon.Switch.Host.Logging - Tachyon.Switch.Host
+2018-01-05 19:40:36,953 INFO  Tachyon.Switch.Host.Logging - ----------------------------------------------------------------
+2018-01-05 19:40:36,953 INFO  Tachyon.Switch.Host.Logging - Version 3.2.0.571
+2018-01-05 19:40:36,969 INFO  Tachyon.Switch.Host.Logging - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:40:36,969 INFO  Tachyon.Switch.Host.Logging - Running from Service Control Manager
+2018-01-05 19:40:36,969 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'NumberOfSwitches' to 1
+2018-01-05 19:40:36,969 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'SwitchStartupDelaySeconds' to 3
+2018-01-05 19:40:36,969 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'SwitchShutdownTimeoutSeconds' to 60
+2018-01-05 19:40:36,969 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'StatisticsLogIntervalMinutes' to 60
+2018-01-05 19:40:36,969 INFO  Tachyon.Switch.Host.SwitchHostConfiguration - Setting 'SwitchRegistrationPort' to 3900
+2018-01-05 19:40:37,000 INFO  Tachyon.Switch.Host.SwitchRegistrationService - Starting SwitchRegistrationService on loopback @ port 3900
+2018-01-05 19:40:37,000 INFO  Tachyon.Switch.Host.SwitchRegistrationService - SwitchRegistrationService started
+2018-01-05 19:40:37,000 INFO  Tachyon.Switch.Host.SwitchHost - Managing 1 Switch processes
+2018-01-05 19:40:37,000 INFO  Tachyon.Switch.Host.SwitchProcess - Waiting for 3 seconds before starting Switch #1
+2018-01-05 19:40:40,000 INFO  Tachyon.Switch.Host.SwitchProcess - Starting Switch #1 with command-line args: -config=TST03-2012R201:80/CoreInternal -log=0x2000  -Port=4000  -selftest=0  -DDoSblock=0  -NoStdOut -NoSumm -Log=0
+2018-01-05 19:40:40,016 INFO  Tachyon.Switch.Host.SwitchProcess - Started Switch #1 - process ID is 5024
+2018-01-05 19:40:47,459 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: 19:40:40.016 WARNING: Domain Check "TST03-2012R201"!=""
+2018-01-05 19:40:47,459 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: 19:40:40.016 Config Server=TST03-2012R201:80/CoreInternal pServer=TST03-2012R201:80/CoreInternal
+2018-01-05 19:40:47,459 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: 19:40:40.016 Initialising Config From "http://TST03-2012R201:80/CoreInternal/configuration/switch/request/TST03-2012R201"
+2018-01-05 19:40:47,459 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: [4244] 19:40:47.459 Listener listening on 0.0.0.0:4000
+2018-01-05 19:40:47,459 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: Logging to "C:\ProgramData\1E\Tachyon\Tachyon.Switch.log"
+2018-01-05 19:40:47,459 INFO  Tachyon.Switch.Host.SwitchProcess - Switch #1 Standard out: 
+2018-01-05 19:40:52,235 INFO  Tachyon.Switch.Host.SwitchRegistrationServiceBehavior - Accepted incoming websocket connection from 127.0.0.1:2008

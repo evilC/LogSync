@@ -1,0 +1,938 @@
+2018-01-05 19:36:53,134 INFO  LogAssemblyReferences - ---------------------------------------------------------------
+2018-01-05 19:36:53,181 INFO  LogAssemblyReferences - 1E Tachyon
+2018-01-05 19:36:53,181 INFO  LogAssemblyReferences - ---------------------------------------------------------------
+2018-01-05 19:36:53,181 INFO  LogAssemblyReferences - Version 3.2.0.571
+2018-01-05 19:36:53,197 INFO  LogAssemblyReferences - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:36:53,197 DEBUG LogAssemblyReferences -  Tachyon.Server.Coordinator, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:36:53,197 DEBUG LogAssemblyReferences -  Tachyon.Server.Coordinator.Common, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:36:53,197 DEBUG LogAssemblyReferences -  log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a
+2018-01-05 19:36:53,197 DEBUG LogAssemblyReferences -  mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:36:53,197 DEBUG LogAssemblyReferences -  System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:36:53,197 DEBUG LogAssemblyReferences -  System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:36:53,197 DEBUG LogAssemblyReferences -  System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:36:53,197 DEBUG LogAssemblyReferences -  System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:36:53,197 DEBUG LogAssemblyReferences -  System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:36:53,259 DEBUG OnStart - OnStart - begin
+2018-01-05 19:36:53,279 DEBUG ServiceQueuedMainCallback - OnStart - end
+2018-01-05 19:36:53,321 DEBUG <OnStart>b__0 - OnStart - Task begin
+2018-01-05 19:36:53,337 INFO  LogSettings - WorkflowPool = 100
+2018-01-05 19:36:53,337 INFO  LogSettings - ConsumerApiRootUrl = https://Tachyon.Lab.Local:443
+2018-01-05 19:36:53,337 INFO  LogSettings - smtpHost = localhost
+2018-01-05 19:36:53,337 INFO  LogSettings - TachyonEmail = tachyon@1e.local
+2018-01-05 19:36:53,337 INFO  LogSettings - ActiveDirectoryServer = gc://
+2018-01-05 19:36:53,337 INFO  LogSettings - CoordinatorServerPort = 8080
+2018-01-05 19:36:53,337 INFO  LogSettings - InstrumentationEnabled = true
+2018-01-05 19:36:53,337 INFO  LogSettings - NotifyExpirationMinutes = 60
+2018-01-05 19:36:53,337 INFO  LogSettings - HouseKeepingMinutes = 10
+2018-01-05 19:36:53,337 INFO  LogSettings - SetDeviceOfflineMinutes = 60
+2018-01-05 19:36:53,337 INFO  LogSettings - HouseKeepingResponseTablesMinutes = 60
+2018-01-05 19:36:53,337 INFO  LogSettings - ResponsesNoTables = 10
+2018-01-05 19:36:53,337 INFO  LogSettings - OTPExpirySeconds = 600
+2018-01-05 19:36:53,337 INFO  LogSettings - OTPRetries = 3
+2018-01-05 19:36:53,337 INFO  LogSettings - OTPLength = 5
+2018-01-05 19:36:53,337 INFO  LogSettings - MaxThreads = 32767
+2018-01-05 19:37:00,354 INFO  <OnStart>b__0 - Initialising module 'Tachyon.Server.Licensing.LicensingModule' ...
+2018-01-05 19:37:00,354 INFO  <OnStart>b__0 - Tachyon.Server.Licensing.LicensingModule - Settings - InstructionDefinitionLicenseCheckBatchSize = 30
+2018-01-05 19:37:00,354 INFO  <OnStart>b__0 - Tachyon.Server.Licensing.LicensingModule - Settings - InstructionDefinitionLicenseCheckIntervalMinutes = 60
+2018-01-05 19:37:00,400 INFO  LicensingCallback - License.dll callback: Callback initialised
+2018-01-05 19:37:00,400 DEBUG LicensingCallback - License.dll callback: License library version 1.0.0.46
+2018-01-05 19:37:00,400 INFO  <OnStart>b__0 - Initialising module 'Tachyon.Server.Instrumentation.Service.InstrumentationModule' ...
+2018-01-05 19:37:00,400 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - InstrumentationServerPort = 3901
+2018-01-05 19:37:00,400 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - CoreApiInstrumentationServicePath = /CoreInstrumentation
+2018-01-05 19:37:00,400 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - SwitchInstrumentationServicePath = /SwitchInstrumentation
+2018-01-05 19:37:00,400 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - ConsumerInstrumentationServicePath = /ConsumerInstrumentation
+2018-01-05 19:37:00,415 DEBUG LicensingCallback - License.dll callback: License Periodic Started
+2018-01-05 19:37:00,415 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - CoordinatorInstrumentationServicePath = /CoordinatorInstrumentation
+2018-01-05 19:37:00,415 INFO  <OnStart>b__0 - Initialising module 'Tachyon.Server.AgentDeployment.AgentDeploymentModule' ...
+2018-01-05 19:37:00,415 DEBUG LicensingCallback - License.dll callback: WARNING: No Url found
+2018-01-05 19:37:00,415 INFO  <OnStart>b__0 - Tachyon.Server.AgentDeployment.AgentDeploymentModule - Settings - MaxSimultaneousInstalls = 2
+2018-01-05 19:37:00,462 DEBUG LicensingCallback - License.dll callback: BinarySigned: C:\Program Files\1E\Tachyon\Coordinator\Licensing.dll - OK
+2018-01-05 19:37:00,478 DEBUG LicensingCallback - License.dll callback: BinarySigned: C:\Program Files\1E\Tachyon\Coordinator\Tachyon.Server.Coordinator.exe - OK
+2018-01-05 19:37:00,478 INFO  LicensingCallback - License.dll callback: LICENSING  ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:37:00,478 INFO  LicensingCallback - License.dll callback: LICENSING Tachyon ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:37:00,478 DEBUG LicensingCallback - License.dll callback: WARNING: No Url found
+2018-01-05 19:37:00,478 INFO  LicensingCallback - License.dll callback: LICENSING Tachyon ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:37:00,478 WARN  LicensingCallback - License.dll callback: LICENSING: 0 days left
+2018-01-05 19:37:00,571 INFO  <OnStart>b__0 - Starting web Server at 'https://+:8080' ...
+2018-01-05 19:37:00,571 DEBUG StateMachinesInitialiseDoWork - Initialising state machines: Starting...
+2018-01-05 19:37:00,571 DEBUG HouseKeepingDoWork - Performing device offline Housekeeping
+2018-01-05 19:37:00,790 DEBUG Initialise - Initialising state machines: found 0 active Instructions.
+2018-01-05 19:37:00,790 DEBUG OnDoWork - Initialising state machines: Initialised 0 state machines.
+2018-01-05 19:37:00,931 INFO  <OnStart>b__0 - Server running at https://+:8080
+2018-01-05 19:37:00,946 INFO  Start - Starting Licensing Server
+2018-01-05 19:37:00,946 INFO  LicensingCallback - License.dll callback: LICENSING Tachyon ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:37:00,946 INFO  LicensingCallback - License.dll callback: Summary: Tachyon - Licensed to "Tachyon Automation" until 2018/01/06 16:00:01 (1) Activated until 2018/01/06 16:00:01
+2018-01-05 19:37:00,946 INFO  LogLicense - Licensing information:
+2018-01-05 19:37:00,946 INFO  LogLicense - Tachyon - Licensed to "Tachyon Automation" until 2018/01/06 16:00:01 (1) Activated until 2018/01/06 16:00:01
+2018-01-05 19:37:01,009 INFO  Start - Total instruction definitions 0
+2018-01-05 19:37:01,009 INFO  Start - Frequency 60 minutes, 30 definitions per call
+2018-01-05 19:37:01,165 INFO  LicensingDoWork - Periodic license check
+2018-01-05 19:37:01,165 DEBUG LicensingCallback - License.dll callback: Features 1 NWM-Integration 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:37:01,165 DEBUG LicensingCallback - License.dll callback: Features 2 TachyonPlatform 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:37:01,165 DEBUG LicensingCallback - License.dll callback: Features 3 TachyonExplorer 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:37:01,165 DEBUG LicensingCallback - License.dll callback: Features 4 Automation 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:37:01,165 INFO  LicensingCompleted - Total instruction definitions 0
+2018-01-05 19:37:01,165 INFO  LicensingCompleted - Frequency 60 minutes, 30 definitions per call
+2018-01-05 19:37:02,384 INFO  Start - Starting Agent Deployment Server
+2018-01-05 19:37:02,384 DEBUG <OnStart>b__0 - OnStart - Task end
+2018-01-05 19:37:02,400 DEBUG Run - Starting the Queue Dispatcher.
+2018-01-05 19:37:02,587 DEBUG FixStateOfUnfinishedDeployments - Checked for unfinished installations and found that no devices had an incomplete state.
+2018-01-05 19:37:02,587 DEBUG DoWork - Queue Worker 0 has been started on Thread 10.
+2018-01-05 19:37:02,759 DEBUG DoWork - Queue Worker number 0 is sleeping because there is no work for it to do.
+2018-01-05 19:37:03,571 DEBUG DoWork - Queue Worker 1 has been started on Thread 15.
+2018-01-05 19:37:03,571 DEBUG DoWork - Queue Worker number 1 is sleeping because there is no work for it to do.
+2018-01-05 19:37:08,056 DEBUG IsAuthorized - invokingUserName=NT AUTHORITY\NETWORK SERVICE, poolIdentity=NT AUTHORITY\NETWORK SERVICE
+2018-01-05 19:37:08,071 DEBUG IsAuthorized - Authorized (matching pool identity)
+2018-01-05 19:37:12,650 DEBUG IsAuthorized - invokingUserName=NT AUTHORITY\NETWORK SERVICE, poolIdentity=NT AUTHORITY\NETWORK SERVICE
+2018-01-05 19:37:12,650 DEBUG IsAuthorized - Authorized (matching pool identity)
+2018-01-05 19:37:12,650 DEBUG LicensingCallback - License.dll callback: Features 1 NWM-Integration 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:37:12,665 DEBUG LicensingCallback - License.dll callback: Features 2 TachyonPlatform 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:37:12,665 DEBUG LicensingCallback - License.dll callback: Features 3 TachyonExplorer 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:37:12,665 DEBUG LicensingCallback - License.dll callback: Features 4 Automation 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:37:15,697 DEBUG OnStop - OnStop - begin
+2018-01-05 19:37:15,697 DEBUG OnStop - OnStop - Waiting
+2018-01-05 19:37:15,697 DEBUG OnStop - OnStop - Waited
+2018-01-05 19:37:15,697 INFO  Stop - Stopping Licensing Server...
+2018-01-05 19:37:15,712 INFO  Stop - Stopping Agent Deployment Server...
+2018-01-05 19:37:15,712 INFO  OnStop - Stopping web Server...
+2018-01-05 19:37:15,728 DEBUG OnStop - Serializing 0 Workflows...
+2018-01-05 19:37:15,728 DEBUG OnStop - All Workflows have been saved.
+2018-01-05 19:37:15,728 DEBUG OnStop - OnStop - end
+2018-01-05 19:37:32,259 INFO  LogAssemblyReferences - ---------------------------------------------------------------
+2018-01-05 19:37:32,306 INFO  LogAssemblyReferences - 1E Tachyon
+2018-01-05 19:37:32,306 INFO  LogAssemblyReferences - ---------------------------------------------------------------
+2018-01-05 19:37:32,306 INFO  LogAssemblyReferences - Version 3.2.0.571
+2018-01-05 19:37:32,306 INFO  LogAssemblyReferences - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:37:32,306 DEBUG LogAssemblyReferences -  Tachyon.Server.Coordinator, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:32,306 DEBUG LogAssemblyReferences -  Tachyon.Server.Coordinator.Common, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:37:32,306 DEBUG LogAssemblyReferences -  log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a
+2018-01-05 19:37:32,306 DEBUG LogAssemblyReferences -  mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:32,306 DEBUG LogAssemblyReferences -  System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:32,306 DEBUG LogAssemblyReferences -  System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:32,306 DEBUG LogAssemblyReferences -  System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:32,306 DEBUG LogAssemblyReferences -  System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:37:32,306 DEBUG LogAssemblyReferences -  System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:37:32,337 DEBUG OnStart - OnStart - begin
+2018-01-05 19:37:32,337 DEBUG ServiceQueuedMainCallback - OnStart - end
+2018-01-05 19:37:32,369 DEBUG <OnStart>b__0 - OnStart - Task begin
+2018-01-05 19:37:32,369 INFO  LogSettings - WorkflowPool = 100
+2018-01-05 19:37:32,369 INFO  LogSettings - ConsumerApiRootUrl = https://Tachyon.Lab.Local:443
+2018-01-05 19:37:32,369 INFO  LogSettings - smtpHost = localhost
+2018-01-05 19:37:32,369 INFO  LogSettings - TachyonEmail = tachyon@1e.local
+2018-01-05 19:37:32,369 INFO  LogSettings - ActiveDirectoryServer = gc://
+2018-01-05 19:37:32,384 INFO  LogSettings - CoordinatorServerPort = 8080
+2018-01-05 19:37:32,384 INFO  LogSettings - InstrumentationEnabled = true
+2018-01-05 19:37:32,384 INFO  LogSettings - NotifyExpirationMinutes = 60
+2018-01-05 19:37:32,384 INFO  LogSettings - HouseKeepingMinutes = 10
+2018-01-05 19:37:32,384 INFO  LogSettings - SetDeviceOfflineMinutes = 60
+2018-01-05 19:37:32,384 INFO  LogSettings - HouseKeepingResponseTablesMinutes = 60
+2018-01-05 19:37:32,384 INFO  LogSettings - ResponsesNoTables = 10
+2018-01-05 19:37:32,384 INFO  LogSettings - OTPExpirySeconds = 600
+2018-01-05 19:37:32,384 INFO  LogSettings - OTPRetries = 3
+2018-01-05 19:37:32,384 INFO  LogSettings - OTPLength = 5
+2018-01-05 19:37:32,384 INFO  LogSettings - MaxThreads = 32767
+2018-01-05 19:37:38,791 INFO  <OnStart>b__0 - Initialising module 'Tachyon.Server.Licensing.LicensingModule' ...
+2018-01-05 19:37:38,806 INFO  <OnStart>b__0 - Tachyon.Server.Licensing.LicensingModule - Settings - InstructionDefinitionLicenseCheckBatchSize = 30
+2018-01-05 19:37:38,806 INFO  <OnStart>b__0 - Tachyon.Server.Licensing.LicensingModule - Settings - InstructionDefinitionLicenseCheckIntervalMinutes = 60
+2018-01-05 19:37:38,806 INFO  LicensingCallback - License.dll callback: Callback initialised
+2018-01-05 19:37:38,806 DEBUG LicensingCallback - License.dll callback: License library version 1.0.0.46
+2018-01-05 19:37:38,806 INFO  <OnStart>b__0 - Initialising module 'Tachyon.Server.Instrumentation.Service.InstrumentationModule' ...
+2018-01-05 19:37:38,806 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - InstrumentationServerPort = 3901
+2018-01-05 19:37:38,806 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - CoreApiInstrumentationServicePath = /CoreInstrumentation
+2018-01-05 19:37:38,806 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - SwitchInstrumentationServicePath = /SwitchInstrumentation
+2018-01-05 19:37:38,806 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - ConsumerInstrumentationServicePath = /ConsumerInstrumentation
+2018-01-05 19:37:38,806 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - CoordinatorInstrumentationServicePath = /CoordinatorInstrumentation
+2018-01-05 19:37:38,806 INFO  <OnStart>b__0 - Initialising module 'Tachyon.Server.AgentDeployment.AgentDeploymentModule' ...
+2018-01-05 19:37:38,806 INFO  <OnStart>b__0 - Tachyon.Server.AgentDeployment.AgentDeploymentModule - Settings - MaxSimultaneousInstalls = 2
+2018-01-05 19:37:38,822 DEBUG LicensingCallback - License.dll callback: License Periodic Started
+2018-01-05 19:37:38,822 DEBUG LicensingCallback - License.dll callback: WARNING: No Url found
+2018-01-05 19:37:38,884 DEBUG LicensingCallback - License.dll callback: BinarySigned: C:\Program Files\1E\Tachyon\Coordinator\Licensing.dll - OK
+2018-01-05 19:37:38,884 DEBUG LicensingCallback - License.dll callback: BinarySigned: C:\Program Files\1E\Tachyon\Coordinator\Tachyon.Server.Coordinator.exe - OK
+2018-01-05 19:37:38,884 INFO  LicensingCallback - License.dll callback: LICENSING  ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:37:38,884 INFO  LicensingCallback - License.dll callback: LICENSING Tachyon ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:37:38,900 DEBUG LicensingCallback - License.dll callback: WARNING: No Url found
+2018-01-05 19:37:38,900 INFO  LicensingCallback - License.dll callback: LICENSING Tachyon ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:37:38,900 WARN  LicensingCallback - License.dll callback: LICENSING: 0 days left
+2018-01-05 19:37:38,947 INFO  <OnStart>b__0 - Starting web Server at 'https://+:8080' ...
+2018-01-05 19:37:38,947 DEBUG StateMachinesInitialiseDoWork - Initialising state machines: Starting...
+2018-01-05 19:37:38,962 DEBUG HouseKeepingDoWork - Performing device offline Housekeeping
+2018-01-05 19:37:39,228 INFO  <OnStart>b__0 - Server running at https://+:8080
+2018-01-05 19:37:39,228 INFO  Start - Starting Licensing Server
+2018-01-05 19:37:39,228 INFO  LicensingCallback - License.dll callback: LICENSING Tachyon ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:37:39,228 INFO  LicensingCallback - License.dll callback: Summary: Tachyon - Licensed to "Tachyon Automation" until 2018/01/06 16:00:01 (1) Activated until 2018/01/06 16:00:01
+2018-01-05 19:37:39,228 INFO  LogLicense - Licensing information:
+2018-01-05 19:37:39,228 INFO  LogLicense - Tachyon - Licensed to "Tachyon Automation" until 2018/01/06 16:00:01 (1) Activated until 2018/01/06 16:00:01
+2018-01-05 19:37:39,244 DEBUG Initialise - Initialising state machines: found 0 active Instructions.
+2018-01-05 19:37:39,244 DEBUG OnDoWork - Initialising state machines: Initialised 0 state machines.
+2018-01-05 19:37:39,291 INFO  Start - Total instruction definitions 22
+2018-01-05 19:37:39,291 INFO  Start - Frequency 60 minutes, 30 definitions per call
+2018-01-05 19:37:39,525 INFO  LicensingDoWork - Periodic license check
+2018-01-05 19:37:39,525 DEBUG LicensingCallback - License.dll callback: Features 1 NWM-Integration 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:37:39,525 DEBUG LicensingCallback - License.dll callback: Features 2 TachyonPlatform 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:37:39,525 DEBUG LicensingCallback - License.dll callback: Features 3 TachyonExplorer 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:37:39,525 DEBUG LicensingCallback - License.dll callback: Features 4 Automation 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=1,Name=Auto-Echo-Action,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=2,Name=Auto-Echo-Question,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=3,Name=Auto-Echo-Question-MinTtl,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=4,Name=Auto-EchoWithReplySize,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=5,Name=Auto-Echo-JsonTest,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=6,Name=Auto-Sleep,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=7,Name=Auto-Sleep-Exclusive,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=8,Name=Auto-UpdateExtensibility,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=9,Name=Auto-SystemBIOSDetails,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=10,Name=Auto-DisabledServices,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=11,Name=Auto-UninstallApplication,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=12,Name=Auto-KillProcess,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=13,Name=Auto-RunCommand-Exclusive,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=14,Name=Auto-ControlService,Version=2] has been marked licensed
+2018-01-05 19:37:39,572 INFO  UpdateLicense - Instruction definition [Id=15,Name=Auto-InstructionStatsForId,Version=2.0] has been marked licensed
+2018-01-05 19:37:39,587 INFO  UpdateLicense - Instruction definition [Id=16,Name=Auto-InstructionStats,Version=2] has been marked licensed
+2018-01-05 19:37:39,587 INFO  UpdateLicense - Instruction definition [Id=17,Name=Auto-AgentDiagnostics,Version=2] has been marked licensed
+2018-01-05 19:37:39,587 INFO  UpdateLicense - Instruction definition [Id=18,Name=Auto-ConnectionInformation,Version=2] has been marked licensed
+2018-01-05 19:37:39,587 INFO  UpdateLicense - Instruction definition [Id=19,Name=Auto-SQL-Column-Response,Version=2] has been marked licensed
+2018-01-05 19:37:39,587 INFO  UpdateLicense - Instruction definition [Id=20,Name=Auto-Echo-Action-MinTtl,Version=2.0] has been marked licensed
+2018-01-05 19:37:39,587 INFO  UpdateLicense - Instruction definition [Id=21,Name=Auto-FindFileByName,Version=3.0] has been marked licensed
+2018-01-05 19:37:39,587 INFO  UpdateLicense - Instruction definition [Id=22,Name=Auto-DevicesConnectedToEndpoint,Version=3.0] has been marked licensed
+2018-01-05 19:37:39,587 INFO  LicensingCompleted - Total instruction definitions 22
+2018-01-05 19:37:39,587 INFO  LicensingCompleted - Frequency 60 minutes, 30 definitions per call
+2018-01-05 19:37:40,681 INFO  Start - Starting Agent Deployment Server
+2018-01-05 19:37:40,681 DEBUG Run - Starting the Queue Dispatcher.
+2018-01-05 19:37:40,697 DEBUG <OnStart>b__0 - OnStart - Task end
+2018-01-05 19:37:40,869 DEBUG FixStateOfUnfinishedDeployments - Checked for unfinished installations and found that no devices had an incomplete state.
+2018-01-05 19:37:40,869 DEBUG DoWork - Queue Worker 0 has been started on Thread 10.
+2018-01-05 19:37:41,087 DEBUG DoWork - Queue Worker number 0 is sleeping because there is no work for it to do.
+2018-01-05 19:37:41,244 DEBUG IsAuthorized - invokingUserName=NT AUTHORITY\NETWORK SERVICE, poolIdentity=NT AUTHORITY\NETWORK SERVICE
+2018-01-05 19:37:41,259 DEBUG IsAuthorized - Authorized (matching pool identity)
+2018-01-05 19:37:41,462 DEBUG DoWork - Queue Worker 1 has been started on Thread 16.
+2018-01-05 19:37:41,462 DEBUG DoWork - Queue Worker number 1 is sleeping because there is no work for it to do.
+2018-01-05 19:38:09,112 DEBUG IsAuthorized - invokingUserName=NT AUTHORITY\NETWORK SERVICE, poolIdentity=NT AUTHORITY\NETWORK SERVICE
+2018-01-05 19:38:09,113 DEBUG IsAuthorized - Authorized (matching pool identity)
+2018-01-05 19:38:09,115 DEBUG LicensingCallback - License.dll callback: Features 1 NWM-Integration 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:38:09,117 DEBUG LicensingCallback - License.dll callback: Features 2 TachyonPlatform 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:38:09,118 DEBUG LicensingCallback - License.dll callback: Features 3 TachyonExplorer 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:38:09,119 DEBUG LicensingCallback - License.dll callback: Features 4 Automation 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:38:25,937 DEBUG IsAuthorized - invokingUserName=NT AUTHORITY\NETWORK SERVICE, poolIdentity=NT AUTHORITY\NETWORK SERVICE
+2018-01-05 19:38:25,937 DEBUG IsAuthorized - Authorized (matching pool identity)
+2018-01-05 19:38:26,116 INFO  PostInternal - Processing new instruction with ID 2
+2018-01-05 19:38:26,244 DEBUG SetState - SetState for 1 from  to ApprovalState
+2018-01-05 19:38:26,246 DEBUG SetState - Added handler for Cancelled1
+2018-01-05 19:38:26,247 DEBUG SetState - Added handler for Rejected1
+2018-01-05 19:38:26,247 DEBUG SetState - Added handler for Approved1
+2018-01-05 19:38:26,740 INFO  UpdateState - 20437543-85f3-4365-b734-289c35038006  SequentialWorkflow.UpdateState:Initialized
+2018-01-05 19:38:26,747 DEBUG State_changed - SequentialWorkflowList.State_changed:1, Approval, Initialized
+2018-01-05 19:38:26,748 INFO  UpdateState - 20437543-85f3-4365-b734-289c35038006  SequentialWorkflow.UpdateState:Executing
+2018-01-05 19:38:26,748 DEBUG State_changed - SequentialWorkflowList.State_changed:1, Approval, Executing
+2018-01-05 19:38:26,749 INFO  Add - SequentialWorkflowList.Promoting:1
+2018-01-05 19:38:26,763 INFO  UpdateState - 38f05842-4662-47ca-8a1a-60237261fbb7  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:38:26,769 INFO  UpdateState - 38f05842-4662-47ca-8a1a-60237261fbb7  SequenceActivity.UpdateState:Executing
+2018-01-05 19:38:26,795 INFO  UpdateState - dfcb7292-cb04-4a48-a3fe-05c583c3a4bc  CodeActivity.UpdateState:Initialized
+2018-01-05 19:38:26,820 DEBUG set_ParameterList_out - dfcb7292-cb04-4a48-a3fe-05c583c3a4bc  CodeActivity.ParameterList_out:Setting To to Test@Automation.com
+2018-01-05 19:38:26,821 DEBUG set_ParameterList_out - dfcb7292-cb04-4a48-a3fe-05c583c3a4bc  CodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:38:26,822 INFO  UpdateState - dfcb7292-cb04-4a48-a3fe-05c583c3a4bc  CodeActivity.UpdateState:Executing
+2018-01-05 19:38:26,971 INFO  UpdateState - dfcb7292-cb04-4a48-a3fe-05c583c3a4bc  CodeActivity.UpdateState:Closed
+2018-01-05 19:38:26,978 INFO  UpdateState - 1f966d4e-19db-42d8-8014-dcf4585b0227  IfElseActivity.UpdateState:Initialized
+2018-01-05 19:38:26,980 INFO  UpdateState - 1f966d4e-19db-42d8-8014-dcf4585b0227  IfElseActivity.UpdateState:Executing
+2018-01-05 19:38:26,991 INFO  UpdateState - 9221ce75-4103-499b-8b31-a98c2e76daae  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:38:26,992 DEBUG set_ParameterList_out - 9221ce75-4103-499b-8b31-a98c2e76daae  ConditionActivity.ParameterList_out:Setting ApproverCount to 1
+2018-01-05 19:38:26,993 INFO  UpdateState - 9221ce75-4103-499b-8b31-a98c2e76daae  ConditionActivity.UpdateState:Executing
+2018-01-05 19:38:27,002 DEBUG Execute - 9221ce75-4103-499b-8b31-a98c2e76daae  ConditionActivity.Execute:Condition: 0 = 1
+2018-01-05 19:38:27,003 INFO  UpdateState - 9221ce75-4103-499b-8b31-a98c2e76daae  ConditionActivity.UpdateState:Closed
+2018-01-05 19:38:27,003 INFO  UpdateState - 1e24474d-b1d3-4cc9-81af-385025be7a68  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:38:27,004 INFO  UpdateState - 1e24474d-b1d3-4cc9-81af-385025be7a68  ConditionActivity.UpdateState:Executing
+2018-01-05 19:38:27,004 INFO  UpdateState - 1e24474d-b1d3-4cc9-81af-385025be7a68  ConditionActivity.UpdateState:Closed
+2018-01-05 19:38:27,005 INFO  UpdateState - 95f457c8-cc6d-4c15-b09e-f7c2b0a232b7  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:38:27,013 INFO  UpdateState - 95f457c8-cc6d-4c15-b09e-f7c2b0a232b7  SequenceActivity.UpdateState:Executing
+2018-01-05 19:38:27,013 INFO  UpdateState - 4c6ed7f9-1ce3-4812-9332-2f789e5ded7c  CodeActivity.UpdateState:Initialized
+2018-01-05 19:38:27,014 DEBUG set_ParameterList_out - 4c6ed7f9-1ce3-4812-9332-2f789e5ded7c  CodeActivity.ParameterList_out:Setting runtime to Administrator
+2018-01-05 19:38:27,014 DEBUG set_ParameterList_out - 4c6ed7f9-1ce3-4812-9332-2f789e5ded7c  CodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:38:27,014 INFO  UpdateState - 4c6ed7f9-1ce3-4812-9332-2f789e5ded7c  CodeActivity.UpdateState:Executing
+2018-01-05 19:38:27,112 INFO  UpdateState - 4c6ed7f9-1ce3-4812-9332-2f789e5ded7c  CodeActivity.UpdateState:Closed
+2018-01-05 19:38:27,117 INFO  UpdateState - 229b3fc5-85f0-46c0-9f4b-de3abbdbbfea  ParallelSequenceActivity.UpdateState:Initialized
+2018-01-05 19:38:27,118 INFO  UpdateState - 229b3fc5-85f0-46c0-9f4b-de3abbdbbfea  ParallelSequenceActivity.UpdateState:Executing
+2018-01-05 19:38:27,129 INFO  UpdateState - 6c05d9ff-e16c-4d13-9548-dfd18c59c457  SendEMailActivity.UpdateState:Initialized
+2018-01-05 19:38:27,130 INFO  UpdateState - 59fa9811-5938-4a00-947a-9a0f4f955d64  StateMachineActivity.UpdateState:Initialized
+2018-01-05 19:38:27,136 DEBUG set_ParameterList_out - 6c05d9ff-e16c-4d13-9548-dfd18c59c457  SendEMailActivity.ParameterList_out:Setting SmtpHost to localhost
+2018-01-05 19:38:27,136 DEBUG set_ParameterList_out - 6c05d9ff-e16c-4d13-9548-dfd18c59c457  SendEMailActivity.ParameterList_out:Setting From to tachyon@1e.local
+2018-01-05 19:38:27,136 INFO  UpdateState - 59fa9811-5938-4a00-947a-9a0f4f955d64  StateMachineActivity.UpdateState:Executing
+2018-01-05 19:38:27,137 DEBUG set_ParameterList_out - 6c05d9ff-e16c-4d13-9548-dfd18c59c457  SendEMailActivity.ParameterList_out:Setting CC to Test@Automation.com
+2018-01-05 19:38:27,137 DEBUG set_ParameterList_out - 6c05d9ff-e16c-4d13-9548-dfd18c59c457  SendEMailActivity.ParameterList_out:Setting To to Test@Automation.com
+2018-01-05 19:38:27,138 DEBUG set_ParameterList_out - 6c05d9ff-e16c-4d13-9548-dfd18c59c457  SendEMailActivity.ParameterList_out:Setting Subject to Tachyon Action 2 requires approval
+2018-01-05 19:38:27,139 DEBUG set_ParameterList_out - 6c05d9ff-e16c-4d13-9548-dfd18c59c457  SendEMailActivity.ParameterList_out:Setting Body to <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> <title>Tachyon</title> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> </head><body bgcolor="#f2f2f2"> <table align="center" border="0" cellpadding="0" cellspacing="0" width="500" style="max-width: 500px; font-family: Arial, sans-serif; font-size: 12px; color: #444444; border: 1px solid #EEEEEE"> <tr> <td height="2" bgcolor="#FF671F" colspan="3" style="padding: 0"></td></tr><tr> <td bgcolor="#FFFFFF" colspan="3" style="padding: 0"> <img src="cid:EmailHeader"/> </td></tr><tr> <td bgcolor="#ffffff" style="padding: 15px" colspan="3"> <h2 style="text-align: left; font-size: 24px; margin-top: 15px; margin-bottom: 15px;">Tachyon has a pending send instruction request from <b>Administrator</b></h2> <h3 style="border-bottom: 1px solid #EEEEEE; margin-bottom: 10px; font-size: 14px">Instruction details</h3> <table width="100%" style="font-family: Arial, sans-serif; font-size: 12px; color: #444444;"> <tr> <td bgcolor="#F2F2F2" style="padding: 5px">Name</td><td bgcolor="#FAFAFA" style="padding: 5px"> Automation - Send echo Action </td></tr><tr> <td bgcolor="#F2F2F2" style="padding: 5px">Description</td><td bgcolor="#FAFAFA" style="padding: 5px"> Automation - Send an echo request to all machines </td></tr><tr> <td bgcolor="#F2F2F2" style="padding: 5px">Coverage</td><td bgcolor="#FAFAFA" style="padding: 5px"> All </td></tr><tr> <td bgcolor="#F2F2F2" style="padding: 5px">Comment</td><td bgcolor="#FAFAFA" style="padding: 5px">  </td></tr> </table> <h3 style="border-bottom: 1px solid #EEEEEE; margin-bottom: 10px; font-size: 14px">Projected statistics</h3> <table width="100%" style="font-family: Arial, sans-serif; font-size: 12px; color: #444444;"> <tr> <th colspan="5" style="text-align: left; padding: 5px 5px 5px 0;"> Performance </th> </tr><tr> <td bgcolor="#F2F2F2" style="padding: 5px">Instructions executed</td><td bgcolor="#FAFAFA" style="padding: 5px; text-align: right;"> 0 </td><td width="15"></td><td bgcolor="#F2F2F2" style="padding: 5px">Devices</td><td bgcolor="#FAFAFA" style="padding: 5px; text-align: right;"> 0 </td></tr><tr> <td bgcolor="#F2F2F2" style="padding: 5px">Approximate target</td><td bgcolor="#FAFAFA" style="padding: 5px; text-align: right;"> 1 </td><td width="15"></td><td bgcolor="#F2F2F2" style="padding: 5px">Avg. execution time</td><td bgcolor="#FAFAFA" style="padding: 5px; text-align: right;"> 0 </td></tr><tr> <td bgcolor="#F2F2F2" style="padding: 5px">Bytes to receive</td><td bgcolor="#FAFAFA" style="padding: 5px; text-align: right;"> 0 </td><td width="15"></td><td bgcolor="#F2F2F2" style="padding: 5px">Bytes to send</td><td bgcolor="#FAFAFA" style="padding: 5px; text-align: right;"> 168 </td></tr><tr> <td bgcolor="#F2F2F2" style="padding: 5px">Rows to insert</td><td bgcolor="#FAFAFA" style="padding: 5px; text-align: right;"> 0 </td><td width="15"></td><td bgcolor="#F2F2F2" style="padding: 5px">Rows to process</td><td bgcolor="#FAFAFA" style="padding: 5px; text-align: right;"> 0 </td></tr><tr> <th colspan="5" style="text-align: left; padding: 15px 5px 5px 0;"> Number of devices reporting </th> </tr><tr> <td bgcolor="#F2F2F2" style="padding: 5px">Success</td><td bgcolor="#FAFAFA" style="padding: 5px; text-align: right;"> 0 </td><td width="15"></td><td bgcolor="#F2F2F2" style="padding: 5px">Error</td><td bgcolor="#FAFAFA" style="padding: 5px; text-align: right;"> 0 </td></tr><tr> <td bgcolor="#F2F2F2" style="padding: 5px">Not implemented</td><td bgcolor="#FAFAFA" style="padding: 5px; text-align: right;"> 0 </td><td width="15"></td><td bgcolor="#F2F2F2" style="padding: 5px">Response too large</td><td bgcolor="#FAFAFA" style="padding: 5px; text-align: right;"> 0 </td></tr><tr> <td bgcolor="#F2F2F2" style="padding: 5px">Success with no data</td><td bgcolor="#FAFAFA" style="padding: 5px; text-align: right;"> 0 </td></tr></table> </td></tr><tr> <td bgcolor="#ffffff" style="text-align: center; padding: 15px" colspan="3"> <table border="0" cellspacing="0" cellpadding="0" align="center"> <tr> <td bgcolor="#ff671f" style="padding: 12px 18px 12px 18px; -webkit-border-radius:30px; border-radius:30px; color: #ffffff" align="center"> <a href="https://Tachyon.Lab.Local:443/explorer/#/notification/instruction/2" target="_blank" style="text-decoration: none; font-size: 14px; font-weight: normal; color: #ffffff; display: inline-block; font-family: Arial, sans-serif;"> Go to approval page </a> </td></tr></table> </td></tr><tr> <td bgcolor="#353230" height="20" style="padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; color: #AAAAAA; text-align: center" colspan="3"> <strong>Tachyon</strong> by <strong>1E</strong> | Copyright &copy; 1E 2015- 2018. All Rights Reserved. | <a href="http://www.1e.com/contact-us/" style="color: #ff671f; text-decoration:none !important; text-decoration:none;">Contact us</a> </td></tr></table></body></html>
+2018-01-05 19:38:27,139 INFO  UpdateState - 6c05d9ff-e16c-4d13-9548-dfd18c59c457  SendEMailActivity.UpdateState:Executing
+2018-01-05 19:38:27,139 DEBUG SetState - SetState for 1 from  to ApprovalState
+2018-01-05 19:38:27,140 DEBUG SetState - Added handler for InstanceRejected1
+2018-01-05 19:38:27,140 DEBUG SetState - Added handler for InstanceApproved1
+2018-01-05 19:38:27,140 DEBUG State_changed - SequentialWorkflowList.State_changed:1, Approval, Waiting
+2018-01-05 19:38:29,164 DEBUG IsAuthorized - invokingUserName=NT AUTHORITY\NETWORK SERVICE, poolIdentity=NT AUTHORITY\NETWORK SERVICE
+2018-01-05 19:38:29,165 DEBUG IsAuthorized - Authorized (matching pool identity)
+2018-01-05 19:38:29,184 INFO  EnsureLive - SequentialWorkflowList.EnsureLive:1
+2018-01-05 19:38:29,191 INFO  EnsureLive - SequentialWorkflowList.Promoting:1
+2018-01-05 19:38:29,191 INFO  EnsureLive - SequentialWorkflowList.IsLive:1
+2018-01-05 19:38:29,195 DEBUG SetState - SetState for 1 from ApprovalState to ApprovedState
+2018-01-05 19:38:29,196 INFO  UpdateState - 59fa9811-5938-4a00-947a-9a0f4f955d64  StateMachineActivity.UpdateState:Closed
+2018-01-05 19:38:29,211 ERROR Execute - SendEmailActivity.Execute
+System.Net.Mail.SmtpException: Failure sending mail. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:25
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   at System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   at System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Tachyon.Server.Coordinator.Workflow.SendEMailActivity.Execute(Boolean fromShutdown)
+2018-01-05 19:38:29,228 ERROR Execute - The configuration of the SMTP client was the following:
+Host=localhost
+Port=25
+DeliveryFormat=SevenBit
+DeliveryMethod=Network
+EnableSsl=False
+Timeout=100000
+UseDefaultCredentials=True
+Domain=
+UserName=
+Password=*********
+
+2018-01-05 19:38:29,228 INFO  UpdateState - 6c05d9ff-e16c-4d13-9548-dfd18c59c457  SendEMailActivity.UpdateState:Closed
+2018-01-05 19:38:29,229 INFO  UpdateState - 229b3fc5-85f0-46c0-9f4b-de3abbdbbfea  ParallelSequenceActivity.UpdateState:Closed
+2018-01-05 19:38:29,230 INFO  UpdateState - a272ef32-9db8-40c9-92ce-5d9736dfb744  IfElseActivity.UpdateState:Initialized
+2018-01-05 19:38:29,231 INFO  UpdateState - a272ef32-9db8-40c9-92ce-5d9736dfb744  IfElseActivity.UpdateState:Executing
+2018-01-05 19:38:29,231 INFO  UpdateState - 4d888e0b-1563-4634-a3ac-b17a656e6cc7  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:38:29,232 DEBUG set_ParameterList_out - 4d888e0b-1563-4634-a3ac-b17a656e6cc7  ConditionActivity.ParameterList_out:Setting State to ApprovedState
+2018-01-05 19:38:29,232 INFO  UpdateState - 4d888e0b-1563-4634-a3ac-b17a656e6cc7  ConditionActivity.UpdateState:Executing
+2018-01-05 19:38:29,232 DEBUG Execute - 4d888e0b-1563-4634-a3ac-b17a656e6cc7  ConditionActivity.Execute:Condition: RejectedState = ApprovedState
+2018-01-05 19:38:29,237 INFO  UpdateState - 4d888e0b-1563-4634-a3ac-b17a656e6cc7  ConditionActivity.UpdateState:Closed
+2018-01-05 19:38:29,237 INFO  UpdateState - ff5875aa-d036-4d64-a1a3-2615ca7777fd  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:38:29,238 INFO  UpdateState - ff5875aa-d036-4d64-a1a3-2615ca7777fd  ConditionActivity.UpdateState:Executing
+2018-01-05 19:38:29,238 INFO  UpdateState - ff5875aa-d036-4d64-a1a3-2615ca7777fd  ConditionActivity.UpdateState:Closed
+2018-01-05 19:38:29,239 INFO  UpdateState - 5d913023-b64a-4c63-bdb6-f86c56026d03  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:38:29,239 INFO  UpdateState - 5d913023-b64a-4c63-bdb6-f86c56026d03  SequenceActivity.UpdateState:Executing
+2018-01-05 19:38:29,240 INFO  UpdateState - d3b61f11-d5de-403d-b1a0-c2be5f032db0  CodeActivity.UpdateState:Initialized
+2018-01-05 19:38:29,240 DEBUG set_ParameterList_out - d3b61f11-d5de-403d-b1a0-c2be5f032db0  CodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:38:29,241 DEBUG set_ParameterList_out - d3b61f11-d5de-403d-b1a0-c2be5f032db0  CodeActivity.ParameterList_out:Setting runtime to System.Collections.Generic.Dictionary`2[System.String,System.Object]
+2018-01-05 19:38:29,241 INFO  UpdateState - d3b61f11-d5de-403d-b1a0-c2be5f032db0  CodeActivity.UpdateState:Executing
+2018-01-05 19:38:29,244 INFO  UpdateState - d3b61f11-d5de-403d-b1a0-c2be5f032db0  CodeActivity.UpdateState:Closed
+2018-01-05 19:38:29,245 INFO  UpdateState - 736cca10-c62f-4738-a94b-c27c56769e87  SendEMailActivity.UpdateState:Initialized
+2018-01-05 19:38:29,245 DEBUG set_ParameterList_out - 736cca10-c62f-4738-a94b-c27c56769e87  SendEMailActivity.ParameterList_out:Setting SmtpHost to localhost
+2018-01-05 19:38:29,245 DEBUG set_ParameterList_out - 736cca10-c62f-4738-a94b-c27c56769e87  SendEMailActivity.ParameterList_out:Setting From to tachyon@1e.local
+2018-01-05 19:38:29,246 DEBUG set_ParameterList_out - 736cca10-c62f-4738-a94b-c27c56769e87  SendEMailActivity.ParameterList_out:Setting To to Test@Automation.com
+2018-01-05 19:38:29,246 DEBUG set_ParameterList_out - 736cca10-c62f-4738-a94b-c27c56769e87  SendEMailActivity.ParameterList_out:Setting Subject to Tachyon Action 2 has been approved
+2018-01-05 19:38:29,246 DEBUG set_ParameterList_out - 736cca10-c62f-4738-a94b-c27c56769e87  SendEMailActivity.ParameterList_out:Setting Body to <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> <title>Tachyon</title> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> </head> <body bgcolor="#f2f2f2"> <table align="center" border="0" cellpadding="0" cellspacing="0" width="500" style="max-width: 500px; font-family: Arial, sans-serif; font-size: 12px; color: #444444; border: 1px solid #EEEEEE"> <tr> <td height="2" bgcolor="#FF671F" colspan="3" style="padding: 0"></td></tr><tr> <td bgcolor="#FFFFFF" colspan="3" style="padding: 0"> <img src="cid:EmailHeader"/> </td></tr><tr> <td bgcolor="#ffffff" style="padding: 15px" colspan="3"> <h2 style="text-align: left; font-size: 24px; margin-top: 15px; margin-bottom: 15px;">Tachyon instruction approved</h2> <p> Tachyon instruction request has been <b>approved</b> by <b> TST03-2012R201\Administrator </b> on <b> 05/01/2018 19:38:29 UTC </b> . </p><h3 style="border-bottom: 1px solid #EEEEEE; margin-bottom: 10px; font-size: 14px">Instruction details</h3> <table width="100%" style="font-family: Arial, sans-serif; font-size: 12px; color: #444444;"> <tr> <td bgcolor="#F2F2F2" style="padding: 5px">Name</td><td bgcolor="#FAFAFA" style="padding: 5px"> Automation - Send echo Action </td></tr><tr> <td bgcolor="#F2F2F2" style="padding: 5px">Description</td><td bgcolor="#FAFAFA" style="padding: 5px"> Automation - Send an echo request to all machines </td></tr><tr> <td bgcolor="#F2F2F2" style="padding: 5px">Coverage</td><td bgcolor="#FAFAFA" style="padding: 5px"> All </td></tr></table> <h3 style="border-bottom: 1px solid #EEEEEE; margin-bottom: 10px; font-size: 14px">Reason for approval</h3> Approving the instructionid = 2 </td></tr><tr> <td bgcolor="#ffffff" style="text-align: center; padding: 15px" colspan="3"> <table border="0" cellspacing="0" cellpadding="0" align="center"> <tr> <td bgcolor="#ff671f" style="padding: 12px 18px 12px 18px; -webkit-border-radius:30px; border-radius:30px; color: #ffffff" align="center"> <a href="https://Tachyon.Lab.Local:443/explorer/#/instructions/history/responses/2" target="_blank" style="text-decoration: none; font-size: 14px; font-weight: normal; color: #ffffff; display: inline-block; font-family: Arial, sans-serif;"> Go to results page </a> </td></tr></table> </td></tr><tr> <td bgcolor="#353230" height="20" style="padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; color: #AAAAAA; text-align: center" colspan="3"> <strong>Tachyon</strong> by <strong>1E</strong> | Copyright &copy; 1E 2015- 2018 . All Rights Reserved. | <a href="http://www.1e.com/contact-us/" style="color: #ff671f; text-decoration:none !important; text-decoration:none;">Contact us</a> </td></tr></table> </body></html>
+2018-01-05 19:38:29,247 INFO  UpdateState - 736cca10-c62f-4738-a94b-c27c56769e87  SendEMailActivity.UpdateState:Executing
+2018-01-05 19:38:31,281 ERROR Execute - SendEmailActivity.Execute
+System.Net.Mail.SmtpException: Failure sending mail. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:25
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   at System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   at System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Tachyon.Server.Coordinator.Workflow.SendEMailActivity.Execute(Boolean fromShutdown)
+2018-01-05 19:38:31,282 ERROR Execute - The configuration of the SMTP client was the following:
+Host=localhost
+Port=25
+DeliveryFormat=SevenBit
+DeliveryMethod=Network
+EnableSsl=False
+Timeout=100000
+UseDefaultCredentials=True
+Domain=
+UserName=
+Password=*********
+
+2018-01-05 19:38:31,282 INFO  UpdateState - 736cca10-c62f-4738-a94b-c27c56769e87  SendEMailActivity.UpdateState:Closed
+2018-01-05 19:38:31,282 INFO  UpdateState - 5b458880-9cc8-4aeb-b9c2-0afb05852e60  CodeActivity.UpdateState:Initialized
+2018-01-05 19:38:31,283 DEBUG set_ParameterList_out - 5b458880-9cc8-4aeb-b9c2-0afb05852e60  CodeActivity.ParameterList_out:Setting referenceId to 2
+2018-01-05 19:38:31,283 DEBUG set_ParameterList_out - 5b458880-9cc8-4aeb-b9c2-0afb05852e60  CodeActivity.ParameterList_out:Setting runtime to System.Collections.Generic.Dictionary`2[System.String,System.Object]
+2018-01-05 19:38:31,284 INFO  UpdateState - 5b458880-9cc8-4aeb-b9c2-0afb05852e60  CodeActivity.UpdateState:Executing
+2018-01-05 19:38:31,342 INFO  UpdateState - 5b458880-9cc8-4aeb-b9c2-0afb05852e60  CodeActivity.UpdateState:Closed
+2018-01-05 19:38:31,344 INFO  UpdateState - d1191134-790f-4515-9458-a2e2078edee7  CodeActivity.UpdateState:Initialized
+2018-01-05 19:38:31,345 DEBUG set_ParameterList_out - d1191134-790f-4515-9458-a2e2078edee7  CodeActivity.ParameterList_out:Setting referenceId to 2
+2018-01-05 19:38:31,345 INFO  UpdateState - d1191134-790f-4515-9458-a2e2078edee7  CodeActivity.UpdateState:Executing
+2018-01-05 19:38:31,358 INFO  UpdateState - d1191134-790f-4515-9458-a2e2078edee7  CodeActivity.UpdateState:Closed
+2018-01-05 19:38:31,361 INFO  UpdateState - de9c807e-4f14-4877-8d19-8cac911871c9  DeferredCodeActivity.UpdateState:Initialized
+2018-01-05 19:38:31,362 INFO  UpdateState - de9c807e-4f14-4877-8d19-8cac911871c9  DeferredCodeActivity.UpdateState:Executing
+2018-01-05 19:38:31,371 INFO  UpdateState - de9c807e-4f14-4877-8d19-8cac911871c9  DeferredCodeActivity.UpdateState:Closed
+2018-01-05 19:38:31,372 INFO  UpdateState - 5d913023-b64a-4c63-bdb6-f86c56026d03  SequenceActivity.UpdateState:Closed
+2018-01-05 19:38:31,373 INFO  UpdateState - a272ef32-9db8-40c9-92ce-5d9736dfb744  IfElseActivity.UpdateState:Closed
+2018-01-05 19:38:31,373 INFO  UpdateState - 95f457c8-cc6d-4c15-b09e-f7c2b0a232b7  SequenceActivity.UpdateState:Closed
+2018-01-05 19:38:31,374 INFO  UpdateState - 1f966d4e-19db-42d8-8014-dcf4585b0227  IfElseActivity.UpdateState:Closed
+2018-01-05 19:38:31,374 INFO  UpdateState - 38f05842-4662-47ca-8a1a-60237261fbb7  SequenceActivity.UpdateState:Closed
+2018-01-05 19:38:31,375 INFO  UpdateState - 20437543-85f3-4365-b734-289c35038006  SequentialWorkflow.UpdateState:Closed
+2018-01-05 19:38:31,383 DEBUG State_changed - SequentialWorkflowList.State_changed:1, Approval, Closed
+2018-01-05 19:38:31,384 INFO  State_changed - SequentialWorkflowList.Removing:1, Approval
+2018-01-05 19:38:31,385 INFO  EnsureLive - SequentialWorkflowList.EnsureLive:1
+2018-01-05 19:38:31,386 DEBUG SetState - SetState for 1 from ApprovalState to ProcessingState
+2018-01-05 19:38:31,386 DEBUG SetState - Added handler for ProcessingSubmit1
+2018-01-05 19:38:31,386 DEBUG SetState - Added handler for ProcessingFailed1
+2018-01-05 19:38:31,387 DEBUG SetState - Added handler for Cancelled1
+2018-01-05 19:38:31,400 INFO  UpdateState - 3fb14fad-47c6-4d19-8d76-389e74f20bbe  SequentialWorkflow.UpdateState:Initialized
+2018-01-05 19:38:31,400 DEBUG State_changed - SequentialWorkflowList.State_changed:1, Processing, Initialized
+2018-01-05 19:38:31,401 INFO  UpdateState - 3fb14fad-47c6-4d19-8d76-389e74f20bbe  SequentialWorkflow.UpdateState:Executing
+2018-01-05 19:38:31,401 DEBUG State_changed - SequentialWorkflowList.State_changed:1, Processing, Executing
+2018-01-05 19:38:31,402 INFO  Add - SequentialWorkflowList.Promoting:1
+2018-01-05 19:38:31,405 INFO  UpdateState - 56ae3171-cadf-4ea5-bd13-327382d03839  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:38:31,406 INFO  UpdateState - 56ae3171-cadf-4ea5-bd13-327382d03839  SequenceActivity.UpdateState:Executing
+2018-01-05 19:38:31,406 INFO  UpdateState - 4b4f16de-a3a6-4594-b353-a1313736ff05  CodeActivity.UpdateState:Initialized
+2018-01-05 19:38:31,406 DEBUG set_ParameterList_out - 4b4f16de-a3a6-4594-b353-a1313736ff05  CodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:38:31,406 INFO  UpdateState - 4b4f16de-a3a6-4594-b353-a1313736ff05  CodeActivity.UpdateState:Executing
+2018-01-05 19:38:31,409 DEBUG LicensingCallback - License.dll callback: Features 1 NWM-Integration 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:38:31,409 DEBUG LicensingCallback - License.dll callback: Features 2 TachyonPlatform 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:38:31,410 DEBUG LicensingCallback - License.dll callback: Features 3 TachyonExplorer 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:38:31,411 DEBUG LicensingCallback - License.dll callback: Features 4 Automation 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:38:31,411 INFO  UpdateState - 4b4f16de-a3a6-4594-b353-a1313736ff05  CodeActivity.UpdateState:Closed
+2018-01-05 19:38:31,412 INFO  UpdateState - 4467a661-f153-4f00-9a79-0f723561be5e  IfElseActivity.UpdateState:Initialized
+2018-01-05 19:38:31,412 INFO  UpdateState - 4467a661-f153-4f00-9a79-0f723561be5e  IfElseActivity.UpdateState:Executing
+2018-01-05 19:38:31,413 INFO  UpdateState - 51a781e9-3e85-4d63-b5e7-ef348efe0418  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:38:31,413 DEBUG set_ParameterList_out - 51a781e9-3e85-4d63-b5e7-ef348efe0418  ConditionActivity.ParameterList_out:Setting IsLicensed to True
+2018-01-05 19:38:31,413 INFO  UpdateState - 51a781e9-3e85-4d63-b5e7-ef348efe0418  ConditionActivity.UpdateState:Executing
+2018-01-05 19:38:31,413 DEBUG Execute - 51a781e9-3e85-4d63-b5e7-ef348efe0418  ConditionActivity.Execute:Condition: false = True
+2018-01-05 19:38:31,414 INFO  UpdateState - 51a781e9-3e85-4d63-b5e7-ef348efe0418  ConditionActivity.UpdateState:Closed
+2018-01-05 19:38:31,414 INFO  UpdateState - ef79a326-a992-4e35-9c7b-45b9a3dbebff  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:38:31,414 INFO  UpdateState - ef79a326-a992-4e35-9c7b-45b9a3dbebff  ConditionActivity.UpdateState:Executing
+2018-01-05 19:38:31,414 INFO  UpdateState - ef79a326-a992-4e35-9c7b-45b9a3dbebff  ConditionActivity.UpdateState:Closed
+2018-01-05 19:38:31,415 INFO  UpdateState - 6c068207-1201-4ca1-8c3c-1c173a129ae2  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:38:31,416 INFO  UpdateState - 6c068207-1201-4ca1-8c3c-1c173a129ae2  SequenceActivity.UpdateState:Executing
+2018-01-05 19:38:31,418 INFO  UpdateState - be22462e-07ad-4644-ad0f-dc5330c52448  ASyncCodeActivity.UpdateState:Initialized
+2018-01-05 19:38:31,418 DEBUG set_ParameterList_out - be22462e-07ad-4644-ad0f-dc5330c52448  ASyncCodeActivity.ParameterList_out:Setting responseTableOptimisation to Write
+2018-01-05 19:38:31,419 DEBUG set_ParameterList_out - be22462e-07ad-4644-ad0f-dc5330c52448  ASyncCodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:38:31,419 INFO  UpdateState - be22462e-07ad-4644-ad0f-dc5330c52448  ASyncCodeActivity.UpdateState:Executing
+2018-01-05 19:38:31,423 INFO  UpdateState - 06b24b5a-b4a9-4298-a440-1c6e151e4395  StateMachineActivity.UpdateState:Initialized
+2018-01-05 19:38:31,430 DEBUG set_ParameterList_out - 06b24b5a-b4a9-4298-a440-1c6e151e4395  StateMachineActivity.ParameterList_out:Setting Name to State Activity Processing
+2018-01-05 19:38:31,430 INFO  UpdateState - f9ef7398-623c-4175-b1a0-508eff982869  CodeActivity.UpdateState:Initialized
+2018-01-05 19:38:31,430 DEBUG set_ParameterList_out - f9ef7398-623c-4175-b1a0-508eff982869  CodeActivity.ParameterList_out:Setting id to 1
+2018-01-05 19:38:31,431 DEBUG set_ParameterList_out - f9ef7398-623c-4175-b1a0-508eff982869  CodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:38:31,431 DEBUG set_ParameterList_out - f9ef7398-623c-4175-b1a0-508eff982869  CodeActivity.ParameterList_out:Setting responseTableOptimisation to Write
+2018-01-05 19:38:31,431 INFO  UpdateState - 06b24b5a-b4a9-4298-a440-1c6e151e4395  StateMachineActivity.UpdateState:Executing
+2018-01-05 19:38:31,433 DEBUG SetState - SetState for 1 from  to ProcessingState
+2018-01-05 19:38:31,434 DEBUG SetState - Added handler for InstanceFailed1
+2018-01-05 19:38:31,434 DEBUG SetState - Added handler for InstanceSucceeded1
+2018-01-05 19:38:31,434 INFO  UpdateState - be22462e-07ad-4644-ad0f-dc5330c52448  ASyncCodeActivity.UpdateState:Waiting
+2018-01-05 19:38:31,434 DEBUG State_changed - SequentialWorkflowList.State_changed:1, Processing, Waiting
+2018-01-05 19:38:31,435 INFO  UpdateState - f9ef7398-623c-4175-b1a0-508eff982869  CodeActivity.UpdateState:Executing
+2018-01-05 19:38:31,438 INFO  UpdateState - f9ef7398-623c-4175-b1a0-508eff982869  CodeActivity.UpdateState:Closed
+2018-01-05 19:38:31,469 INFO  Execute - Sequencing Instruction 2 as 2
+2018-01-05 19:38:31,486 DEBUG PostInstructionToCores - Posting Action with ID 2 to Core API 1
+2018-01-05 19:38:31,736 INFO  EnsureLive - SequentialWorkflowList.EnsureLive:1
+2018-01-05 19:38:31,736 INFO  EnsureLive - SequentialWorkflowList.Promoting:1
+2018-01-05 19:38:31,737 INFO  EnsureLive - SequentialWorkflowList.IsLive:1
+2018-01-05 19:38:31,740 DEBUG SetState - SetState for 1 from ProcessingState to SucceededState
+2018-01-05 19:38:31,741 INFO  UpdateState - 06b24b5a-b4a9-4298-a440-1c6e151e4395  StateMachineActivity.UpdateState:Closed
+2018-01-05 19:38:31,742 INFO  UpdateState - be22462e-07ad-4644-ad0f-dc5330c52448  ASyncCodeActivity.UpdateState:Closed
+2018-01-05 19:38:31,743 INFO  UpdateState - 3e4f0526-097b-4dad-966d-684c8f7ff0e7  IfElseActivity.UpdateState:Initialized
+2018-01-05 19:38:31,743 INFO  UpdateState - 3e4f0526-097b-4dad-966d-684c8f7ff0e7  IfElseActivity.UpdateState:Executing
+2018-01-05 19:38:31,744 INFO  UpdateState - 2263d0b7-746a-4f37-93d9-e389204d343e  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:38:31,744 DEBUG set_ParameterList_out - 2263d0b7-746a-4f37-93d9-e389204d343e  ConditionActivity.ParameterList_out:Setting State to SucceededState
+2018-01-05 19:38:31,744 INFO  UpdateState - 2263d0b7-746a-4f37-93d9-e389204d343e  ConditionActivity.UpdateState:Executing
+2018-01-05 19:38:31,745 DEBUG Execute - 2263d0b7-746a-4f37-93d9-e389204d343e  ConditionActivity.Execute:Condition: FailedState = SucceededState
+2018-01-05 19:38:31,745 INFO  UpdateState - 2263d0b7-746a-4f37-93d9-e389204d343e  ConditionActivity.UpdateState:Closed
+2018-01-05 19:38:31,745 INFO  UpdateState - ff2131e4-9434-46f8-a3d4-ac7f78bab931  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:38:31,746 INFO  UpdateState - ff2131e4-9434-46f8-a3d4-ac7f78bab931  ConditionActivity.UpdateState:Executing
+2018-01-05 19:38:31,746 INFO  UpdateState - ff2131e4-9434-46f8-a3d4-ac7f78bab931  ConditionActivity.UpdateState:Closed
+2018-01-05 19:38:31,747 INFO  UpdateState - a88d2d79-d6c3-495d-bd1a-4966a6b816d3  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:38:31,747 INFO  UpdateState - a88d2d79-d6c3-495d-bd1a-4966a6b816d3  SequenceActivity.UpdateState:Executing
+2018-01-05 19:38:31,747 INFO  UpdateState - f7cc67e5-f5a9-445c-9695-6f20bef20093  DeferredCodeActivity.UpdateState:Initialized
+2018-01-05 19:38:31,748 INFO  UpdateState - f7cc67e5-f5a9-445c-9695-6f20bef20093  DeferredCodeActivity.UpdateState:Executing
+2018-01-05 19:38:31,748 INFO  UpdateState - f7cc67e5-f5a9-445c-9695-6f20bef20093  DeferredCodeActivity.UpdateState:Closed
+2018-01-05 19:38:31,749 INFO  UpdateState - a88d2d79-d6c3-495d-bd1a-4966a6b816d3  SequenceActivity.UpdateState:Closed
+2018-01-05 19:38:31,749 INFO  UpdateState - 3e4f0526-097b-4dad-966d-684c8f7ff0e7  IfElseActivity.UpdateState:Closed
+2018-01-05 19:38:31,750 INFO  UpdateState - 6c068207-1201-4ca1-8c3c-1c173a129ae2  SequenceActivity.UpdateState:Closed
+2018-01-05 19:38:31,750 INFO  UpdateState - 4467a661-f153-4f00-9a79-0f723561be5e  IfElseActivity.UpdateState:Closed
+2018-01-05 19:38:31,751 INFO  UpdateState - 56ae3171-cadf-4ea5-bd13-327382d03839  SequenceActivity.UpdateState:Closed
+2018-01-05 19:38:31,751 INFO  UpdateState - 3fb14fad-47c6-4d19-8d76-389e74f20bbe  SequentialWorkflow.UpdateState:Closed
+2018-01-05 19:38:31,752 DEBUG State_changed - SequentialWorkflowList.State_changed:1, Processing, Closed
+2018-01-05 19:38:31,752 INFO  State_changed - SequentialWorkflowList.Removing:1, Processing
+2018-01-05 19:38:31,753 INFO  EnsureLive - SequentialWorkflowList.EnsureLive:1
+2018-01-05 19:38:31,753 DEBUG SetState - SetState for 1 from ProcessingState to InProgressState
+2018-01-05 19:38:31,754 DEBUG SetState - Added handler for InProgressSubmit1
+2018-01-05 19:38:31,754 DEBUG SetState - Added handler for InProgressFailed1
+2018-01-05 19:38:31,755 DEBUG SetState - Added handler for Cancelled1
+2018-01-05 19:38:31,777 INFO  UpdateState - 09807b0d-2f40-41fe-be09-c6f2ed75444d  SequentialWorkflow.UpdateState:Initialized
+2018-01-05 19:38:31,778 DEBUG State_changed - SequentialWorkflowList.State_changed:1, InProgress, Initialized
+2018-01-05 19:38:31,778 INFO  UpdateState - 09807b0d-2f40-41fe-be09-c6f2ed75444d  SequentialWorkflow.UpdateState:Executing
+2018-01-05 19:38:31,779 DEBUG State_changed - SequentialWorkflowList.State_changed:1, InProgress, Executing
+2018-01-05 19:38:31,779 INFO  Add - SequentialWorkflowList.Promoting:1
+2018-01-05 19:38:31,780 INFO  UpdateState - be557dd3-accd-4ccb-91bf-4740d4e65fbe  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:38:31,781 INFO  UpdateState - be557dd3-accd-4ccb-91bf-4740d4e65fbe  SequenceActivity.UpdateState:Executing
+2018-01-05 19:38:31,781 INFO  UpdateState - eeda888f-1a4b-4225-bdf5-78b556fed8e6  CodeActivity.UpdateState:Initialized
+2018-01-05 19:38:31,782 DEBUG set_ParameterList_out - eeda888f-1a4b-4225-bdf5-78b556fed8e6  CodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:38:31,782 INFO  UpdateState - eeda888f-1a4b-4225-bdf5-78b556fed8e6  CodeActivity.UpdateState:Executing
+2018-01-05 19:38:31,783 INFO  UpdateState - eeda888f-1a4b-4225-bdf5-78b556fed8e6  CodeActivity.UpdateState:Closed
+2018-01-05 19:38:31,785 INFO  UpdateState - dbe77902-005b-4c02-a411-c16f71654b30  EventActivity.UpdateState:Initialized
+2018-01-05 19:38:31,786 DEBUG set_ParameterList_out - dbe77902-005b-4c02-a411-c16f71654b30  EventActivity.ParameterList_out:Setting Time to 05/01/2018 20:38:31
+2018-01-05 19:38:31,786 INFO  UpdateState - dbe77902-005b-4c02-a411-c16f71654b30  EventActivity.UpdateState:Executing
+2018-01-05 19:38:31,797 DEBUG State_changed - SequentialWorkflowList.State_changed:1, InProgress, Waiting
+2018-01-05 19:38:31,801 INFO  Execute - Next Event in 3599981.9993 ms for 1
+2018-01-05 19:38:32,256 DEBUG IsAuthorized - invokingUserName=NT AUTHORITY\NETWORK SERVICE, poolIdentity=NT AUTHORITY\NETWORK SERVICE
+2018-01-05 19:38:32,257 DEBUG IsAuthorized - Authorized (matching pool identity)
+2018-01-05 19:38:32,258 INFO  EnsureLive - SequentialWorkflowList.EnsureLive:1
+2018-01-05 19:38:32,258 INFO  EnsureLive - SequentialWorkflowList.Promoting:1
+2018-01-05 19:38:32,258 INFO  EnsureLive - SequentialWorkflowList.IsLive:1
+2018-01-05 19:38:32,259 WARN  Raise_Event - No handler found for event InstanceApproved1
+2018-01-05 19:38:39,460 WARN  LicensingCallback - License.dll callback: LICENSING: 0 days left
+2018-01-05 19:38:52,727 DEBUG IsAuthorized - invokingUserName=NT AUTHORITY\NETWORK SERVICE, poolIdentity=NT AUTHORITY\NETWORK SERVICE
+2018-01-05 19:38:52,728 DEBUG IsAuthorized - Authorized (matching pool identity)
+2018-01-05 19:38:52,729 INFO  PostInternal - Processing new instruction with ID 3
+2018-01-05 19:38:52,735 DEBUG SetState - SetState for 2 from  to ProcessingState
+2018-01-05 19:38:52,736 DEBUG SetState - Added handler for ProcessingSubmit2
+2018-01-05 19:38:52,736 DEBUG SetState - Added handler for ProcessingFailed2
+2018-01-05 19:38:52,737 DEBUG SetState - Added handler for Cancelled2
+2018-01-05 19:38:52,752 INFO  UpdateState - bf1faf41-7764-418a-9c8c-788cc555243e  SequentialWorkflow.UpdateState:Initialized
+2018-01-05 19:38:52,754 DEBUG State_changed - SequentialWorkflowList.State_changed:2, Processing, Initialized
+2018-01-05 19:38:52,754 INFO  UpdateState - bf1faf41-7764-418a-9c8c-788cc555243e  SequentialWorkflow.UpdateState:Executing
+2018-01-05 19:38:52,755 DEBUG State_changed - SequentialWorkflowList.State_changed:2, Processing, Executing
+2018-01-05 19:38:52,756 INFO  Add - SequentialWorkflowList.Promoting:2
+2018-01-05 19:38:52,757 INFO  UpdateState - 60b1bf8b-91f7-4fc7-92ec-208944a30c2c  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:38:52,758 INFO  UpdateState - 60b1bf8b-91f7-4fc7-92ec-208944a30c2c  SequenceActivity.UpdateState:Executing
+2018-01-05 19:38:52,758 INFO  UpdateState - 73c0b3bd-a86d-491e-9178-fa4ed9c940a2  CodeActivity.UpdateState:Initialized
+2018-01-05 19:38:52,758 DEBUG set_ParameterList_out - 73c0b3bd-a86d-491e-9178-fa4ed9c940a2  CodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:38:52,758 INFO  UpdateState - 73c0b3bd-a86d-491e-9178-fa4ed9c940a2  CodeActivity.UpdateState:Executing
+2018-01-05 19:38:52,764 DEBUG LicensingCallback - License.dll callback: Features 1 NWM-Integration 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:38:52,764 DEBUG LicensingCallback - License.dll callback: Features 2 TachyonPlatform 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:38:52,764 DEBUG LicensingCallback - License.dll callback: Features 3 TachyonExplorer 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:38:52,764 DEBUG LicensingCallback - License.dll callback: Features 4 Automation 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:38:52,764 INFO  UpdateState - 73c0b3bd-a86d-491e-9178-fa4ed9c940a2  CodeActivity.UpdateState:Closed
+2018-01-05 19:38:52,769 INFO  UpdateState - f725e112-d316-46d6-bdc4-c58656e10e2c  IfElseActivity.UpdateState:Initialized
+2018-01-05 19:38:52,769 INFO  UpdateState - f725e112-d316-46d6-bdc4-c58656e10e2c  IfElseActivity.UpdateState:Executing
+2018-01-05 19:38:52,770 INFO  UpdateState - ce88db08-f62e-461d-a299-cd772f400ce2  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:38:52,770 DEBUG set_ParameterList_out - ce88db08-f62e-461d-a299-cd772f400ce2  ConditionActivity.ParameterList_out:Setting IsLicensed to True
+2018-01-05 19:38:52,770 INFO  UpdateState - ce88db08-f62e-461d-a299-cd772f400ce2  ConditionActivity.UpdateState:Executing
+2018-01-05 19:38:52,771 DEBUG Execute - ce88db08-f62e-461d-a299-cd772f400ce2  ConditionActivity.Execute:Condition: false = True
+2018-01-05 19:38:52,771 INFO  UpdateState - ce88db08-f62e-461d-a299-cd772f400ce2  ConditionActivity.UpdateState:Closed
+2018-01-05 19:38:52,771 INFO  UpdateState - e8fc5748-ad31-4b74-ac51-a9228228b907  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:38:52,772 INFO  UpdateState - e8fc5748-ad31-4b74-ac51-a9228228b907  ConditionActivity.UpdateState:Executing
+2018-01-05 19:38:52,772 INFO  UpdateState - e8fc5748-ad31-4b74-ac51-a9228228b907  ConditionActivity.UpdateState:Closed
+2018-01-05 19:38:52,773 INFO  UpdateState - c8505715-c31d-49a4-a6cd-f4497222f96e  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:38:52,773 INFO  UpdateState - c8505715-c31d-49a4-a6cd-f4497222f96e  SequenceActivity.UpdateState:Executing
+2018-01-05 19:38:52,777 INFO  UpdateState - 12a439b8-5e7c-4e3f-9c99-da7ef216a939  ASyncCodeActivity.UpdateState:Initialized
+2018-01-05 19:38:52,778 DEBUG set_ParameterList_out - 12a439b8-5e7c-4e3f-9c99-da7ef216a939  ASyncCodeActivity.ParameterList_out:Setting responseTableOptimisation to Write
+2018-01-05 19:38:52,778 DEBUG set_ParameterList_out - 12a439b8-5e7c-4e3f-9c99-da7ef216a939  ASyncCodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:38:52,779 INFO  UpdateState - 12a439b8-5e7c-4e3f-9c99-da7ef216a939  ASyncCodeActivity.UpdateState:Executing
+2018-01-05 19:38:52,779 INFO  UpdateState - 45a79356-7c13-4d37-be87-692e67db1abf  StateMachineActivity.UpdateState:Initialized
+2018-01-05 19:38:52,780 DEBUG set_ParameterList_out - 45a79356-7c13-4d37-be87-692e67db1abf  StateMachineActivity.ParameterList_out:Setting Name to State Activity Processing
+2018-01-05 19:38:52,780 INFO  UpdateState - 0478700b-df59-431b-a67c-384e3bd0f51c  CodeActivity.UpdateState:Initialized
+2018-01-05 19:38:52,781 DEBUG set_ParameterList_out - 0478700b-df59-431b-a67c-384e3bd0f51c  CodeActivity.ParameterList_out:Setting id to 2
+2018-01-05 19:38:52,781 DEBUG set_ParameterList_out - 0478700b-df59-431b-a67c-384e3bd0f51c  CodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:38:52,782 DEBUG set_ParameterList_out - 0478700b-df59-431b-a67c-384e3bd0f51c  CodeActivity.ParameterList_out:Setting responseTableOptimisation to Write
+2018-01-05 19:38:52,782 INFO  UpdateState - 45a79356-7c13-4d37-be87-692e67db1abf  StateMachineActivity.UpdateState:Executing
+2018-01-05 19:38:52,782 DEBUG SetState - SetState for 2 from  to ProcessingState
+2018-01-05 19:38:52,783 DEBUG SetState - Added handler for InstanceFailed2
+2018-01-05 19:38:52,783 DEBUG SetState - Added handler for InstanceSucceeded2
+2018-01-05 19:38:52,784 INFO  UpdateState - 12a439b8-5e7c-4e3f-9c99-da7ef216a939  ASyncCodeActivity.UpdateState:Waiting
+2018-01-05 19:38:52,784 DEBUG State_changed - SequentialWorkflowList.State_changed:2, Processing, Waiting
+2018-01-05 19:38:52,785 INFO  UpdateState - 0478700b-df59-431b-a67c-384e3bd0f51c  CodeActivity.UpdateState:Executing
+2018-01-05 19:38:52,785 INFO  UpdateState - 0478700b-df59-431b-a67c-384e3bd0f51c  CodeActivity.UpdateState:Closed
+2018-01-05 19:38:52,794 INFO  Execute - Sequencing Instruction 3 as 3
+2018-01-05 19:38:52,794 DEBUG PostInstructionToCores - Posting Question with ID 3 to Core API 1
+2018-01-05 19:38:52,856 INFO  EnsureLive - SequentialWorkflowList.EnsureLive:2
+2018-01-05 19:38:52,856 INFO  EnsureLive - SequentialWorkflowList.Promoting:2
+2018-01-05 19:38:52,857 INFO  EnsureLive - SequentialWorkflowList.IsLive:2
+2018-01-05 19:38:52,857 DEBUG SetState - SetState for 2 from ProcessingState to SucceededState
+2018-01-05 19:38:52,858 INFO  UpdateState - 45a79356-7c13-4d37-be87-692e67db1abf  StateMachineActivity.UpdateState:Closed
+2018-01-05 19:38:52,858 INFO  UpdateState - 12a439b8-5e7c-4e3f-9c99-da7ef216a939  ASyncCodeActivity.UpdateState:Closed
+2018-01-05 19:38:52,859 INFO  UpdateState - 1f61e5a3-f888-441f-bf94-e2781731eb6f  IfElseActivity.UpdateState:Initialized
+2018-01-05 19:38:52,859 INFO  UpdateState - 1f61e5a3-f888-441f-bf94-e2781731eb6f  IfElseActivity.UpdateState:Executing
+2018-01-05 19:38:52,860 INFO  UpdateState - ecf9e2f4-5f73-41c8-8ea2-52c17c49bd21  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:38:52,860 DEBUG set_ParameterList_out - ecf9e2f4-5f73-41c8-8ea2-52c17c49bd21  ConditionActivity.ParameterList_out:Setting State to SucceededState
+2018-01-05 19:38:52,860 INFO  UpdateState - ecf9e2f4-5f73-41c8-8ea2-52c17c49bd21  ConditionActivity.UpdateState:Executing
+2018-01-05 19:38:52,861 DEBUG Execute - ecf9e2f4-5f73-41c8-8ea2-52c17c49bd21  ConditionActivity.Execute:Condition: FailedState = SucceededState
+2018-01-05 19:38:52,861 INFO  UpdateState - ecf9e2f4-5f73-41c8-8ea2-52c17c49bd21  ConditionActivity.UpdateState:Closed
+2018-01-05 19:38:52,861 INFO  UpdateState - a5a6e54e-4ce5-4e34-ace3-8d8e98119eac  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:38:52,861 INFO  UpdateState - a5a6e54e-4ce5-4e34-ace3-8d8e98119eac  ConditionActivity.UpdateState:Executing
+2018-01-05 19:38:52,862 INFO  UpdateState - a5a6e54e-4ce5-4e34-ace3-8d8e98119eac  ConditionActivity.UpdateState:Closed
+2018-01-05 19:38:52,862 INFO  UpdateState - 960b867a-a8f3-4645-b6be-b13ddbf160ac  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:38:52,862 INFO  UpdateState - 960b867a-a8f3-4645-b6be-b13ddbf160ac  SequenceActivity.UpdateState:Executing
+2018-01-05 19:38:52,869 INFO  UpdateState - 8ce5e18b-3b59-46d2-bb9f-4ea9d1f2926c  DeferredCodeActivity.UpdateState:Initialized
+2018-01-05 19:38:52,870 INFO  UpdateState - 8ce5e18b-3b59-46d2-bb9f-4ea9d1f2926c  DeferredCodeActivity.UpdateState:Executing
+2018-01-05 19:38:52,870 INFO  UpdateState - 8ce5e18b-3b59-46d2-bb9f-4ea9d1f2926c  DeferredCodeActivity.UpdateState:Closed
+2018-01-05 19:38:52,871 INFO  UpdateState - 960b867a-a8f3-4645-b6be-b13ddbf160ac  SequenceActivity.UpdateState:Closed
+2018-01-05 19:38:52,871 INFO  UpdateState - 1f61e5a3-f888-441f-bf94-e2781731eb6f  IfElseActivity.UpdateState:Closed
+2018-01-05 19:38:52,871 INFO  UpdateState - c8505715-c31d-49a4-a6cd-f4497222f96e  SequenceActivity.UpdateState:Closed
+2018-01-05 19:38:52,872 INFO  UpdateState - f725e112-d316-46d6-bdc4-c58656e10e2c  IfElseActivity.UpdateState:Closed
+2018-01-05 19:38:52,872 INFO  UpdateState - 60b1bf8b-91f7-4fc7-92ec-208944a30c2c  SequenceActivity.UpdateState:Closed
+2018-01-05 19:38:52,876 INFO  UpdateState - bf1faf41-7764-418a-9c8c-788cc555243e  SequentialWorkflow.UpdateState:Closed
+2018-01-05 19:38:52,876 DEBUG State_changed - SequentialWorkflowList.State_changed:2, Processing, Closed
+2018-01-05 19:38:52,876 INFO  State_changed - SequentialWorkflowList.Removing:2, Processing
+2018-01-05 19:38:52,878 INFO  EnsureLive - SequentialWorkflowList.EnsureLive:2
+2018-01-05 19:38:52,878 DEBUG SetState - SetState for 2 from ProcessingState to InProgressState
+2018-01-05 19:38:52,878 DEBUG SetState - Added handler for InProgressSubmit2
+2018-01-05 19:38:52,879 DEBUG SetState - Added handler for InProgressFailed2
+2018-01-05 19:38:52,879 DEBUG SetState - Added handler for Cancelled2
+2018-01-05 19:38:52,889 INFO  UpdateState - c34a54c5-0048-4680-8d7c-9cb36b1078e8  SequentialWorkflow.UpdateState:Initialized
+2018-01-05 19:38:52,890 DEBUG State_changed - SequentialWorkflowList.State_changed:2, InProgress, Initialized
+2018-01-05 19:38:52,890 INFO  UpdateState - c34a54c5-0048-4680-8d7c-9cb36b1078e8  SequentialWorkflow.UpdateState:Executing
+2018-01-05 19:38:52,891 DEBUG State_changed - SequentialWorkflowList.State_changed:2, InProgress, Executing
+2018-01-05 19:38:52,891 INFO  Add - SequentialWorkflowList.Promoting:2
+2018-01-05 19:38:52,892 INFO  UpdateState - 78508fc8-75cc-46fc-b737-696605c1db72  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:38:52,892 INFO  UpdateState - 78508fc8-75cc-46fc-b737-696605c1db72  SequenceActivity.UpdateState:Executing
+2018-01-05 19:38:52,893 INFO  UpdateState - aedf398e-a646-4991-9818-25032670591b  CodeActivity.UpdateState:Initialized
+2018-01-05 19:38:52,893 DEBUG set_ParameterList_out - aedf398e-a646-4991-9818-25032670591b  CodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:38:52,893 INFO  UpdateState - aedf398e-a646-4991-9818-25032670591b  CodeActivity.UpdateState:Executing
+2018-01-05 19:38:52,894 INFO  UpdateState - aedf398e-a646-4991-9818-25032670591b  CodeActivity.UpdateState:Closed
+2018-01-05 19:38:52,894 INFO  UpdateState - d03444f8-ea21-4649-bff5-9bb296cdadd3  EventActivity.UpdateState:Initialized
+2018-01-05 19:38:52,895 DEBUG set_ParameterList_out - d03444f8-ea21-4649-bff5-9bb296cdadd3  EventActivity.ParameterList_out:Setting Time to 05/01/2018 20:38:52
+2018-01-05 19:38:52,895 INFO  UpdateState - d03444f8-ea21-4649-bff5-9bb296cdadd3  EventActivity.UpdateState:Executing
+2018-01-05 19:38:52,895 DEBUG State_changed - SequentialWorkflowList.State_changed:2, InProgress, Waiting
+2018-01-05 19:38:52,895 INFO  Execute - Next Event in 3578887.8645 ms for 1
+2018-01-05 19:39:11,371 DEBUG IsAuthorized - invokingUserName=NT AUTHORITY\NETWORK SERVICE, poolIdentity=NT AUTHORITY\NETWORK SERVICE
+2018-01-05 19:39:11,372 DEBUG IsAuthorized - Authorized (matching pool identity)
+2018-01-05 19:39:11,374 INFO  PostInternal - Processing new instruction with ID 4
+2018-01-05 19:39:11,384 DEBUG SetState - SetState for 3 from  to ProcessingState
+2018-01-05 19:39:11,385 DEBUG SetState - Added handler for ProcessingSubmit3
+2018-01-05 19:39:11,386 DEBUG SetState - Added handler for ProcessingFailed3
+2018-01-05 19:39:11,386 DEBUG SetState - Added handler for Cancelled3
+2018-01-05 19:39:11,412 INFO  UpdateState - 49871e4b-311f-4d18-b038-8ab81e40c9f0  SequentialWorkflow.UpdateState:Initialized
+2018-01-05 19:39:11,413 DEBUG State_changed - SequentialWorkflowList.State_changed:3, Processing, Initialized
+2018-01-05 19:39:11,413 INFO  UpdateState - 49871e4b-311f-4d18-b038-8ab81e40c9f0  SequentialWorkflow.UpdateState:Executing
+2018-01-05 19:39:11,414 DEBUG State_changed - SequentialWorkflowList.State_changed:3, Processing, Executing
+2018-01-05 19:39:11,415 INFO  Add - SequentialWorkflowList.Promoting:3
+2018-01-05 19:39:11,416 INFO  UpdateState - 16d0e958-be79-45cd-b870-914621e1c64e  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:39:11,416 INFO  UpdateState - 16d0e958-be79-45cd-b870-914621e1c64e  SequenceActivity.UpdateState:Executing
+2018-01-05 19:39:11,417 INFO  UpdateState - 9ff1f721-8b0a-4a53-adc2-a82ad1dfb0ae  CodeActivity.UpdateState:Initialized
+2018-01-05 19:39:11,417 DEBUG set_ParameterList_out - 9ff1f721-8b0a-4a53-adc2-a82ad1dfb0ae  CodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:39:11,418 INFO  UpdateState - 9ff1f721-8b0a-4a53-adc2-a82ad1dfb0ae  CodeActivity.UpdateState:Executing
+2018-01-05 19:39:11,420 DEBUG LicensingCallback - License.dll callback: Features 1 NWM-Integration 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:39:11,421 DEBUG LicensingCallback - License.dll callback: Features 2 TachyonPlatform 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:39:11,422 DEBUG LicensingCallback - License.dll callback: Features 3 TachyonExplorer 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:39:11,422 DEBUG LicensingCallback - License.dll callback: Features 4 Automation 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:39:11,423 INFO  UpdateState - 9ff1f721-8b0a-4a53-adc2-a82ad1dfb0ae  CodeActivity.UpdateState:Closed
+2018-01-05 19:39:11,424 INFO  UpdateState - f5a20e82-2329-4391-b0d3-0f657059325e  IfElseActivity.UpdateState:Initialized
+2018-01-05 19:39:11,425 INFO  UpdateState - f5a20e82-2329-4391-b0d3-0f657059325e  IfElseActivity.UpdateState:Executing
+2018-01-05 19:39:11,425 INFO  UpdateState - 83753a0e-41d4-4156-86f8-cffc9520e327  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:39:11,426 DEBUG set_ParameterList_out - 83753a0e-41d4-4156-86f8-cffc9520e327  ConditionActivity.ParameterList_out:Setting IsLicensed to True
+2018-01-05 19:39:11,426 INFO  UpdateState - 83753a0e-41d4-4156-86f8-cffc9520e327  ConditionActivity.UpdateState:Executing
+2018-01-05 19:39:11,427 DEBUG Execute - 83753a0e-41d4-4156-86f8-cffc9520e327  ConditionActivity.Execute:Condition: false = True
+2018-01-05 19:39:11,427 INFO  UpdateState - 83753a0e-41d4-4156-86f8-cffc9520e327  ConditionActivity.UpdateState:Closed
+2018-01-05 19:39:11,428 INFO  UpdateState - 7f998771-3323-4f12-8109-e4ff5fb351e4  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:39:11,434 INFO  UpdateState - 7f998771-3323-4f12-8109-e4ff5fb351e4  ConditionActivity.UpdateState:Executing
+2018-01-05 19:39:11,435 INFO  UpdateState - 7f998771-3323-4f12-8109-e4ff5fb351e4  ConditionActivity.UpdateState:Closed
+2018-01-05 19:39:11,436 INFO  UpdateState - eeed6ac1-1bd3-451d-afbc-cb3e9fb45970  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:39:11,436 INFO  UpdateState - eeed6ac1-1bd3-451d-afbc-cb3e9fb45970  SequenceActivity.UpdateState:Executing
+2018-01-05 19:39:11,437 INFO  UpdateState - acb3a7f6-71cf-45ce-81d9-b35a2663ff8e  ASyncCodeActivity.UpdateState:Initialized
+2018-01-05 19:39:11,437 DEBUG set_ParameterList_out - acb3a7f6-71cf-45ce-81d9-b35a2663ff8e  ASyncCodeActivity.ParameterList_out:Setting responseTableOptimisation to Write
+2018-01-05 19:39:11,438 DEBUG set_ParameterList_out - acb3a7f6-71cf-45ce-81d9-b35a2663ff8e  ASyncCodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:39:11,438 INFO  UpdateState - acb3a7f6-71cf-45ce-81d9-b35a2663ff8e  ASyncCodeActivity.UpdateState:Executing
+2018-01-05 19:39:11,439 INFO  UpdateState - f143d791-1a79-4be4-8f31-6ebf3e88e0d4  StateMachineActivity.UpdateState:Initialized
+2018-01-05 19:39:11,440 DEBUG set_ParameterList_out - f143d791-1a79-4be4-8f31-6ebf3e88e0d4  StateMachineActivity.ParameterList_out:Setting Name to State Activity Processing
+2018-01-05 19:39:11,441 INFO  UpdateState - a716c55a-adf8-4954-bbe0-a0d23870bb83  CodeActivity.UpdateState:Initialized
+2018-01-05 19:39:11,442 DEBUG set_ParameterList_out - a716c55a-adf8-4954-bbe0-a0d23870bb83  CodeActivity.ParameterList_out:Setting id to 3
+2018-01-05 19:39:11,443 DEBUG set_ParameterList_out - a716c55a-adf8-4954-bbe0-a0d23870bb83  CodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:39:11,443 DEBUG set_ParameterList_out - a716c55a-adf8-4954-bbe0-a0d23870bb83  CodeActivity.ParameterList_out:Setting responseTableOptimisation to Write
+2018-01-05 19:39:11,443 INFO  UpdateState - f143d791-1a79-4be4-8f31-6ebf3e88e0d4  StateMachineActivity.UpdateState:Executing
+2018-01-05 19:39:11,444 DEBUG SetState - SetState for 3 from  to ProcessingState
+2018-01-05 19:39:11,445 DEBUG SetState - Added handler for InstanceFailed3
+2018-01-05 19:39:11,445 DEBUG SetState - Added handler for InstanceSucceeded3
+2018-01-05 19:39:11,449 INFO  UpdateState - acb3a7f6-71cf-45ce-81d9-b35a2663ff8e  ASyncCodeActivity.UpdateState:Waiting
+2018-01-05 19:39:11,449 DEBUG State_changed - SequentialWorkflowList.State_changed:3, Processing, Waiting
+2018-01-05 19:39:11,450 INFO  UpdateState - a716c55a-adf8-4954-bbe0-a0d23870bb83  CodeActivity.UpdateState:Executing
+2018-01-05 19:39:11,451 INFO  UpdateState - a716c55a-adf8-4954-bbe0-a0d23870bb83  CodeActivity.UpdateState:Closed
+2018-01-05 19:39:11,455 INFO  Execute - Sequencing Instruction 4 as 4
+2018-01-05 19:39:11,455 DEBUG PostInstructionToCores - Posting Question with ID 4 to Core API 1
+2018-01-05 19:39:11,514 INFO  EnsureLive - SequentialWorkflowList.EnsureLive:3
+2018-01-05 19:39:11,515 INFO  EnsureLive - SequentialWorkflowList.Promoting:3
+2018-01-05 19:39:11,515 INFO  EnsureLive - SequentialWorkflowList.IsLive:3
+2018-01-05 19:39:11,515 DEBUG SetState - SetState for 3 from ProcessingState to SucceededState
+2018-01-05 19:39:11,515 INFO  UpdateState - f143d791-1a79-4be4-8f31-6ebf3e88e0d4  StateMachineActivity.UpdateState:Closed
+2018-01-05 19:39:11,516 INFO  UpdateState - acb3a7f6-71cf-45ce-81d9-b35a2663ff8e  ASyncCodeActivity.UpdateState:Closed
+2018-01-05 19:39:11,517 INFO  UpdateState - 851e393a-1a93-41b4-ba50-17671cf871d8  IfElseActivity.UpdateState:Initialized
+2018-01-05 19:39:11,517 INFO  UpdateState - 851e393a-1a93-41b4-ba50-17671cf871d8  IfElseActivity.UpdateState:Executing
+2018-01-05 19:39:11,518 INFO  UpdateState - 00ccca24-6227-49b7-ba4b-1d17ad7e0328  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:39:11,518 DEBUG set_ParameterList_out - 00ccca24-6227-49b7-ba4b-1d17ad7e0328  ConditionActivity.ParameterList_out:Setting State to SucceededState
+2018-01-05 19:39:11,519 INFO  UpdateState - 00ccca24-6227-49b7-ba4b-1d17ad7e0328  ConditionActivity.UpdateState:Executing
+2018-01-05 19:39:11,519 DEBUG Execute - 00ccca24-6227-49b7-ba4b-1d17ad7e0328  ConditionActivity.Execute:Condition: FailedState = SucceededState
+2018-01-05 19:39:11,520 INFO  UpdateState - 00ccca24-6227-49b7-ba4b-1d17ad7e0328  ConditionActivity.UpdateState:Closed
+2018-01-05 19:39:11,520 INFO  UpdateState - 044824b7-b655-4f01-8f84-d7cba2c46d17  ConditionActivity.UpdateState:Initialized
+2018-01-05 19:39:11,520 INFO  UpdateState - 044824b7-b655-4f01-8f84-d7cba2c46d17  ConditionActivity.UpdateState:Executing
+2018-01-05 19:39:11,521 INFO  UpdateState - 044824b7-b655-4f01-8f84-d7cba2c46d17  ConditionActivity.UpdateState:Closed
+2018-01-05 19:39:11,521 INFO  UpdateState - a22c357f-d870-4a7c-8c53-a62d37a0cde0  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:39:11,522 INFO  UpdateState - a22c357f-d870-4a7c-8c53-a62d37a0cde0  SequenceActivity.UpdateState:Executing
+2018-01-05 19:39:11,522 INFO  UpdateState - 00c23cdf-0419-468d-9d7d-4d01cd52c0c1  DeferredCodeActivity.UpdateState:Initialized
+2018-01-05 19:39:11,523 INFO  UpdateState - 00c23cdf-0419-468d-9d7d-4d01cd52c0c1  DeferredCodeActivity.UpdateState:Executing
+2018-01-05 19:39:11,524 INFO  UpdateState - 00c23cdf-0419-468d-9d7d-4d01cd52c0c1  DeferredCodeActivity.UpdateState:Closed
+2018-01-05 19:39:11,524 INFO  UpdateState - a22c357f-d870-4a7c-8c53-a62d37a0cde0  SequenceActivity.UpdateState:Closed
+2018-01-05 19:39:11,525 INFO  UpdateState - 851e393a-1a93-41b4-ba50-17671cf871d8  IfElseActivity.UpdateState:Closed
+2018-01-05 19:39:11,525 INFO  UpdateState - eeed6ac1-1bd3-451d-afbc-cb3e9fb45970  SequenceActivity.UpdateState:Closed
+2018-01-05 19:39:11,525 INFO  UpdateState - f5a20e82-2329-4391-b0d3-0f657059325e  IfElseActivity.UpdateState:Closed
+2018-01-05 19:39:11,526 INFO  UpdateState - 16d0e958-be79-45cd-b870-914621e1c64e  SequenceActivity.UpdateState:Closed
+2018-01-05 19:39:11,526 INFO  UpdateState - 49871e4b-311f-4d18-b038-8ab81e40c9f0  SequentialWorkflow.UpdateState:Closed
+2018-01-05 19:39:11,527 DEBUG State_changed - SequentialWorkflowList.State_changed:3, Processing, Closed
+2018-01-05 19:39:11,527 INFO  State_changed - SequentialWorkflowList.Removing:3, Processing
+2018-01-05 19:39:11,527 INFO  EnsureLive - SequentialWorkflowList.EnsureLive:3
+2018-01-05 19:39:11,528 DEBUG SetState - SetState for 3 from ProcessingState to InProgressState
+2018-01-05 19:39:11,528 DEBUG SetState - Added handler for InProgressSubmit3
+2018-01-05 19:39:11,529 DEBUG SetState - Added handler for InProgressFailed3
+2018-01-05 19:39:11,529 DEBUG SetState - Added handler for Cancelled3
+2018-01-05 19:39:11,539 INFO  UpdateState - d768802f-f154-4b87-8b55-22669ea1f3fa  SequentialWorkflow.UpdateState:Initialized
+2018-01-05 19:39:11,540 DEBUG State_changed - SequentialWorkflowList.State_changed:3, InProgress, Initialized
+2018-01-05 19:39:11,541 INFO  UpdateState - d768802f-f154-4b87-8b55-22669ea1f3fa  SequentialWorkflow.UpdateState:Executing
+2018-01-05 19:39:11,542 DEBUG State_changed - SequentialWorkflowList.State_changed:3, InProgress, Executing
+2018-01-05 19:39:11,543 INFO  Add - SequentialWorkflowList.Promoting:3
+2018-01-05 19:39:11,544 INFO  UpdateState - 5f967ada-9782-4c1d-9b84-7d0e988f3fef  SequenceActivity.UpdateState:Initialized
+2018-01-05 19:39:11,544 INFO  UpdateState - 5f967ada-9782-4c1d-9b84-7d0e988f3fef  SequenceActivity.UpdateState:Executing
+2018-01-05 19:39:11,544 INFO  UpdateState - a524023f-31f8-47fd-b60d-36d1ae314171  CodeActivity.UpdateState:Initialized
+2018-01-05 19:39:11,544 DEBUG set_ParameterList_out - a524023f-31f8-47fd-b60d-36d1ae314171  CodeActivity.ParameterList_out:Setting instruction to Tachyon.Server.Coordinator.Models.Instruction
+2018-01-05 19:39:11,545 INFO  UpdateState - a524023f-31f8-47fd-b60d-36d1ae314171  CodeActivity.UpdateState:Executing
+2018-01-05 19:39:11,545 INFO  UpdateState - a524023f-31f8-47fd-b60d-36d1ae314171  CodeActivity.UpdateState:Closed
+2018-01-05 19:39:11,546 INFO  UpdateState - 9d9a54b4-26b9-498c-a7d0-f2a9e1bdd6d7  EventActivity.UpdateState:Initialized
+2018-01-05 19:39:11,546 DEBUG set_ParameterList_out - 9d9a54b4-26b9-498c-a7d0-f2a9e1bdd6d7  EventActivity.ParameterList_out:Setting Time to 05/01/2018 20:39:11
+2018-01-05 19:39:11,547 INFO  UpdateState - 9d9a54b4-26b9-498c-a7d0-f2a9e1bdd6d7  EventActivity.UpdateState:Executing
+2018-01-05 19:39:11,547 INFO  Execute - Next Event in 3560235.746 ms for 1
+2018-01-05 19:39:11,547 DEBUG State_changed - SequentialWorkflowList.State_changed:3, InProgress, Waiting
+2018-01-05 19:39:39,465 WARN  LicensingCallback - License.dll callback: LICENSING: 0 days left
+2018-01-05 19:39:57,891 DEBUG OnStop - OnStop - begin
+2018-01-05 19:39:57,891 DEBUG OnStop - OnStop - Waiting
+2018-01-05 19:39:57,891 DEBUG OnStop - OnStop - Waited
+2018-01-05 19:39:57,891 INFO  Stop - Stopping Licensing Server...
+2018-01-05 19:39:57,906 INFO  Stop - Stopping Agent Deployment Server...
+2018-01-05 19:39:57,906 INFO  OnStop - Stopping web Server...
+2018-01-05 19:39:57,922 DEBUG OnStop - Serializing 3 Workflows...
+2018-01-05 19:39:57,922 INFO  Execute - Next Event in 3534972.1895 ms for 2
+2018-01-05 19:39:57,953 INFO  Serialize_Item - SequentialWorkflows.Serialized Instruction with state machine id=1, type InProgress
+2018-01-05 19:39:57,953 INFO  Execute - Next Event in 3553592.0623 ms for 3
+2018-01-05 19:39:58,016 INFO  Serialize_Item - SequentialWorkflows.Serialized Instruction with state machine id=2, type InProgress
+2018-01-05 19:39:58,016 INFO  Serialize_Item - SequentialWorkflows.Serialized Instruction with state machine id=3, type InProgress
+2018-01-05 19:39:58,016 DEBUG OnStop - All Workflows have been saved.
+2018-01-05 19:39:58,016 DEBUG OnStop - OnStop - end
+2018-01-05 19:40:04,453 INFO  LogAssemblyReferences - ---------------------------------------------------------------
+2018-01-05 19:40:04,484 INFO  LogAssemblyReferences - 1E Tachyon
+2018-01-05 19:40:04,484 INFO  LogAssemblyReferences - ---------------------------------------------------------------
+2018-01-05 19:40:04,484 INFO  LogAssemblyReferences - Version 3.2.0.571
+2018-01-05 19:40:04,484 INFO  LogAssemblyReferences - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:40:04,484 DEBUG LogAssemblyReferences -  Tachyon.Server.Coordinator, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:40:04,484 DEBUG LogAssemblyReferences -  Tachyon.Server.Coordinator.Common, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:40:04,484 DEBUG LogAssemblyReferences -  log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a
+2018-01-05 19:40:04,484 DEBUG LogAssemblyReferences -  mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:04,500 DEBUG LogAssemblyReferences -  System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:04,500 DEBUG LogAssemblyReferences -  System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:04,500 DEBUG LogAssemblyReferences -  System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:04,500 DEBUG LogAssemblyReferences -  System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:04,500 DEBUG LogAssemblyReferences -  System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:04,516 DEBUG OnStart - OnStart - begin
+2018-01-05 19:40:04,531 DEBUG ServiceQueuedMainCallback - OnStart - end
+2018-01-05 19:40:04,547 DEBUG <OnStart>b__0 - OnStart - Task begin
+2018-01-05 19:40:04,562 INFO  LogSettings - WorkflowPool = 100
+2018-01-05 19:40:04,562 INFO  LogSettings - ConsumerApiRootUrl = https://Tachyon.Lab.Local:443
+2018-01-05 19:40:04,562 INFO  LogSettings - smtpHost = localhost
+2018-01-05 19:40:04,562 INFO  LogSettings - TachyonEmail = tachyon@1e.local
+2018-01-05 19:40:04,562 INFO  LogSettings - ActiveDirectoryServer = gc://
+2018-01-05 19:40:04,562 INFO  LogSettings - CoordinatorServerPort = 8080
+2018-01-05 19:40:04,562 INFO  LogSettings - InstrumentationEnabled = true
+2018-01-05 19:40:04,562 INFO  LogSettings - NotifyExpirationMinutes = 60
+2018-01-05 19:40:04,562 INFO  LogSettings - HouseKeepingMinutes = 10
+2018-01-05 19:40:04,562 INFO  LogSettings - SetDeviceOfflineMinutes = 60
+2018-01-05 19:40:04,562 INFO  LogSettings - HouseKeepingResponseTablesMinutes = 60
+2018-01-05 19:40:04,562 INFO  LogSettings - ResponsesNoTables = 10
+2018-01-05 19:40:04,562 INFO  LogSettings - OTPExpirySeconds = 600
+2018-01-05 19:40:04,562 INFO  LogSettings - OTPRetries = 3
+2018-01-05 19:40:04,562 INFO  LogSettings - OTPLength = 5
+2018-01-05 19:40:04,562 INFO  LogSettings - MaxThreads = 32767
+2018-01-05 19:40:10,531 INFO  <OnStart>b__0 - Initialising module 'Tachyon.Server.Licensing.LicensingModule' ...
+2018-01-05 19:40:10,531 INFO  <OnStart>b__0 - Tachyon.Server.Licensing.LicensingModule - Settings - InstructionDefinitionLicenseCheckBatchSize = 30
+2018-01-05 19:40:10,531 INFO  <OnStart>b__0 - Tachyon.Server.Licensing.LicensingModule - Settings - InstructionDefinitionLicenseCheckIntervalMinutes = 60
+2018-01-05 19:40:10,531 INFO  LicensingCallback - License.dll callback: Callback initialised
+2018-01-05 19:40:10,547 DEBUG LicensingCallback - License.dll callback: License library version 1.0.0.46
+2018-01-05 19:40:10,547 INFO  <OnStart>b__0 - Initialising module 'Tachyon.Server.Instrumentation.Service.InstrumentationModule' ...
+2018-01-05 19:40:10,547 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - InstrumentationServerPort = 3901
+2018-01-05 19:40:10,547 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - CoreApiInstrumentationServicePath = /CoreInstrumentation
+2018-01-05 19:40:10,547 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - SwitchInstrumentationServicePath = /SwitchInstrumentation
+2018-01-05 19:40:10,547 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - ConsumerInstrumentationServicePath = /ConsumerInstrumentation
+2018-01-05 19:40:10,547 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - CoordinatorInstrumentationServicePath = /CoordinatorInstrumentation
+2018-01-05 19:40:10,547 INFO  <OnStart>b__0 - Initialising module 'Tachyon.Server.AgentDeployment.AgentDeploymentModule' ...
+2018-01-05 19:40:10,547 INFO  <OnStart>b__0 - Tachyon.Server.AgentDeployment.AgentDeploymentModule - Settings - MaxSimultaneousInstalls = 2
+2018-01-05 19:40:10,562 DEBUG LicensingCallback - License.dll callback: License Periodic Started
+2018-01-05 19:40:10,562 DEBUG LicensingCallback - License.dll callback: WARNING: No Url found
+2018-01-05 19:40:10,609 DEBUG LicensingCallback - License.dll callback: BinarySigned: C:\Program Files\1E\Tachyon\Coordinator\Licensing.dll - OK
+2018-01-05 19:40:10,609 DEBUG LicensingCallback - License.dll callback: BinarySigned: C:\Program Files\1E\Tachyon\Coordinator\Tachyon.Server.Coordinator.exe - OK
+2018-01-05 19:40:10,609 INFO  LicensingCallback - License.dll callback: LICENSING  ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:40:10,609 INFO  LicensingCallback - License.dll callback: LICENSING Tachyon ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:40:10,625 DEBUG LicensingCallback - License.dll callback: WARNING: No Url found
+2018-01-05 19:40:10,625 INFO  LicensingCallback - License.dll callback: LICENSING Tachyon ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:40:10,625 WARN  LicensingCallback - License.dll callback: LICENSING: 0 days left
+2018-01-05 19:40:10,734 INFO  <OnStart>b__0 - Starting web Server at 'https://+:8080' ...
+2018-01-05 19:40:10,734 DEBUG StateMachinesInitialiseDoWork - Initialising state machines: Starting...
+2018-01-05 19:40:10,750 DEBUG HouseKeepingDoWork - Performing device offline Housekeeping
+2018-01-05 19:40:10,859 DEBUG Initialise - Initialising state machines: found 0 active Instructions.
+2018-01-05 19:40:10,859 DEBUG OnDoWork - Initialising state machines: Initialised 0 state machines.
+2018-01-05 19:40:10,969 INFO  <OnStart>b__0 - Server running at https://+:8080
+2018-01-05 19:40:10,969 INFO  Start - Starting Licensing Server
+2018-01-05 19:40:10,984 INFO  LicensingCallback - License.dll callback: LICENSING Tachyon ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:40:10,984 INFO  LicensingCallback - License.dll callback: Summary: Tachyon - Licensed to "Tachyon Automation" until 2018/01/06 16:00:01 (1) Activated until 2018/01/06 16:00:01
+2018-01-05 19:40:10,984 INFO  LogLicense - Licensing information:
+2018-01-05 19:40:10,984 INFO  LogLicense - Tachyon - Licensed to "Tachyon Automation" until 2018/01/06 16:00:01 (1) Activated until 2018/01/06 16:00:01
+2018-01-05 19:40:11,035 INFO  Start - Total instruction definitions 22
+2018-01-05 19:40:11,047 INFO  Start - Frequency 60 minutes, 30 definitions per call
+2018-01-05 19:40:11,375 INFO  LicensingDoWork - Periodic license check
+2018-01-05 19:40:11,375 DEBUG LicensingCallback - License.dll callback: Features 1 NWM-Integration 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:11,375 DEBUG LicensingCallback - License.dll callback: Features 2 TachyonPlatform 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:11,375 DEBUG LicensingCallback - License.dll callback: Features 3 TachyonExplorer 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:11,375 DEBUG LicensingCallback - License.dll callback: Features 4 Automation 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=1,Name=Auto-Echo-Action,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=2,Name=Auto-Echo-Question,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=3,Name=Auto-Echo-Question-MinTtl,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=4,Name=Auto-EchoWithReplySize,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=5,Name=Auto-Echo-JsonTest,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=6,Name=Auto-Sleep,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=7,Name=Auto-Sleep-Exclusive,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=8,Name=Auto-UpdateExtensibility,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=9,Name=Auto-SystemBIOSDetails,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=10,Name=Auto-DisabledServices,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=11,Name=Auto-UninstallApplication,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=12,Name=Auto-KillProcess,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=13,Name=Auto-RunCommand-Exclusive,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=14,Name=Auto-ControlService,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=15,Name=Auto-InstructionStatsForId,Version=2.0] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=16,Name=Auto-InstructionStats,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=17,Name=Auto-AgentDiagnostics,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=18,Name=Auto-ConnectionInformation,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=19,Name=Auto-SQL-Column-Response,Version=2] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=20,Name=Auto-Echo-Action-MinTtl,Version=2.0] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=21,Name=Auto-FindFileByName,Version=3.0] has been marked licensed
+2018-01-05 19:40:11,406 INFO  UpdateLicense - Instruction definition [Id=22,Name=Auto-DevicesConnectedToEndpoint,Version=3.0] has been marked licensed
+2018-01-05 19:40:11,406 INFO  LicensingCompleted - Total instruction definitions 22
+2018-01-05 19:40:11,406 INFO  LicensingCompleted - Frequency 60 minutes, 30 definitions per call
+2018-01-05 19:40:12,094 DEBUG IsAuthorized - invokingUserName=NT AUTHORITY\NETWORK SERVICE, poolIdentity=NT AUTHORITY\NETWORK SERVICE
+2018-01-05 19:40:12,094 DEBUG IsAuthorized - Authorized (matching pool identity)
+2018-01-05 19:40:12,953 INFO  Start - Starting Agent Deployment Server
+2018-01-05 19:40:12,969 DEBUG Run - Starting the Queue Dispatcher.
+2018-01-05 19:40:13,031 DEBUG <OnStart>b__0 - OnStart - Task end
+2018-01-05 19:40:13,219 DEBUG FixStateOfUnfinishedDeployments - Checked for unfinished installations and found that no devices had an incomplete state.
+2018-01-05 19:40:13,219 DEBUG DoWork - Queue Worker 0 has been started on Thread 5.
+2018-01-05 19:40:13,266 DEBUG IsAuthorized - invokingUserName=NT AUTHORITY\NETWORK SERVICE, poolIdentity=NT AUTHORITY\NETWORK SERVICE
+2018-01-05 19:40:13,266 DEBUG IsAuthorized - Authorized (matching pool identity)
+2018-01-05 19:40:13,266 DEBUG LicensingCallback - License.dll callback: Features 1 NWM-Integration 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:13,266 DEBUG LicensingCallback - License.dll callback: Features 2 TachyonPlatform 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:13,266 DEBUG LicensingCallback - License.dll callback: Features 3 TachyonExplorer 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:13,266 DEBUG LicensingCallback - License.dll callback: Features 4 Automation 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:13,484 DEBUG DoWork - Queue Worker number 0 is sleeping because there is no work for it to do.
+2018-01-05 19:40:13,656 DEBUG DoWork - Queue Worker 1 has been started on Thread 11.
+2018-01-05 19:40:13,656 DEBUG DoWork - Queue Worker number 1 is sleeping because there is no work for it to do.
+2018-01-05 19:40:17,391 DEBUG OnStop - OnStop - begin
+2018-01-05 19:40:17,391 DEBUG OnStop - OnStop - Waiting
+2018-01-05 19:40:17,391 DEBUG OnStop - OnStop - Waited
+2018-01-05 19:40:17,391 INFO  Stop - Stopping Licensing Server...
+2018-01-05 19:40:17,406 INFO  Stop - Stopping Agent Deployment Server...
+2018-01-05 19:40:17,406 INFO  OnStop - Stopping web Server...
+2018-01-05 19:40:17,406 DEBUG OnStop - Serializing 0 Workflows...
+2018-01-05 19:40:17,406 DEBUG OnStop - All Workflows have been saved.
+2018-01-05 19:40:17,422 DEBUG OnStop - OnStop - end
+2018-01-05 19:40:28,844 INFO  LogAssemblyReferences - ---------------------------------------------------------------
+2018-01-05 19:40:28,875 INFO  LogAssemblyReferences - 1E Tachyon
+2018-01-05 19:40:28,875 INFO  LogAssemblyReferences - ---------------------------------------------------------------
+2018-01-05 19:40:28,875 INFO  LogAssemblyReferences - Version 3.2.0.571
+2018-01-05 19:40:28,875 INFO  LogAssemblyReferences - Copyright © 1E 2000-2018. All rights reserved.
+2018-01-05 19:40:28,875 DEBUG LogAssemblyReferences -  Tachyon.Server.Coordinator, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:40:28,875 DEBUG LogAssemblyReferences -  Tachyon.Server.Coordinator.Common, Version=3.2.0.571, Culture=neutral, PublicKeyToken=e98a79df4fba740b
+2018-01-05 19:40:28,875 DEBUG LogAssemblyReferences -  log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a
+2018-01-05 19:40:28,875 DEBUG LogAssemblyReferences -  mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:28,875 DEBUG LogAssemblyReferences -  System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:28,875 DEBUG LogAssemblyReferences -  System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:28,875 DEBUG LogAssemblyReferences -  System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:28,875 DEBUG LogAssemblyReferences -  System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2018-01-05 19:40:28,875 DEBUG LogAssemblyReferences -  System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2018-01-05 19:40:28,906 DEBUG OnStart - OnStart - begin
+2018-01-05 19:40:28,906 DEBUG ServiceQueuedMainCallback - OnStart - end
+2018-01-05 19:40:28,922 DEBUG <OnStart>b__0 - OnStart - Task begin
+2018-01-05 19:40:28,922 INFO  LogSettings - WorkflowPool = 100
+2018-01-05 19:40:28,922 INFO  LogSettings - ConsumerApiRootUrl = https://Tachyon.Lab.Local:443
+2018-01-05 19:40:28,922 INFO  LogSettings - smtpHost = localhost
+2018-01-05 19:40:28,922 INFO  LogSettings - TachyonEmail = tachyon@1e.local
+2018-01-05 19:40:28,922 INFO  LogSettings - ActiveDirectoryServer = gc://
+2018-01-05 19:40:28,922 INFO  LogSettings - CoordinatorServerPort = 8080
+2018-01-05 19:40:28,938 INFO  LogSettings - InstrumentationEnabled = true
+2018-01-05 19:40:28,938 INFO  LogSettings - NotifyExpirationMinutes = 60
+2018-01-05 19:40:28,938 INFO  LogSettings - HouseKeepingMinutes = 10
+2018-01-05 19:40:28,938 INFO  LogSettings - SetDeviceOfflineMinutes = 60
+2018-01-05 19:40:28,938 INFO  LogSettings - HouseKeepingResponseTablesMinutes = 60
+2018-01-05 19:40:28,938 INFO  LogSettings - ResponsesNoTables = 10
+2018-01-05 19:40:28,938 INFO  LogSettings - OTPExpirySeconds = 600
+2018-01-05 19:40:28,938 INFO  LogSettings - OTPRetries = 3
+2018-01-05 19:40:28,938 INFO  LogSettings - OTPLength = 5
+2018-01-05 19:40:28,938 INFO  LogSettings - MaxThreads = 32767
+2018-01-05 19:40:32,875 INFO  <OnStart>b__0 - Initialising module 'Tachyon.Server.Licensing.LicensingModule' ...
+2018-01-05 19:40:32,875 INFO  <OnStart>b__0 - Tachyon.Server.Licensing.LicensingModule - Settings - InstructionDefinitionLicenseCheckBatchSize = 30
+2018-01-05 19:40:32,875 INFO  <OnStart>b__0 - Tachyon.Server.Licensing.LicensingModule - Settings - InstructionDefinitionLicenseCheckIntervalMinutes = 60
+2018-01-05 19:40:32,875 INFO  LicensingCallback - License.dll callback: Callback initialised
+2018-01-05 19:40:32,891 DEBUG LicensingCallback - License.dll callback: License library version 1.0.0.46
+2018-01-05 19:40:32,891 INFO  <OnStart>b__0 - Initialising module 'Tachyon.Server.Instrumentation.Service.InstrumentationModule' ...
+2018-01-05 19:40:32,891 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - InstrumentationServerPort = 3901
+2018-01-05 19:40:32,891 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - CoreApiInstrumentationServicePath = /CoreInstrumentation
+2018-01-05 19:40:32,891 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - SwitchInstrumentationServicePath = /SwitchInstrumentation
+2018-01-05 19:40:32,891 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - ConsumerInstrumentationServicePath = /ConsumerInstrumentation
+2018-01-05 19:40:32,891 INFO  <OnStart>b__0 - Tachyon.Server.Instrumentation.Service.InstrumentationModule - Settings - CoordinatorInstrumentationServicePath = /CoordinatorInstrumentation
+2018-01-05 19:40:32,891 INFO  <OnStart>b__0 - Initialising module 'Tachyon.Server.AgentDeployment.AgentDeploymentModule' ...
+2018-01-05 19:40:32,891 INFO  <OnStart>b__0 - Tachyon.Server.AgentDeployment.AgentDeploymentModule - Settings - MaxSimultaneousInstalls = 2
+2018-01-05 19:40:32,907 DEBUG LicensingCallback - License.dll callback: License Periodic Started
+2018-01-05 19:40:32,907 DEBUG LicensingCallback - License.dll callback: WARNING: No Url found
+2018-01-05 19:40:32,938 DEBUG LicensingCallback - License.dll callback: BinarySigned: C:\Program Files\1E\Tachyon\Coordinator\Licensing.dll - OK
+2018-01-05 19:40:32,953 DEBUG LicensingCallback - License.dll callback: BinarySigned: C:\Program Files\1E\Tachyon\Coordinator\Tachyon.Server.Coordinator.exe - OK
+2018-01-05 19:40:32,953 INFO  LicensingCallback - License.dll callback: LICENSING  ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:40:32,953 INFO  LicensingCallback - License.dll callback: LICENSING Tachyon ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:40:32,953 DEBUG LicensingCallback - License.dll callback: WARNING: No Url found
+2018-01-05 19:40:32,953 INFO  LicensingCallback - License.dll callback: LICENSING Tachyon ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:40:32,953 WARN  LicensingCallback - License.dll callback: LICENSING: 0 days left
+2018-01-05 19:40:33,063 INFO  <OnStart>b__0 - Starting web Server at 'https://+:8080' ...
+2018-01-05 19:40:33,063 DEBUG StateMachinesInitialiseDoWork - Initialising state machines: Starting...
+2018-01-05 19:40:33,063 DEBUG HouseKeepingDoWork - Performing device offline Housekeeping
+2018-01-05 19:40:33,219 DEBUG Initialise - Initialising state machines: found 0 active Instructions.
+2018-01-05 19:40:33,219 DEBUG OnDoWork - Initialising state machines: Initialised 0 state machines.
+2018-01-05 19:40:33,266 INFO  <OnStart>b__0 - Server running at https://+:8080
+2018-01-05 19:40:33,266 INFO  Start - Starting Licensing Server
+2018-01-05 19:40:33,266 INFO  LicensingCallback - License.dll callback: LICENSING Tachyon ExpiryDate 2018/01/06 16:00:01 days left=0
+2018-01-05 19:40:33,266 INFO  LicensingCallback - License.dll callback: Summary: Tachyon - Licensed to "Tachyon Automation" until 2018/01/06 16:00:01 (1) Activated until 2018/01/06 16:00:01
+2018-01-05 19:40:33,266 INFO  LogLicense - Licensing information:
+2018-01-05 19:40:33,266 INFO  LogLicense - Tachyon - Licensed to "Tachyon Automation" until 2018/01/06 16:00:01 (1) Activated until 2018/01/06 16:00:01
+2018-01-05 19:40:33,313 INFO  Start - Total instruction definitions 22
+2018-01-05 19:40:33,313 INFO  Start - Frequency 60 minutes, 30 definitions per call
+2018-01-05 19:40:33,532 INFO  LicensingDoWork - Periodic license check
+2018-01-05 19:40:33,532 DEBUG LicensingCallback - License.dll callback: Features 1 NWM-Integration 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:33,532 DEBUG LicensingCallback - License.dll callback: Features 2 TachyonPlatform 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:33,532 DEBUG LicensingCallback - License.dll callback: Features 3 TachyonExplorer 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:33,532 DEBUG LicensingCallback - License.dll callback: Features 4 Automation 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:33,547 INFO  UpdateLicense - Instruction definition [Id=1,Name=Auto-Echo-Action,Version=2] has been marked licensed
+2018-01-05 19:40:33,547 INFO  UpdateLicense - Instruction definition [Id=2,Name=Auto-Echo-Question,Version=2] has been marked licensed
+2018-01-05 19:40:33,547 INFO  UpdateLicense - Instruction definition [Id=3,Name=Auto-Echo-Question-MinTtl,Version=2] has been marked licensed
+2018-01-05 19:40:33,547 INFO  UpdateLicense - Instruction definition [Id=4,Name=Auto-EchoWithReplySize,Version=2] has been marked licensed
+2018-01-05 19:40:33,547 INFO  UpdateLicense - Instruction definition [Id=5,Name=Auto-Echo-JsonTest,Version=2] has been marked licensed
+2018-01-05 19:40:33,547 INFO  UpdateLicense - Instruction definition [Id=6,Name=Auto-Sleep,Version=2] has been marked licensed
+2018-01-05 19:40:33,547 INFO  UpdateLicense - Instruction definition [Id=7,Name=Auto-Sleep-Exclusive,Version=2] has been marked licensed
+2018-01-05 19:40:33,547 INFO  UpdateLicense - Instruction definition [Id=8,Name=Auto-UpdateExtensibility,Version=2] has been marked licensed
+2018-01-05 19:40:33,547 INFO  UpdateLicense - Instruction definition [Id=9,Name=Auto-SystemBIOSDetails,Version=2] has been marked licensed
+2018-01-05 19:40:33,547 INFO  UpdateLicense - Instruction definition [Id=10,Name=Auto-DisabledServices,Version=2] has been marked licensed
+2018-01-05 19:40:33,563 INFO  UpdateLicense - Instruction definition [Id=11,Name=Auto-UninstallApplication,Version=2] has been marked licensed
+2018-01-05 19:40:33,563 INFO  UpdateLicense - Instruction definition [Id=12,Name=Auto-KillProcess,Version=2] has been marked licensed
+2018-01-05 19:40:33,563 INFO  UpdateLicense - Instruction definition [Id=13,Name=Auto-RunCommand-Exclusive,Version=2] has been marked licensed
+2018-01-05 19:40:33,563 INFO  UpdateLicense - Instruction definition [Id=14,Name=Auto-ControlService,Version=2] has been marked licensed
+2018-01-05 19:40:33,563 INFO  UpdateLicense - Instruction definition [Id=15,Name=Auto-InstructionStatsForId,Version=2.0] has been marked licensed
+2018-01-05 19:40:33,563 INFO  UpdateLicense - Instruction definition [Id=16,Name=Auto-InstructionStats,Version=2] has been marked licensed
+2018-01-05 19:40:33,563 INFO  UpdateLicense - Instruction definition [Id=17,Name=Auto-AgentDiagnostics,Version=2] has been marked licensed
+2018-01-05 19:40:33,563 INFO  UpdateLicense - Instruction definition [Id=18,Name=Auto-ConnectionInformation,Version=2] has been marked licensed
+2018-01-05 19:40:33,563 INFO  UpdateLicense - Instruction definition [Id=19,Name=Auto-SQL-Column-Response,Version=2] has been marked licensed
+2018-01-05 19:40:33,563 INFO  UpdateLicense - Instruction definition [Id=20,Name=Auto-Echo-Action-MinTtl,Version=2.0] has been marked licensed
+2018-01-05 19:40:33,563 INFO  UpdateLicense - Instruction definition [Id=21,Name=Auto-FindFileByName,Version=3.0] has been marked licensed
+2018-01-05 19:40:33,563 INFO  UpdateLicense - Instruction definition [Id=22,Name=Auto-DevicesConnectedToEndpoint,Version=3.0] has been marked licensed
+2018-01-05 19:40:33,563 INFO  LicensingCompleted - Total instruction definitions 22
+2018-01-05 19:40:33,563 INFO  LicensingCompleted - Frequency 60 minutes, 30 definitions per call
+2018-01-05 19:40:34,563 INFO  Start - Starting Agent Deployment Server
+2018-01-05 19:40:34,563 DEBUG <OnStart>b__0 - OnStart - Task end
+2018-01-05 19:40:34,563 DEBUG Run - Starting the Queue Dispatcher.
+2018-01-05 19:40:34,719 DEBUG FixStateOfUnfinishedDeployments - Checked for unfinished installations and found that no devices had an incomplete state.
+2018-01-05 19:40:34,719 DEBUG DoWork - Queue Worker 0 has been started on Thread 10.
+2018-01-05 19:40:34,860 DEBUG DoWork - Queue Worker number 0 is sleeping because there is no work for it to do.
+2018-01-05 19:40:35,157 DEBUG IsAuthorized - invokingUserName=NT AUTHORITY\NETWORK SERVICE, poolIdentity=NT AUTHORITY\NETWORK SERVICE
+2018-01-05 19:40:35,157 DEBUG IsAuthorized - Authorized (matching pool identity)
+2018-01-05 19:40:35,328 DEBUG DoWork - Queue Worker 1 has been started on Thread 5.
+2018-01-05 19:40:35,328 DEBUG DoWork - Queue Worker number 1 is sleeping because there is no work for it to do.
+2018-01-05 19:40:57,140 DEBUG IsAuthorized - invokingUserName=NT AUTHORITY\NETWORK SERVICE, poolIdentity=NT AUTHORITY\NETWORK SERVICE
+2018-01-05 19:40:57,141 DEBUG IsAuthorized - Authorized (matching pool identity)
+2018-01-05 19:40:57,143 DEBUG LicensingCallback - License.dll callback: Features 1 NWM-Integration 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:57,144 DEBUG LicensingCallback - License.dll callback: Features 2 TachyonPlatform 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:57,144 DEBUG LicensingCallback - License.dll callback: Features 3 TachyonExplorer 2018/01/06 16:00:01 daysleft=0
+2018-01-05 19:40:57,145 DEBUG LicensingCallback - License.dll callback: Features 4 Automation 2018/01/06 16:00:01 daysleft=0

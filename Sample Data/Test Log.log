@@ -1,0 +1,370 @@
+1EAUTO| 2018-01-05 19:35:40.383 : 
+1EAUTO| 2018-01-05 19:35:40.383 : ********************************************************************************
+1EAUTO| 2018-01-05 19:35:40.383 : ***** NEW FEATURE
+1EAUTO| 2018-01-05 19:35:40.383 : Smoke Tests
+1EAUTO| 2018-01-05 19:35:40.383 : 
+1EAUTO| 2018-01-05 19:35:40.383 : ********************************************************************************
+1EAUTO| 2018-01-05 19:35:40.383 : ***** NEW FEATURE
+1EAUTO| 2018-01-05 19:35:40.383 : Smoke Tests
+1EAUTO| 2018-01-05 19:35:40.649 : 
+1EAUTO| 2018-01-05 19:35:40.649 : ================================================================================
+1EAUTO| 2018-01-05 19:35:40.649 : ===== NEW SCENARIO
+1EAUTO| 2018-01-05 19:35:40.649 : Smoke - Ask an action and get the answer after approval
+1EAUTO| 2018-01-05 19:35:40.727 : 
+1EAUTO| 2018-01-05 19:35:40.727 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:35:40.727 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:35:40.727 : Given The Product is in the following state
+1EAUTO| 2018-01-05 19:35:40.727 : | Component | InstallState | ServiceRunning |
+1EAUTO| 2018-01-05 19:35:40.727 : | Server    | Feature      | True           |
+1EAUTO| 2018-01-05 19:35:40.727 : | Agent     | Scenario     | True           |
+1EAUTO| 2018-01-05 19:35:40.727 : 
+1EAUTO| 2018-01-05 19:35:40.821 : GetProductInState | Component = 'Tachyon Server': New InstallState = 'Feature' | Currently Installed = False | Perform Uninstall = False | Perform Install = True
+1EAUTO| 2018-01-05 19:35:40.899 : Performing fresh Tachyon Server install
+1EAUTO| 2018-01-05 19:35:40.915 : Installing Tachyon Server 3.2.0.571
+1EAUTO| 2018-01-05 19:36:51.743 : The sql query result from Adding the Global Approver and Global Administrator role is : 6
+1EAUTO| 2018-01-05 19:36:51.743 : Setting up Custom Workflow...
+1EAUTO| 2018-01-05 19:36:51.743 : Populating email for default principal...
+1EAUTO| 2018-01-05 19:36:51.759 : The sql query update [TachyonMaster].[dbo].[Principal] set Email='Test@Automation.com' where Id = '1' returned the result : 1
+1EAUTO| 2018-01-05 19:36:51.759 : Setting self approver in Consumer API...
+1EAUTO| 2018-01-05 19:36:51.759 : Setting self approver in Workflow...
+1EAUTO| 2018-01-05 19:36:51.759 : Creating event source...
+1EAUTO| 2018-01-05 19:36:51.868 : Requesting service Tachyon.Coordinator to enter state Started. Current state: Stopped
+1EAUTO| 2018-01-05 19:36:53.525 : Service Tachyon.Coordinator is now in state Running
+1EAUTO| 2018-01-05 19:36:53.525 : Waiting for ConsumerAPI to be ready...
+1EAUTO| 2018-01-05 19:37:09.025 : ConsumerAPI appears to be ready after 15 seconds.
+1EAUTO| 2018-01-05 19:37:09.025 : Registering Consumer...
+1EAUTO| 2018-01-05 19:37:12.618 : Consumer registration complete.
+1EAUTO| 2018-01-05 19:37:12.618 : Uploading Default Product Packs...
+1EAUTO| 2018-01-05 19:37:14.650 : InstructionSet '1Default instructions for Automation' uploaded OK as InstructionSetId 1
+1EAUTO| 2018-01-05 19:37:14.650 : Default Product Pack uploading complete
+1EAUTO| 2018-01-05 19:37:14.650 : Inserting dummy instruction one
+1EAUTO| 2018-01-05 19:37:14.681 : Dummy instruction one inserted
+1EAUTO| 2018-01-05 19:37:14.681 : Requesting service Tachyon.Coordinator to enter state Stopped. Current state: Running
+1EAUTO| 2018-01-05 19:37:15.962 : Service Tachyon.Coordinator is now in state Stopped
+1EAUTO| 2018-01-05 19:37:17.947 : Resetting IIS...
+1EAUTO| 2018-01-05 19:37:19.525 : IIS reset complete
+1EAUTO| 2018-01-05 19:37:19.525 : keeping security level=5
+1EAUTO| 2018-01-05 19:37:19.525 : Disabling 2FA for actions...
+1EAUTO| 2018-01-05 19:37:19.525 : Return value from the SQL QUERY execution to update the Default Workflow is , 1
+1EAUTO| 2018-01-05 19:37:19.540 : Poking CoreAPI to wake it up...
+1EAUTO| 2018-01-05 19:37:31.040 : CoreAPI woke after 11 seconds
+1EAUTO| 2018-01-05 19:37:31.056 : Requesting service Tachyon.Coordinator to enter state Started. Current state: Stopped
+1EAUTO| 2018-01-05 19:37:32.588 : Service Tachyon.Coordinator is now in state Running
+1EAUTO| 2018-01-05 19:37:32.588 : Waiting for ConsumerAPI to be ready...
+1EAUTO| 2018-01-05 19:37:42.056 : ConsumerAPI appears to be ready after 9 seconds.
+1EAUTO| 2018-01-05 19:37:42.056 : GetProductInState | Component = 'Tachyon Agent': New InstallState = 'Scenario' | Currently Installed = False | Perform Uninstall = False | Perform Install = True
+1EAUTO| 2018-01-05 19:37:42.056 : Installing Tachyon Agent on port 4000
+1EAUTO| 2018-01-05 19:37:47.603 : Requesting service Tachyon.Switch to enter state Started. Current state: Stopped
+1EAUTO| 2018-01-05 19:37:48.619 : Poking CoreAPI to wake it up...
+1EAUTO| 2018-01-05 19:37:48.619 : CoreAPI woke after 0 seconds
+1EAUTO| 2018-01-05 19:37:48.619 : Attempt: 1 to start Service: Tachyon.Switch
+1EAUTO| 2018-01-05 19:38:09.088 : Service: Tachyon.Switch is now in State: Running  after 1 atempt(s)
+1EAUTO| 2018-01-05 19:38:09.088 : Service Tachyon.Switch is now in state Running
+1EAUTO| 2018-01-05 19:38:12.524 : Switch appears to be ready after 3 seconds. Switch Count: 1
+1EAUTO| 2018-01-05 19:38:12.525 : Requesting service Tachyon.Agent to enter state Started. Current state: Stopped
+1EAUTO| 2018-01-05 19:38:14.356 : Service Tachyon.Agent is now in state Running
+1EAUTO| 2018-01-05 19:38:14.361 : Waiting for Agent to connect to Switch...
+1EAUTO| 2018-01-05 19:38:23.866 : Agent connected to Switch in 9.5050173 seconds
+1EAUTO| 2018-01-05 19:38:23.875 : 
+1EAUTO| 2018-01-05 19:38:23.875 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:38:23.876 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:38:23.876 : Given I create an instruction 'A1' of type 'Auto-Echo-Action'
+1EAUTO| 2018-01-05 19:38:24.650 : 
+1EAUTO| 2018-01-05 19:38:24.650 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:38:24.650 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:38:24.650 : When instruction 'A1' is sent
+1EAUTO| 2018-01-05 19:38:26.874 : Instruction created with instructionId 2
+1EAUTO| 2018-01-05 19:38:26.875 : Waiting for instruction 2 to be live.
+1EAUTO| 2018-01-05 19:38:27.044 : Instruction 2 is currently in state: 1
+1EAUTO| 2018-01-05 19:38:27.045 : Instruction 2 is now live. Current state: 1
+1EAUTO| 2018-01-05 19:38:27.045 : 
+1EAUTO| 2018-01-05 19:38:27.045 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:38:27.045 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:38:27.045 : When instruction 'A1' is approved
+1EAUTO| 2018-01-05 19:38:29.209 : Instruction 2 approved, got success response
+1EAUTO| 2018-01-05 19:38:29.209 : Waiting for WorkflowState for instruction 2 to not be 2...
+1EAUTO| 2018-01-05 19:38:32.288 : Instruction 2 approved, got success response
+1EAUTO| 2018-01-05 19:38:32.288 : Waiting for WorkflowState for instruction 2 to not be 2...
+1EAUTO| 2018-01-05 19:38:32.307 : Instruction 2 left approval is now in WorkflowState 4
+1EAUTO| 2018-01-05 19:38:32.308 : 
+1EAUTO| 2018-01-05 19:38:32.308 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:38:32.308 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:38:32.308 : Then I wait for instruction 'A1' to have responses or errors from all agents
+1EAUTO| 2018-01-05 19:38:32.354 : Waiting for completion of instruction 'A1' for 0s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:33.365 : Waiting for completion of instruction 'A1' for 1s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:34.378 : Waiting for completion of instruction 'A1' for 2s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:35.393 : Waiting for completion of instruction 'A1' for 3s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:36.408 : Waiting for completion of instruction 'A1' for 4s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:37.420 : Waiting for completion of instruction 'A1' for 5s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:38.433 : Waiting for completion of instruction 'A1' for 6s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:39.444 : Waiting for completion of instruction 'A1' for 7s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:40.457 : Waiting for completion of instruction 'A1' for 8s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:41.476 : Waiting for completion of instruction 'A1' for 9s, Respondents: Actual= 1, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:41.476 : Scenario instruction A1 - final InstructionStatistics:
+1EAUTO| 2018-01-05 19:38:41.478 : Id = 1, EstimatedCount = 1, ReceivedCount = 1, SentCount = 1, OutstandingResponsesCount = 0, 
+1EAUTO| 2018-01-05 19:38:41.479 : AverageExecTime = 00:00:00, Runningtime = 00:00:15.6543693, TotalBytesSent = 168, 
+1EAUTO| 2018-01-05 19:38:41.479 : TotalBytesReceived = 279, AverageBytesReceived = 279, TotalRowInserts = 1, TotalRowProcessed = 1, 
+1EAUTO| 2018-01-05 19:38:41.480 : TotalSuccessRespondents = 1, TotalSuccessNoDataRespondents = 0, TotalErrorRespondents = 0, 
+1EAUTO| 2018-01-05 19:38:41.480 : TotalNotImplementedRespondents = 0, TotalResponseTooLargeRespondents = 0, TotalSubscribedEventsRespondents = 0, 
+1EAUTO| 2018-01-05 19:38:41.480 : InstructionId = 2, InstructionDefinitionId = 1, Sequence = 2, 
+1EAUTO| 2018-01-05 19:38:41.480 : Scenario instruction A1 completed in 9 seconds
+1EAUTO| 2018-01-05 19:38:41.487 : 
+1EAUTO| 2018-01-05 19:38:41.487 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:38:41.487 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:38:41.487 : Then instruction 'A1' should have >= '1' responses
+1EAUTO| 2018-01-05 19:38:41.678 : 
+1EAUTO| 2018-01-05 19:38:41.678 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:38:41.678 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:38:41.678 : Then instruction 'A1' should have '0' errors
+1EAUTO| 2018-01-05 19:38:41.821 : 
+1EAUTO| 2018-01-05 19:38:41.821 : ================================================================================
+1EAUTO| 2018-01-05 19:38:41.821 : ===== NEW SCENARIO
+1EAUTO| 2018-01-05 19:38:41.821 : Smoke - Ask simple question and get the answer
+1EAUTO| 2018-01-05 19:38:41.821 : 
+1EAUTO| 2018-01-05 19:38:41.821 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:38:41.821 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:38:41.821 : Given The Product is in the following state
+1EAUTO| 2018-01-05 19:38:41.822 : | Component | InstallState | ServiceRunning |
+1EAUTO| 2018-01-05 19:38:41.822 : | Server    | Feature      | True           |
+1EAUTO| 2018-01-05 19:38:41.822 : | Agent     | Scenario     | True           |
+1EAUTO| 2018-01-05 19:38:41.822 : 
+1EAUTO| 2018-01-05 19:38:41.827 : GetProductInState | Component = 'Tachyon Server': New InstallState = 'Feature' | Currently Installed = True | Perform Uninstall = False | Perform Install = False
+1EAUTO| 2018-01-05 19:38:41.829 : GetProductInState | Component = 'Tachyon Agent': New InstallState = 'Scenario' | Currently Installed = True | Perform Uninstall = True | Perform Install = True
+1EAUTO| 2018-01-05 19:38:41.829 : Uninstalling Tachyon Agent
+1EAUTO| 2018-01-05 19:38:44.267 : WARNING: Requested Service Tachyon.Agent to enter state Stopped, but it does not exist
+1EAUTO| 2018-01-05 19:38:44.268 : Installing Tachyon Agent on port 4000
+1EAUTO| 2018-01-05 19:38:48.662 : Requested service Tachyon.Switch to enter state Started, but is already in that state.
+1EAUTO| 2018-01-05 19:38:48.662 : Service Tachyon.Switch is now in state Running
+1EAUTO| 2018-01-05 19:38:48.681 : Switch appears to be ready after 0 seconds. Switch Count: 1
+1EAUTO| 2018-01-05 19:38:48.681 : Requesting service Tachyon.Agent to enter state Started. Current state: Stopped
+1EAUTO| 2018-01-05 19:38:50.471 : Service Tachyon.Agent is now in state Running
+1EAUTO| 2018-01-05 19:38:50.473 : Waiting for Agent to connect to Switch...
+1EAUTO| 2018-01-05 19:38:52.642 : Agent connected to Switch in 2.1683202 seconds
+1EAUTO| 2018-01-05 19:38:52.642 : 
+1EAUTO| 2018-01-05 19:38:52.642 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:38:52.642 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:38:52.642 : Given I create an instruction 'Q1' of type 'Auto-SystemBIOSDetails'
+1EAUTO| 2018-01-05 19:38:52.655 : 
+1EAUTO| 2018-01-05 19:38:52.655 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:38:52.655 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:38:52.655 : When instruction 'Q1' is sent
+1EAUTO| 2018-01-05 19:38:52.771 : Instruction created with instructionId 3
+1EAUTO| 2018-01-05 19:38:52.771 : Waiting for instruction 3 to be live.
+1EAUTO| 2018-01-05 19:38:52.800 : Instruction 3 is currently in state: 4
+1EAUTO| 2018-01-05 19:38:52.800 : Instruction 3 is now live. Current state: 4
+1EAUTO| 2018-01-05 19:38:52.800 : 
+1EAUTO| 2018-01-05 19:38:52.800 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:38:52.801 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:38:52.801 : Then I wait for instruction 'Q1' to have responses or errors from all agents
+1EAUTO| 2018-01-05 19:38:52.815 : Waiting for completion of instruction 'Q1' for 0s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:53.829 : Waiting for completion of instruction 'Q1' for 1s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:54.841 : Waiting for completion of instruction 'Q1' for 2s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:55.856 : Waiting for completion of instruction 'Q1' for 3s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:56.884 : Waiting for completion of instruction 'Q1' for 4s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:57.897 : Waiting for completion of instruction 'Q1' for 5s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:58.912 : Waiting for completion of instruction 'Q1' for 6s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:38:59.925 : Waiting for completion of instruction 'Q1' for 7s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:39:00.941 : Waiting for completion of instruction 'Q1' for 8s, Respondents: Actual= 1, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:39:00.941 : Scenario instruction Q1 - final InstructionStatistics:
+1EAUTO| 2018-01-05 19:39:00.941 : Id = 2, EstimatedCount = 1, ReceivedCount = 1, SentCount = 1, OutstandingResponsesCount = 0, 
+1EAUTO| 2018-01-05 19:39:00.941 : AverageExecTime = 00:00:00.0400000, Runningtime = 00:00:08.2534987, TotalBytesSent = 235, 
+1EAUTO| 2018-01-05 19:39:00.941 : TotalBytesReceived = 397, AverageBytesReceived = 397, TotalRowInserts = 1, TotalRowProcessed = 1, 
+1EAUTO| 2018-01-05 19:39:00.942 : TotalSuccessRespondents = 1, TotalSuccessNoDataRespondents = 0, TotalErrorRespondents = 0, 
+1EAUTO| 2018-01-05 19:39:00.942 : TotalNotImplementedRespondents = 0, TotalResponseTooLargeRespondents = 0, TotalSubscribedEventsRespondents = 0, 
+1EAUTO| 2018-01-05 19:39:00.942 : InstructionId = 3, InstructionDefinitionId = 9, Sequence = 3, 
+1EAUTO| 2018-01-05 19:39:00.942 : Scenario instruction Q1 completed in 8 seconds
+1EAUTO| 2018-01-05 19:39:00.942 : 
+1EAUTO| 2018-01-05 19:39:00.942 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:00.942 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:00.942 : Then instruction 'Q1' should have >= '1' responses
+1EAUTO| 2018-01-05 19:39:00.973 : 
+1EAUTO| 2018-01-05 19:39:00.973 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:00.973 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:00.973 : Then instruction 'Q1' should have '0' errors
+1EAUTO| 2018-01-05 19:39:01.013 : 
+1EAUTO| 2018-01-05 19:39:01.013 : ================================================================================
+1EAUTO| 2018-01-05 19:39:01.013 : ===== NEW SCENARIO
+1EAUTO| 2018-01-05 19:39:01.013 : Smoke - Check Agent Diagnostics
+1EAUTO| 2018-01-05 19:39:01.013 : 
+1EAUTO| 2018-01-05 19:39:01.014 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:01.014 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:01.014 : Given The Product is in the following state
+1EAUTO| 2018-01-05 19:39:01.014 : | Component | InstallState | ServiceRunning |
+1EAUTO| 2018-01-05 19:39:01.014 : | Server    | Feature      | True           |
+1EAUTO| 2018-01-05 19:39:01.014 : | Agent     | Scenario     | True           |
+1EAUTO| 2018-01-05 19:39:01.014 : 
+1EAUTO| 2018-01-05 19:39:01.016 : GetProductInState | Component = 'Tachyon Server': New InstallState = 'Feature' | Currently Installed = True | Perform Uninstall = False | Perform Install = False
+1EAUTO| 2018-01-05 19:39:01.018 : GetProductInState | Component = 'Tachyon Agent': New InstallState = 'Scenario' | Currently Installed = True | Perform Uninstall = True | Perform Install = True
+1EAUTO| 2018-01-05 19:39:01.018 : Uninstalling Tachyon Agent
+1EAUTO| 2018-01-05 19:39:02.840 : WARNING: Requested Service Tachyon.Agent to enter state Stopped, but it does not exist
+1EAUTO| 2018-01-05 19:39:02.841 : Installing Tachyon Agent on port 4000
+1EAUTO| 2018-01-05 19:39:07.265 : Requested service Tachyon.Switch to enter state Started, but is already in that state.
+1EAUTO| 2018-01-05 19:39:07.265 : Service Tachyon.Switch is now in state Running
+1EAUTO| 2018-01-05 19:39:07.287 : Switch appears to be ready after 0 seconds. Switch Count: 1
+1EAUTO| 2018-01-05 19:39:07.288 : Requesting service Tachyon.Agent to enter state Started. Current state: Stopped
+1EAUTO| 2018-01-05 19:39:09.082 : Service Tachyon.Agent is now in state Running
+1EAUTO| 2018-01-05 19:39:09.084 : Waiting for Agent to connect to Switch...
+1EAUTO| 2018-01-05 19:39:11.263 : Agent connected to Switch in 2.1790448 seconds
+1EAUTO| 2018-01-05 19:39:11.264 : 
+1EAUTO| 2018-01-05 19:39:11.264 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:11.264 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:11.264 : Given I create an instruction 'Q1' of type 'Auto-AgentDiagnostics'
+1EAUTO| 2018-01-05 19:39:11.287 : 
+1EAUTO| 2018-01-05 19:39:11.287 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:11.288 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:11.288 : When instruction 'Q1' is sent
+1EAUTO| 2018-01-05 19:39:11.424 : Instruction created with instructionId 4
+1EAUTO| 2018-01-05 19:39:11.424 : Waiting for instruction 4 to be live.
+1EAUTO| 2018-01-05 19:39:11.443 : Instruction 4 is currently in state: 4
+1EAUTO| 2018-01-05 19:39:11.443 : Instruction 4 is now live. Current state: 4
+1EAUTO| 2018-01-05 19:39:11.443 : 
+1EAUTO| 2018-01-05 19:39:11.443 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:11.443 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:11.443 : Then I wait for instruction 'Q1' to have responses or errors from all agents
+1EAUTO| 2018-01-05 19:39:11.456 : Waiting for completion of instruction 'Q1' for 0s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:39:12.470 : Waiting for completion of instruction 'Q1' for 1s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:39:13.483 : Waiting for completion of instruction 'Q1' for 2s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:39:14.502 : Waiting for completion of instruction 'Q1' for 3s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:39:15.518 : Waiting for completion of instruction 'Q1' for 4s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:39:16.531 : Waiting for completion of instruction 'Q1' for 5s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:39:17.544 : Waiting for completion of instruction 'Q1' for 6s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:39:18.555 : Waiting for completion of instruction 'Q1' for 7s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:39:19.570 : Waiting for completion of instruction 'Q1' for 8s, Respondents: Actual= 0, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:39:20.590 : Waiting for completion of instruction 'Q1' for 9s, Respondents: Actual= 1, Expected= 1 (1 * 1)
+1EAUTO| 2018-01-05 19:39:20.590 : Scenario instruction Q1 - final InstructionStatistics:
+1EAUTO| 2018-01-05 19:39:20.590 : Id = 3, EstimatedCount = 1, ReceivedCount = 1, SentCount = 0, OutstandingResponsesCount = 0, 
+1EAUTO| 2018-01-05 19:39:20.590 : AverageExecTime = 00:00:00, Runningtime = 00:00:09.2586326, TotalBytesSent = 0, TotalBytesReceived = 466, 
+1EAUTO| 2018-01-05 19:39:20.590 : AverageBytesReceived = 466, TotalRowInserts = 1, TotalRowProcessed = 1, TotalSuccessRespondents = 1, 
+1EAUTO| 2018-01-05 19:39:20.590 : TotalSuccessNoDataRespondents = 0, TotalErrorRespondents = 0, TotalNotImplementedRespondents = 0, 
+1EAUTO| 2018-01-05 19:39:20.590 : TotalResponseTooLargeRespondents = 0, TotalSubscribedEventsRespondents = 0, InstructionId = 4, 
+1EAUTO| 2018-01-05 19:39:20.590 : InstructionDefinitionId = 17, Sequence = 4, 
+1EAUTO| 2018-01-05 19:39:20.590 : Scenario instruction Q1 completed in 9 seconds
+1EAUTO| 2018-01-05 19:39:20.591 : 
+1EAUTO| 2018-01-05 19:39:20.591 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:20.591 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:20.591 : Then instruction 'Q1' should have the following values for response '0'
+1EAUTO| 2018-01-05 19:39:20.591 : | Key                          | Operator | Operand |
+1EAUTO| 2018-01-05 19:39:20.591 : | Values\BytesReceived         | >        | 0       |
+1EAUTO| 2018-01-05 19:39:20.591 : | Values\BytesSent             | >        | 0       |
+1EAUTO| 2018-01-05 19:39:20.591 : | Values\ConnectionsSuccessful | >        | 0       |
+1EAUTO| 2018-01-05 19:39:20.591 : 
+1EAUTO| 2018-01-05 19:39:20.691 : 
+1EAUTO| 2018-01-05 19:39:20.692 : ================================================================================
+1EAUTO| 2018-01-05 19:39:20.692 : ===== NEW SCENARIO
+1EAUTO| 2018-01-05 19:39:20.692 : Smoke - Verify Agent installation
+1EAUTO| 2018-01-05 19:39:20.692 : 
+1EAUTO| 2018-01-05 19:39:20.692 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:20.692 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:20.692 : Given The Product is in the following state
+1EAUTO| 2018-01-05 19:39:20.692 : | Component | InstallState | ServiceRunning |
+1EAUTO| 2018-01-05 19:39:20.692 : | Server    | Any          | False          |
+1EAUTO| 2018-01-05 19:39:20.692 : | Agent     | Scenario     | True           |
+1EAUTO| 2018-01-05 19:39:20.692 : 
+1EAUTO| 2018-01-05 19:39:20.695 : GetProductInState | Component = 'Tachyon Server': New InstallState = 'Any' | Currently Installed = True | Perform Uninstall = False | Perform Install = False
+1EAUTO| 2018-01-05 19:39:20.697 : GetProductInState | Component = 'Tachyon Agent': New InstallState = 'Scenario' | Currently Installed = True | Perform Uninstall = True | Perform Install = True
+1EAUTO| 2018-01-05 19:39:20.697 : Uninstalling Tachyon Agent
+1EAUTO| 2018-01-05 19:39:22.628 : WARNING: Requested Service Tachyon.Agent to enter state Stopped, but it does not exist
+1EAUTO| 2018-01-05 19:39:22.628 : Installing Tachyon Agent on port 4000
+1EAUTO| 2018-01-05 19:39:26.891 : Requesting service Tachyon.Switch to enter state Stopped. Current state: Running
+1EAUTO| 2018-01-05 19:39:28.935 : Service Tachyon.Switch is now in state Stopped
+1EAUTO| 2018-01-05 19:39:28.935 : Requesting service Tachyon.Agent to enter state Started. Current state: Stopped
+1EAUTO| 2018-01-05 19:39:30.732 : Service Tachyon.Agent is now in state Running
+1EAUTO| 2018-01-05 19:39:30.732 : 
+1EAUTO| 2018-01-05 19:39:30.732 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:30.732 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:30.732 : Then '1E Tachyon Agent' service gets installed and is running
+1EAUTO| 2018-01-05 19:39:31.763 : Time elapsed : 1 seconds.
+1EAUTO| 2018-01-05 19:39:31.763 : 
+1EAUTO| 2018-01-05 19:39:31.763 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:31.763 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:31.763 : Then '1E Tachyon Agent' service is running as 'LocalSystem' account
+1EAUTO| 2018-01-05 19:39:32.060 : Service Tachyon.Agent Logon Name:LocalSystem
+1EAUTO| 2018-01-05 19:39:32.076 : 
+1EAUTO| 2018-01-05 19:39:32.076 : ================================================================================
+1EAUTO| 2018-01-05 19:39:32.076 : ===== NEW SCENARIO
+1EAUTO| 2018-01-05 19:39:32.076 : Smoke - Verify installed Tachyon Server information
+1EAUTO| 2018-01-05 19:39:32.076 : 
+1EAUTO| 2018-01-05 19:39:32.076 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:32.076 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:32.076 : Given The Product is in the following state
+1EAUTO| 2018-01-05 19:39:32.076 : | Component | InstallState | ServiceRunning |
+1EAUTO| 2018-01-05 19:39:32.076 : | Server    | Feature      | True           |
+1EAUTO| 2018-01-05 19:39:32.076 : | Agent     | Any          | False          |
+1EAUTO| 2018-01-05 19:39:32.076 : 
+1EAUTO| 2018-01-05 19:39:32.076 : GetProductInState | Component = 'Tachyon Server': New InstallState = 'Feature' | Currently Installed = True | Perform Uninstall = False | Perform Install = False
+1EAUTO| 2018-01-05 19:39:32.076 : GetProductInState | Component = 'Tachyon Agent': New InstallState = 'Any' | Currently Installed = True | Perform Uninstall = False | Perform Install = False
+1EAUTO| 2018-01-05 19:39:32.076 : Requesting service Tachyon.Switch to enter state Started. Current state: Stopped
+1EAUTO| 2018-01-05 19:39:33.091 : Poking CoreAPI to wake it up...
+1EAUTO| 2018-01-05 19:39:33.091 : CoreAPI woke after 0 seconds
+1EAUTO| 2018-01-05 19:39:33.091 : Attempt: 1 to start Service: Tachyon.Switch
+1EAUTO| 2018-01-05 19:39:53.462 : Service: Tachyon.Switch is now in State: Running  after 1 atempt(s)
+1EAUTO| 2018-01-05 19:39:53.463 : Service Tachyon.Switch is now in state Running
+1EAUTO| 2018-01-05 19:39:53.480 : Switch appears to be ready after 0 seconds. Switch Count: 1
+1EAUTO| 2018-01-05 19:39:53.481 : Requesting service Tachyon.Agent to enter state Stopped. Current state: Running
+1EAUTO| 2018-01-05 19:39:54.734 : Service Tachyon.Agent is now in state Stopped
+1EAUTO| 2018-01-05 19:39:54.734 : 
+1EAUTO| 2018-01-05 19:39:54.734 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:54.734 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:54.734 : When I ask Consumer API for the Tachyon Server version
+1EAUTO| 2018-01-05 19:39:54.760 : 
+1EAUTO| 2018-01-05 19:39:54.760 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:54.760 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:54.760 : Then I get the correct version information
+1EAUTO| 2018-01-05 19:39:54.799 : 
+1EAUTO| 2018-01-05 19:39:54.799 : ================================================================================
+1EAUTO| 2018-01-05 19:39:54.799 : ===== NEW SCENARIO
+1EAUTO| 2018-01-05 19:39:54.799 : Smoke - Verify server installation
+1EAUTO| 2018-01-05 19:39:54.800 : 
+1EAUTO| 2018-01-05 19:39:54.800 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:39:54.800 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:39:54.800 : Given The Product is in the following state
+1EAUTO| 2018-01-05 19:39:54.800 : | Component | InstallState | ServiceRunning |
+1EAUTO| 2018-01-05 19:39:54.800 : | Server    | Scenario     | True           |
+1EAUTO| 2018-01-05 19:39:54.800 : | Agent     | Any          | False          |
+1EAUTO| 2018-01-05 19:39:54.800 : 
+1EAUTO| 2018-01-05 19:39:54.802 : GetProductInState | Component = 'Tachyon Server': New InstallState = 'Scenario' | Currently Installed = True | Perform Uninstall = True | Perform Install = True
+1EAUTO| 2018-01-05 19:39:54.816 : Restoring Tachyon Server install from backup
+1EAUTO| 2018-01-05 19:39:54.817 : Requesting service Tachyon.Switch to enter state Stopped. Current state: Running
+1EAUTO| 2018-01-05 19:39:56.875 : Service Tachyon.Switch is now in state Stopped
+1EAUTO| 2018-01-05 19:39:56.875 : Requesting service Tachyon.Coordinator to enter state Stopped. Current state: Running
+1EAUTO| 2018-01-05 19:39:58.144 : Service Tachyon.Coordinator is now in state Stopped
+1EAUTO| 2018-01-05 19:40:03.281 : Requesting service Tachyon.Coordinator to enter state Started. Current state: Stopped
+1EAUTO| 2018-01-05 19:40:04.781 : Service Tachyon.Coordinator is now in state Running
+1EAUTO| 2018-01-05 19:40:04.781 : Waiting for ConsumerAPI to be ready...
+1EAUTO| 2018-01-05 19:40:13.219 : ConsumerAPI appears to be ready after 8 seconds.
+1EAUTO| 2018-01-05 19:40:13.219 : Uploading Default Product Packs...
+1EAUTO| 2018-01-05 19:40:16.375 : Default Product Pack uploading complete
+1EAUTO| 2018-01-05 19:40:16.375 : Requesting service Tachyon.Coordinator to enter state Stopped. Current state: Running
+1EAUTO| 2018-01-05 19:40:17.656 : Service Tachyon.Coordinator is now in state Stopped
+1EAUTO| 2018-01-05 19:40:17.656 : Server install restore complete
+1EAUTO| 2018-01-05 19:40:17.656 : Resetting IIS...
+1EAUTO| 2018-01-05 19:40:20.313 : IIS reset complete
+1EAUTO| 2018-01-05 19:40:20.313 : keeping security level=5
+1EAUTO| 2018-01-05 19:40:20.313 : Disabling 2FA for actions...
+1EAUTO| 2018-01-05 19:40:20.313 : Return value from the SQL QUERY execution to update the Default Workflow is , 1
+1EAUTO| 2018-01-05 19:40:20.313 : Poking CoreAPI to wake it up...
+1EAUTO| 2018-01-05 19:40:27.688 : CoreAPI woke after 7 seconds
+1EAUTO| 2018-01-05 19:40:27.688 : Requesting service Tachyon.Coordinator to enter state Started. Current state: Stopped
+1EAUTO| 2018-01-05 19:40:29.156 : Service Tachyon.Coordinator is now in state Running
+1EAUTO| 2018-01-05 19:40:29.156 : Waiting for ConsumerAPI to be ready...
+1EAUTO| 2018-01-05 19:40:35.782 : ConsumerAPI appears to be ready after 6 seconds.
+1EAUTO| 2018-01-05 19:40:35.782 : GetProductInState | Component = 'Tachyon Agent': New InstallState = 'Any' | Currently Installed = True | Perform Uninstall = False | Perform Install = False
+1EAUTO| 2018-01-05 19:40:35.782 : Requesting service Tachyon.Switch to enter state Started. Current state: Stopped
+1EAUTO| 2018-01-05 19:40:36.797 : Poking CoreAPI to wake it up...
+1EAUTO| 2018-01-05 19:40:36.797 : CoreAPI woke after 0 seconds
+1EAUTO| 2018-01-05 19:40:36.797 : Attempt: 1 to start Service: Tachyon.Switch
+1EAUTO| 2018-01-05 19:40:57.113 : Service: Tachyon.Switch is now in State: Running  after 1 atempt(s)
+1EAUTO| 2018-01-05 19:40:57.113 : Service Tachyon.Switch is now in state Running
+1EAUTO| 2018-01-05 19:41:00.287 : Switch appears to be ready after 3 seconds. Switch Count: 1
+1EAUTO| 2018-01-05 19:41:00.288 : Requested service Tachyon.Agent to enter state Stopped, but is already in that state.
+1EAUTO| 2018-01-05 19:41:00.288 : Service Tachyon.Agent is now in state Stopped
+1EAUTO| 2018-01-05 19:41:00.289 : 
+1EAUTO| 2018-01-05 19:41:00.289 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:41:00.289 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:41:00.289 : Then '1E Tachyon Coordinator' service gets installed and is running
+1EAUTO| 2018-01-05 19:41:01.299 : Time elapsed : 1 seconds.
+1EAUTO| 2018-01-05 19:41:01.299 : 
+1EAUTO| 2018-01-05 19:41:01.299 : --------------------------------------------------------------------------------
+1EAUTO| 2018-01-05 19:41:01.299 : ----- NEW STEP
+1EAUTO| 2018-01-05 19:41:01.299 : Then '1E Tachyon Switch Host' service gets installed and is running
+1EAUTO| 2018-01-05 19:41:02.302 : Time elapsed : 1 seconds.

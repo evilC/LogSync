@@ -1,0 +1,245 @@
+2017-nn-nn 19:38:01.288 DDoSblock=0 (was 10)
+2018-01-05 19:38:01.288 Date reminder it was GMT Fri Jan 05 2018 19:38:01(UTC) (local 2018-01-05 19:38:01)
+2018-01-05 19:38:01.288 
+
+2018-01-05 19:38:01.288 Tachyon Switch: v3.2.0.571 (Jan  5 2018 18:28:27)
+2018-01-05 19:38:01.288 Copyright (c) 1E Ltd. 2015-2018. All rights reserved
+2018-01-05 19:38:01.288 log=0x0 SecurityLevel=5 UsingSSL=true workers=1 slots=1000 batch=300
+2018-01-05 19:38:01.288 sendLimit=50000000 recvLimit=0 rqstLimit=50000000
+2018-01-05 19:38:01.288 WARNING: SSE4.2 unavailable 0001
+2018-01-05 19:38:01.288 using CaCert.pem -> "C:\Program Files\1E\Tachyon\Switch\SSL\cacert.pem"
+2018-01-05 19:38:01.288 Using: OpenSSL 1.1.0e  16 Feb 2017
+2018-01-05 19:38:01.288 Using: scope.dll v3.2.0.571
+2018-01-05 19:38:01.288  
+
+2018-01-05 19:38:01.304 CheckTrustedCertList: "C:\Program Files\1E\Tachyon\Switch\SSL\cacert.pem" - Number of Trusted Certs = 1
+2018-01-05 19:38:01.304 CA Cert_0 subject=ACME-CA-ROOT issuer=ACME-CA-ROOT serialNum=106F84567C6A539E40F1A832923CF1EC time=2016/08/10 14:12:09
+2018-01-05 19:38:01.304 INFO: ACME-CA-ROOT - no CRL distribution points
+2018-01-05 19:38:01.304  
+
+2018-01-05 19:38:01.304 CheckMyCertificate: TST03-2012R201 "C:\Program Files\1E\Tachyon\Switch\SSL\TST03-2012R201.cer"
+2018-01-05 19:38:01.304 My Cert subject=Tachyon.Lab.local issuer=ACME-CA-ROOT serialNum=7E0000001BA59810144BCA859300000000001B
+2018-01-05 19:38:01.304 My Cert altNames=Tachyon.Lab.local,TST03-2012R201,TST03-2012R202,TST03-2012R203,TST03-2012R204
+2018-01-05 19:38:01.304 Getting CRL ACME-CA-ROOT - http://Tachyon.Lab.local/crld/ACME-CA-ROOT.crl
+2018-01-05 19:38:01.439 Alt Name OK (TST03-2012R201)
+2018-01-05 19:38:01.439 SNDBUF=65536 RCVBUF=65536
+2018-01-05 19:38:01.439 Manager Listening on 0.0.0.0:4001
+2018-01-05 19:38:01.439 Thread "Manager" - started
+2018-01-05 19:38:02.158 Switch Registered SwitchId=1 ipAddr=10.10.0.171
+2018-01-05 19:38:02.158 MySwitchId=1 10.10.0.171:4001
+2018-01-05 19:38:03.158 MGR_19: Starting Instructions - Tachyon.Lab.Local:443 (SSL)
+2018-01-05 19:38:03.158 Thread "BufMgr" - started
+2018-01-05 19:38:03.174 BufMgr: Allocated 146 Batching Buffers (bufSiz=1485056 bytes) (=206.77 mBytes)
+2018-01-05 19:38:03.189 BufMgr: Started slot=21
+2018-01-05 19:38:03.189 Thread "SwHost" - started
+2018-01-05 19:38:03.205 SwHost: Thread started slot=22 - http://127.0.0.1:3900
+2018-01-05 19:38:03.205 Thread "Limiters" - started
+2018-01-05 19:38:04.768 WARNING: TickTest: 100 Millisec = 1.562 seconds
+2018-01-05 19:38:04.967 Limiters: Started slot=23
+2018-01-05 19:38:06.124 GetLastInstruction: returns 1
+2018-01-05 19:38:06.125 Thread "InstructionStats" - started
+2018-01-05 19:38:06.146 Istat_1: Ready
+2018-01-05 19:38:06.176 Thread "DeviceStatus" - started
+2018-01-05 19:38:06.177 DevStat_1: Connecting to http://TST03-2012R201:80/CoreInternal/Devices
+2018-01-05 19:38:06.228 Thread "Uploader_02" - started type=12
+(16 lines suppressed)
+2018-01-05 19:38:07.129 Thread "Worker_00" - started
+2018-01-05 19:38:07.280 AgentListener Ready
+2018-01-05 19:38:07.297 Initial Memory Allocation 243196296
+2018-01-05 19:38:07.298 Thread "Instrumentation" - started
+2018-01-05 19:38:07.299 Instrment_1: Connecting to http://localhost:3901/SwitchInstrumentation  - Async
+2018-01-05 19:38:07.300 Instrment_0: WebSock Ready (slot=0)
+2018-01-05 19:38:07.305 Instrment_1: WebSock Ready (slot=1)
+2018-01-05 19:38:07.305 Instrment_1: bCoreReady
+2018-01-05 19:38:07.308 Instrumentation: Started slot=25
+2018-01-05 19:38:07.310 Thread "CertCrlRdr" - started
+2018-01-05 19:38:07.321 CertCrlRdr: Started slot=26
+2018-01-05 19:38:07.321 Manager Init Complete
+2018-01-05 19:38:09.311 Local Addresses - TST03-2012R201 - 127.0.0.1;::1;10.10.0.171
+2018-01-05 19:38:18.573 Seq_1 not marked (base=1)
+2018-01-05 19:38:31.833 Seq_2 Id=2 Instruction: name="Auto-Echo-Action" cmd="SendAll " batchHint=600 scope="null" payload="Agent.Echo(Message:\"Your message goes here (via action)!\");\r\n" instrStatus=5
+2018-01-05 19:38:31.833 Seq_2 Found - Using GetInstructionFromStore - expires 20:38:31 (2018-01-05T19:38:25.693 + 60) - instrStatus=5
+2018-01-05 19:38:31.833 Seq_2(2) Auto-Echo-Actio  Start
+2018-01-05 19:38:31.834 WARNING: "batchHint"(600) > max configured value(300)
+2018-01-05 19:38:31.834 Uploader_05: name="Auto-Echo-Action" ActualBatch=300 RdyCnt=0
+2018-01-05 19:38:31.834 Uploader_05: Seq_2 Expecting 1
+2018-01-05 19:38:31.938 Uploader_05: Seq_2 First Batch 281 bytes
+2018-01-05 19:38:32.394 Seq_2 100% inserted=1 (279 bytes, 1 blocks) in 562 milliSec
+2018-01-05 19:38:32.405 UPL_5_1: 01 -> 01
+2018-01-05 19:38:32.405 Uploader_05: Seq_2 Complete
+2018-01-05 19:38:52.876 Seq_3 Id=3 Instruction: name="Auto-SystemBIOSDetails" cmd="SendAll " batchHint=375 scope="null" payload="NativeServices.RunWmiQuery(Namespace:\"root\\\\cimv2\", Query:\"SELECT BIOSVersion, PrimaryBIOS, Version, Status FROM Win32_BIOS\");\r\n" instrStatus=5
+2018-01-05 19:38:52.876 Seq_3 Found - Using GetInstructionFromStore - expires 20:38:53 (2018-01-05T19:38:52.677 + 60) - instrStatus=5
+2018-01-05 19:38:52.876 Seq_3(3) Auto-SystemBIOS  Start
+2018-01-05 19:38:52.878 WARNING: "batchHint"(375) > max configured value(300)
+2018-01-05 19:38:52.878 Uploader_06: name="Auto-SystemBIOSD" ActualBatch=300 RdyCnt=0
+2018-01-05 19:38:52.878 Uploader_06: Seq_3 Expecting 1
+2018-01-05 19:38:53.031 Uploader_06: Seq_3 First Batch 399 bytes
+2018-01-05 19:38:53.050 Seq_3 100% inserted=1 (397 bytes, 1 blocks) in 174 milliSec
+2018-01-05 19:38:53.061 UPL_6_1: 01 -> 01
+2018-01-05 19:38:53.061 Uploader_06: Seq_3 Complete
+2018-01-05 19:39:11.542 Seq_4 Id=4 Instruction: name="Auto-AgentDiagnostics" cmd="SendAll " batchHint=213 scope="null" payload="Agent.GetDiagnostics();\r\n" instrStatus=5
+2018-01-05 19:39:11.542 Seq_4 Found - Using GetInstructionFromStore - expires 20:39:11 (2018-01-05T19:39:11.32 + 60) - instrStatus=5
+2018-01-05 19:39:11.542 Seq_4(4) Auto-AgentDiagn  Start
+2018-01-05 19:39:11.543 Uploader_07: name="Auto-AgentDiagno" ActualBatch=213 RdyCnt=0
+2018-01-05 19:39:11.543 Uploader_07: Seq_4 Expecting 1
+2018-01-05 19:39:11.652 Uploader_07: Seq_4 First Batch 468 bytes
+2018-01-05 19:39:11.676 Seq_4 100% inserted=1 (466 bytes, 1 blocks) in 134 milliSec
+2018-01-05 19:39:11.687 UPL_7_1: 01 -> 01
+2018-01-05 19:39:11.687 Uploader_07: Seq_4 Complete
+2018-01-05 19:39:27.922 SWHST_1: Shutdown Requested
+2018-01-05 19:39:27.923 Thread "SwHost" - exiting
+2018-01-05 19:39:27.924 mgr Thread exiting
+2018-01-05 19:39:27.924 Thread "Instrumentation" - exiting
+2018-01-05 19:39:27.924 Thread "BufMgr" - exiting
+2018-01-05 19:39:27.924 Thread "CertCrlRdr" - exiting
+2018-01-05 19:39:27.925 mgr Thread exits
+2018-01-05 19:39:28.169 Thread "Uploader_06" - exiting
+2018-01-05 19:39:28.435 Exiting
+2018-01-05 19:39:28.435 Thread "Uploader_02" - exiting
+(15 lines suppressed)
+2018-01-05 19:39:28.560 Stopped Misc Threads
+2018-01-05 19:39:28.560 mgr Listen exiting
+2018-01-05 19:39:28.560 Closed sockets
+2018-01-05 19:39:28.560 Listener exits
+2018-01-05 19:39:28.560 mgr Listen exits
+2018-01-05 19:39:28.654 Thread "InstructionStats" - exiting
+2018-01-05 19:39:28.685 Thread "DeviceStatus" - exiting
+2018-01-05 19:39:28.794 log closed
+2017-nn-nn 19:39:36.451 DDoSblock=0 (was 10)
+2018-01-05 19:39:36.451 Date reminder it was GMT Fri Jan 05 2018 19:39:36(UTC) (local 2018-01-05 19:39:36)
+2018-01-05 19:39:36.451 
+
+2018-01-05 19:39:36.451 Tachyon Switch: v3.2.0.571 (Jan  5 2018 18:28:27)
+2018-01-05 19:39:36.451 Copyright (c) 1E Ltd. 2015-2018. All rights reserved
+2018-01-05 19:39:36.451 log=0x0 SecurityLevel=5 UsingSSL=true workers=1 slots=1000 batch=300
+2018-01-05 19:39:36.451 sendLimit=50000000 recvLimit=0 rqstLimit=50000000
+2018-01-05 19:39:36.451 WARNING: SSE4.2 unavailable 0001
+2018-01-05 19:39:36.451 using CaCert.pem -> "C:\Program Files\1E\Tachyon\Switch\SSL\cacert.pem"
+2018-01-05 19:39:36.451 Using: OpenSSL 1.1.0e  16 Feb 2017
+2018-01-05 19:39:36.451 Using: scope.dll v3.2.0.571
+2018-01-05 19:39:36.451  
+
+2018-01-05 19:39:36.451 CheckTrustedCertList: "C:\Program Files\1E\Tachyon\Switch\SSL\cacert.pem" - Number of Trusted Certs = 1
+2018-01-05 19:39:36.451 CA Cert_0 subject=ACME-CA-ROOT issuer=ACME-CA-ROOT serialNum=106F84567C6A539E40F1A832923CF1EC time=2016/08/10 14:12:09
+2018-01-05 19:39:36.451 INFO: ACME-CA-ROOT - no CRL distribution points
+2018-01-05 19:39:36.451  
+
+2018-01-05 19:39:36.451 CheckMyCertificate: TST03-2012R201 "C:\Program Files\1E\Tachyon\Switch\SSL\TST03-2012R201.cer"
+2018-01-05 19:39:36.451 My Cert subject=Tachyon.Lab.local issuer=ACME-CA-ROOT serialNum=7E0000001BA59810144BCA859300000000001B
+2018-01-05 19:39:36.451 My Cert altNames=Tachyon.Lab.local,TST03-2012R201,TST03-2012R202,TST03-2012R203,TST03-2012R204
+2018-01-05 19:39:36.451 Getting CRL ACME-CA-ROOT - http://Tachyon.Lab.local/crld/ACME-CA-ROOT.crl
+2018-01-05 19:39:36.479 Alt Name OK (TST03-2012R201)
+2018-01-05 19:39:36.494 SNDBUF=65536 RCVBUF=65536
+2018-01-05 19:39:36.494 Manager Listening on 0.0.0.0:4001
+2018-01-05 19:39:36.494 Thread "Manager" - started
+2018-01-05 19:39:36.635 Switch Registered SwitchId=2 ipAddr=10.10.0.171
+2018-01-05 19:39:36.635 MySwitchId=2 10.10.0.171:4001
+2018-01-05 19:39:37.166 MGR_19: Starting Instructions - Tachyon.Lab.Local:443 (SSL)
+2018-01-05 19:39:37.166 BufMgr: Started slot=21
+2018-01-05 19:39:37.166 Thread "BufMgr" - started
+2018-01-05 19:39:37.166 Thread "SwHost" - started
+2018-01-05 19:39:37.182 SwHost: Thread started slot=22 - http://127.0.0.1:3900
+2018-01-05 19:39:37.182 BufMgr: Allocated 146 Batching Buffers (bufSiz=1485056 bytes) (=206.77 mBytes)
+2018-01-05 19:39:37.182 Thread "Limiters" - started
+2018-01-05 19:39:38.744 WARNING: TickTest: 100 Millisec = 1.562 seconds
+2018-01-05 19:39:38.955 WARNING: TickTest: 100 Millisec = 0.210 seconds
+2018-01-05 19:39:38.958 Limiters: Started slot=23
+2018-01-05 19:39:39.975 GetLastInstruction: First non-expired=2
+2018-01-05 19:39:39.991 GetLastInstruction: returns 4
+2018-01-05 19:39:39.991 Thread "InstructionStats" - started
+2018-01-05 19:39:40.002 Istat_1: Ready
+2018-01-05 19:39:40.042 Thread "DeviceStatus" - started
+2018-01-05 19:39:40.043 DevStat_1: Connecting to http://TST03-2012R201:80/CoreInternal/Devices
+2018-01-05 19:39:40.093 Thread "Uploader_02" - started type=12
+(16 lines suppressed)
+2018-01-05 19:39:40.983 Thread "Worker_00" - started
+2018-01-05 19:39:41.163 Initial Memory Allocation 243196296
+2018-01-05 19:39:41.164 Thread "Instrumentation" - started
+2018-01-05 19:39:41.164 Instrment_1: Connecting to http://localhost:3901/SwitchInstrumentation  - Async
+2018-01-05 19:39:41.164 Instrment_0: WebSock Ready (slot=0)
+2018-01-05 19:39:41.165 Instrment_1: WebSock Ready (slot=1)
+2018-01-05 19:39:41.165 Instrment_1: bCoreReady
+2018-01-05 19:39:41.174 Instrumentation: Started slot=25
+2018-01-05 19:39:41.174 Thread "CertCrlRdr" - started
+2018-01-05 19:39:41.185 CertCrlRdr: Started slot=26
+2018-01-05 19:39:41.185 Manager Init Complete
+2018-01-05 19:39:41.187 WARNING: Rejected 127.0.0.1 (premature)
+2018-01-05 19:39:41.187 AgentListener Ready
+2018-01-05 19:39:43.175 Local Addresses - TST03-2012R201 - 127.0.0.1;::1;10.10.0.171
+2018-01-05 19:39:55.837 SWHST_1: Shutdown Requested
+2018-01-05 19:39:55.838 Thread "SwHost" - exiting
+2018-01-05 19:39:55.838 mgr Thread exiting
+2018-01-05 19:39:55.838 Thread "BufMgr" - exiting
+2018-01-05 19:39:55.839 mgr Thread exits
+2018-01-05 19:39:55.839 Thread "CertCrlRdr" - exiting
+2018-01-05 19:39:55.839 Thread "Instrumentation" - exiting
+2018-01-05 19:39:56.015 Thread "InstructionStats" - exiting
+2018-01-05 19:39:56.047 Thread "DeviceStatus" - exiting
+2018-01-05 19:39:56.344 Exiting
+2018-01-05 19:39:56.344 Thread "Uploader_04" - exiting
+(16 lines suppressed)
+2018-01-05 19:39:56.375 Stopped Misc Threads
+2018-01-05 19:39:56.375 mgr Listen exiting
+2018-01-05 19:39:56.375 Closed sockets
+2018-01-05 19:39:56.375 Listener exits
+2018-01-05 19:39:56.375 mgr Listen exits
+2018-01-05 19:39:56.594 log closed
+2017-nn-nn 19:40:47.474 DDoSblock=0 (was 10)
+2018-01-05 19:40:47.474 Date reminder it was GMT Fri Jan 05 2018 19:40:47(UTC) (local 2018-01-05 19:40:47)
+2018-01-05 19:40:47.474 
+
+2018-01-05 19:40:47.474 Tachyon Switch: v3.2.0.571 (Jan  5 2018 18:28:27)
+2018-01-05 19:40:47.474 Copyright (c) 1E Ltd. 2015-2018. All rights reserved
+2018-01-05 19:40:47.474 log=0x0 SecurityLevel=5 UsingSSL=true workers=1 slots=1000 batch=300
+2018-01-05 19:40:47.474 sendLimit=50000000 recvLimit=0 rqstLimit=50000000
+2018-01-05 19:40:47.474 WARNING: SSE4.2 unavailable 0001
+2018-01-05 19:40:47.474 using CaCert.pem -> "C:\Program Files\1E\Tachyon\Switch\SSL\cacert.pem"
+2018-01-05 19:40:47.474 Using: OpenSSL 1.1.0e  16 Feb 2017
+2018-01-05 19:40:47.474 Using: scope.dll v3.2.0.571
+2018-01-05 19:40:47.474  
+
+2018-01-05 19:40:47.474 CheckTrustedCertList: "C:\Program Files\1E\Tachyon\Switch\SSL\cacert.pem" - Number of Trusted Certs = 1
+2018-01-05 19:40:47.474 CA Cert_0 subject=ACME-CA-ROOT issuer=ACME-CA-ROOT serialNum=106F84567C6A539E40F1A832923CF1EC time=2016/08/10 14:12:09
+2018-01-05 19:40:47.474 INFO: ACME-CA-ROOT - no CRL distribution points
+2018-01-05 19:40:47.474  
+
+2018-01-05 19:40:47.474 CheckMyCertificate: TST03-2012R201 "C:\Program Files\1E\Tachyon\Switch\SSL\TST03-2012R201.cer"
+2018-01-05 19:40:47.474 My Cert subject=Tachyon.Lab.local issuer=ACME-CA-ROOT serialNum=7E0000001BA59810144BCA859300000000001B
+2018-01-05 19:40:47.474 My Cert altNames=Tachyon.Lab.local,TST03-2012R201,TST03-2012R202,TST03-2012R203,TST03-2012R204
+2018-01-05 19:40:47.474 Getting CRL ACME-CA-ROOT - http://Tachyon.Lab.local/crld/ACME-CA-ROOT.crl
+2018-01-05 19:40:47.563 Alt Name OK (TST03-2012R201)
+2018-01-05 19:40:47.563 SNDBUF=65536 RCVBUF=65536
+2018-01-05 19:40:47.563 Manager Listening on 0.0.0.0:4001
+2018-01-05 19:40:47.563 Thread "Manager" - started
+2018-01-05 19:40:51.156 Switch Registered SwitchId=1 ipAddr=10.10.0.171
+2018-01-05 19:40:51.156 MySwitchId=1 10.10.0.171:4001
+2018-01-05 19:40:52.125 MGR_19: Starting Instructions - Tachyon.Lab.Local:443 (SSL)
+2018-01-05 19:40:52.125 Thread "BufMgr" - started
+2018-01-05 19:40:52.141 BufMgr: Allocated 146 Batching Buffers (bufSiz=1485056 bytes) (=206.77 mBytes)
+2018-01-05 19:40:52.156 BufMgr: Started slot=21
+2018-01-05 19:40:52.156 Thread "SwHost" - started
+2018-01-05 19:40:52.172 SwHost: Thread started slot=22 - http://127.0.0.1:3900
+2018-01-05 19:40:52.172 Thread "Limiters" - started
+2018-01-05 19:40:53.735 WARNING: TickTest: 100 Millisec = 1.563 seconds
+2018-01-05 19:40:53.945 WARNING: TickTest: 100 Millisec = 0.210 seconds
+2018-01-05 19:40:53.947 Limiters: Started slot=23
+2018-01-05 19:40:55.058 GetLastInstruction: returns 1
+2018-01-05 19:40:55.058 Thread "InstructionStats" - started
+2018-01-05 19:40:55.078 Istat_1: Ready
+2018-01-05 19:40:55.109 Thread "DeviceStatus" - started
+2018-01-05 19:40:55.110 DevStat_1: Connecting to http://TST03-2012R201:80/CoreInternal/Devices
+2018-01-05 19:40:55.162 Thread "Uploader_02" - started type=12
+(16 lines suppressed)
+2018-01-05 19:40:56.055 Thread "Worker_00" - started
+2018-01-05 19:40:56.242 Initial Memory Allocation 243196296
+2018-01-05 19:40:56.243 Thread "Instrumentation" - started
+2018-01-05 19:40:56.243 Instrment_1: Connecting to http://localhost:3901/SwitchInstrumentation  - Async
+2018-01-05 19:40:56.243 Instrment_0: WebSock Ready (slot=0)
+2018-01-05 19:40:56.246 Instrment_1: WebSock Ready (slot=1)
+2018-01-05 19:40:56.246 Instrment_1: bCoreReady
+2018-01-05 19:40:56.252 AgentListener Ready
+2018-01-05 19:40:56.253 Instrumentation: Started slot=25
+2018-01-05 19:40:56.253 Thread "CertCrlRdr" - started
+2018-01-05 19:40:56.264 CertCrlRdr: Started slot=26
+2018-01-05 19:40:56.264 Manager Init Complete
+2018-01-05 19:40:58.254 Local Addresses - TST03-2012R201 - 127.0.0.1;::1;10.10.0.171
