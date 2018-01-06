@@ -18,6 +18,8 @@ namespace LogSync.ViewModel
     public class LogViewModel
     {
         public ObservableCollection<LogLine> ViewModelLines { get; set; }
+        public string LogPath { get; set; }
+
         public bool IsFinished { get { return isFinished; } }
 
         private DateTime currentParseTime;
@@ -31,6 +33,7 @@ namespace LogSync.ViewModel
         /// <param name="path">Path to the log file</param>
         public void LoadLog(string path)
         {
+            LogPath = path;
             logModel = new LogModel(path);
         }
 

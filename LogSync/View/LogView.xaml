@@ -7,7 +7,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Margin="5">
-        <ListView Name="LogListView" ItemsSource="{Binding ViewModelLines}" SelectionMode="Multiple" ScrollViewer.ScrollChanged="OnScrollChange">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="{Binding LogPath}">
+        </TextBlock>
+        <ListView Name="LogListView" Grid.Row="1" ItemsSource="{Binding ViewModelLines}" SelectionMode="Multiple" ScrollViewer.ScrollChanged="OnScrollChange">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
