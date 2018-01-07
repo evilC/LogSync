@@ -1,6 +1,8 @@
 # LogSync
 A tool to view multiple logs, synchronized in time and with synced scrollbars
 
+![Preview GIF](https://i.imgur.com/Dv7KQgy.gif)  
+
 ## About
 LogSync is aimed at scenarios where you have multiple logs (Say from a client-server application) and wish to view them together 
 to analyze what was going on at any given point in time.  
