@@ -17,6 +17,11 @@ using LogSync.View;
 using SWF = System.Windows.Forms;
 using Path = System.IO.Path;
 
+/*
+Project -> LogSync Properties... -> Command-line args
+-loadlogs "..\..\..\Sample Data\Tachyon.ConsumerAPI.log" "..\..\..\Sample Data\Tachyon.CoreAPI.log"
+*/
+
 namespace LogSync
 {
     /// <summary>
@@ -33,7 +38,6 @@ namespace LogSync
             InitializeComponent();
 
             logSync = new SyncedViewModel();
-            //LoadLogs(new string[] { "..\\..\\..\\Sample Data\\Tachyon.ConsumerAPI.log", "..\\..\\..\\Sample Data\\Tachyon.CoreAPI.log" });
         }
 
         /// <summary>
