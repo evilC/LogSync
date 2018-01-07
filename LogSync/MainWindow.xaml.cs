@@ -88,6 +88,11 @@ namespace LogSync
         /// <returns></returns>
         private string[] GetLogTitles(string[] logs)
         {
+            // If only one log, return the full title
+            if (logs.Length < 2)
+            {
+                return logs;
+            }
             var pathChunks = new List<string[]>();
             for (int i = 0; i < logs.Length; i++)
             {
