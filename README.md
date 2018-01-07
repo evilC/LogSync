@@ -17,6 +17,10 @@ Using this technique, all log views are of *equal length*, therefore if displaye
 Then we just rig the code so that when one view is scrolled by the user, the other log views are scrolled to match. 
 
 ## Usage
+Note that currently, LogSync only supports logs with timestamps in the format  
+`YYYY-MM-DD HH:MM:SS.FFF` (FFF = milliseconds)  
+This will be configurable at some point in the future.
+
 ### GUI
 1. Double-click LogSync.exe
 2. Click `Load Logs...`
