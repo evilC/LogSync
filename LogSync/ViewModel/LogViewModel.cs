@@ -18,7 +18,7 @@ namespace LogSync.ViewModel
     public class LogViewModel
     {
         public ObservableCollection<LogLine> ViewModelLines { get; set; }
-        public string LogPath { get; set; }
+        public string LogTitle { get; set; }
 
         public bool IsFinished { get { return isFinished; } }
 
@@ -31,9 +31,9 @@ namespace LogSync.ViewModel
         /// Loads a log
         /// </summary>
         /// <param name="path">Path to the log file</param>
-        public void LoadLog(string path)
+        public void LoadLog(string path, string title)
         {
-            LogPath = path;
+            LogTitle = title;
             logModel = new LogModel(path);
         }
 

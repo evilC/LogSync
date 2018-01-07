@@ -23,10 +23,10 @@ namespace LogSync.ViewModel
         /// </summary>
         /// <param name="logPath">The path to the log file</param>
         /// <returns>The ViewModel to DataBind to</returns>
-        public LogViewModel AddLog(string logPath)
+        public LogViewModel AddLog(string logPath, string logTitle)
         {
             var logViewModel = new LogViewModel();
-            logViewModel.LoadLog(logPath);
+            logViewModel.LoadLog(logPath, logTitle);
             logViewModel.InitParse();
             logViewModels.Add(logViewModel);
             return logViewModel;
