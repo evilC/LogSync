@@ -36,6 +36,44 @@ namespace LogSync
         }
 
         /// <summary>
+        /// Creates LogViews from a list of logs
+        /// </summary>
+        /// <param name="logs"></param>
+        public void LoadLogs(string[] logs)
+        {
+            // Remove any old views
+            logGrid.Children.Clear();
+            logGrid.ColumnDefinitions.Clear();
+
+            // Create new views
+            logViews = new List<LogView>();
+
+            for (int i = 0; i < logs.Length; i++)
+            {
+                // Create the View
+                var logViewObject = new LogView(this, i);
+                logViews.Add(logViewObject);
+
+                // Add a new Column to the Grid
+                var col = new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star ), Name = "AAA" };
+                logGrid.ColumnDefinitions.Add(col);
+                // Add the View to the Grid
+                Grid.SetRow(logViewObject, i);
+                Grid.SetColumn(logViewObject, i);
+                logGrid.Children.Add(logViewObject);
+
+                // Create the ViewModel
+                var logViewModel = logSync.AddLog(logs[i]);
+
+                // Bind data to ViewModel
+                logViewObject.DataContext = logViewModel;
+            }
+
+            // Tell ViewModel to sync the logs
+            logSync.SyncLogs();
+        }
+
+        /// <summary>
         /// Called when one of the child windows scrolls
         /// Tells all the other windows to scroll to match
         /// </summary>
@@ -56,7 +94,12 @@ namespace LogSync
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Called when the user uses the UI to open logs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Open_Click(object sender, RoutedEventArgs e)
         {
             // Open file picker Dialog
             SWF.OpenFileDialog o = new SWF.OpenFileDialog();
@@ -71,39 +114,5 @@ namespace LogSync
             LoadLogs(o.FileNames);
         }
 
-        public void LoadLogs(string[] logs)
-        {
-            // Remove any old views
-            logGrid.Children.Clear();
-            logGrid.ColumnDefinitions.Clear();
-
-            // Create new views
-            logViews = new List<LogView>();
-
-            for (int i = 0; i < logs.Length; i++)
-            {
-                // Create the View
-                var logViewObject = new LogView(this, i);
-                logViews.Add(logViewObject);
-
-                // Add a new Column to the Grid
-                var col = new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) };
-                logGrid.ColumnDefinitions.Add(col);
-
-                // Add the View to the Grid
-                Grid.SetRow(logViewObject, i);
-                Grid.SetColumn(logViewObject, i);
-                logGrid.Children.Add(logViewObject);
-
-                // Create the ViewModel
-                var logViewModel = logSync.AddLog(logs[i]);
-
-                // Bind data to ViewModel
-                logViewObject.DataContext = logViewModel;
-            }
-
-            // Tell ViewModel to sync the logs
-            logSync.SyncLogs();
-        }
     }
 }

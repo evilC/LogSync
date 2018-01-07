@@ -7,15 +7,15 @@
         xmlns:views = "clr-namespace:LogSync.View" 
         mc:Ignorable="d"
         Title="LogSync">
-    <Grid Margin="5">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Button Click="Button_Click" Grid.Row="0">
-            <TextBlock>Load Logs...</TextBlock>
-        </Button>
-        <Grid Name="logGrid" Background="AliceBlue" Grid.Row="1">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Load Logs..." Click="Open_Click">
+            </MenuItem>
+        </Menu>
+        <TextBox AcceptsReturn="True" />
+        <Grid Margin="5" DockPanel.Dock="Top">
+            <Grid Name="logGrid" Background="AliceBlue">
+            </Grid>
         </Grid>
-    </Grid>
+    </DockPanel>
 </Window>
