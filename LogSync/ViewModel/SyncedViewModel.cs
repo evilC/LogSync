@@ -28,63 +28,9 @@ namespace LogSync.ViewModel
         {
             mainWindow = mw;
 
-            var args = ProcessCommandLineArguments(e);
-
-            foreach (var arg in args)
-            {
-                switch (arg.Key.ToLower())
-                {
-                    case "-loadlogs":
-                        LoadLogs(arg.Value.ToArray());
-                        break;
-                    default:
-                        var str = string.Format("Invalid Argument '{0}'", arg);
-                        Console.WriteLine(str);
-                        throw new Exception(str);
-                }
-            }
+            ProcessCommandLineArguments(e);
 
             mainWindow.Show();
-        }
-
-        private Dictionary<string, List<string>> ProcessCommandLineArguments(StartupEventArgs e)
-        {
-            var dict = new Dictionary<string, List<string>>();
-            var max = e.Args.Length;
-
-            int currentArg = 0;
-
-            while (currentArg < max)
-            {
-                if (e.Args[currentArg][0] == '-')
-                {
-                    var subArgs = GetNonPrefixedArgs(e, currentArg + 1);
-                    dict.Add(e.Args[currentArg], subArgs);
-                    currentArg += 1 + subArgs.Count;
-                }
-                else
-                {
-                    var str = string.Format("Error: Not expecting non-argument parameter '{0}'", e.Args[currentArg]);
-                    Console.WriteLine(str);
-                    throw new Exception(str);
-                }
-            }
-            return dict;
-        }
-
-        private List<string> GetNonPrefixedArgs(StartupEventArgs e, int offset)
-        {
-            var max = e.Args.Length;
-            var chunks = new List<string>();
-            for (int i = offset; i < max; i++)
-            {
-                if (e.Args[i][0] == '-')
-                {
-                    break;
-                }
-                chunks.Add(e.Args[i]);
-            }
-            return chunks;
         }
 
         public void LoadLogs(string[] logs)
@@ -185,6 +131,7 @@ namespace LogSync.ViewModel
             return paths.ToArray();
         }
 
+        #region View Synchronization
         public void OnScrollChanged(string id, ScrollChangedEventArgs e)
         {
             // Iterate through all views
@@ -197,5 +144,68 @@ namespace LogSync.ViewModel
                 logViews[logView.Key].DoScroll(e);
             }
         }
+        #endregion
+
+        #region Command-Line Argument processing
+        private void ProcessCommandLineArguments(StartupEventArgs e)
+        {
+            var args = ChunkCommandLineArguments(e);
+
+            foreach (var arg in args)
+            {
+                switch (arg.Key.ToLower())
+                {
+                    case "-loadlogs":
+                        LoadLogs(arg.Value.ToArray());
+                        break;
+                    default:
+                        var str = string.Format("Invalid Argument '{0}'", arg);
+                        Console.WriteLine(str);
+                        throw new Exception(str);
+                }
+            }
+        }
+
+        private Dictionary<string, List<string>> ChunkCommandLineArguments(StartupEventArgs e)
+        {
+            var dict = new Dictionary<string, List<string>>();
+            var max = e.Args.Length;
+
+            int currentArg = 0;
+
+            while (currentArg < max)
+            {
+                if (e.Args[currentArg][0] == '-')
+                {
+                    var subArgs = GetNonPrefixedArgs(e, currentArg + 1);
+                    dict.Add(e.Args[currentArg], subArgs);
+                    currentArg += 1 + subArgs.Count;
+                }
+                else
+                {
+                    var str = string.Format("Error: Not expecting non-argument parameter '{0}'", e.Args[currentArg]);
+                    Console.WriteLine(str);
+                    throw new Exception(str);
+                }
+            }
+            return dict;
+        }
+
+        private List<string> GetNonPrefixedArgs(StartupEventArgs e, int offset)
+        {
+            var max = e.Args.Length;
+            var chunks = new List<string>();
+            for (int i = offset; i < max; i++)
+            {
+                if (e.Args[i][0] == '-')
+                {
+                    break;
+                }
+                chunks.Add(e.Args[i]);
+            }
+            return chunks;
+        }
+
+        #endregion
     }
 }
