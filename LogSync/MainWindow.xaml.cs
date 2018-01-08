@@ -15,12 +15,6 @@ using System.Windows.Shapes;
 using LogSync.ViewModel;
 using LogSync.View;
 using SWF = System.Windows.Forms;
-using Path = System.IO.Path;
-
-/*
-Project -> LogSync Properties... -> Command-line args
--loadlogs "..\..\..\Sample Data\Tachyon.ConsumerAPI.log" "..\..\..\Sample Data\Tachyon.CoreAPI.log"
-*/
 
 namespace LogSync
 {
@@ -31,11 +25,11 @@ namespace LogSync
     {
         public SyncedViewModel logSync;
 
-        public MainWindow()
+        public MainWindow(StartupEventArgs e)
         {
             InitializeComponent();
 
-            logSync = new SyncedViewModel(this);
+            logSync = new SyncedViewModel(this, e);
         }
 
         /// <summary>

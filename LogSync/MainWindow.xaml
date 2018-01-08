@@ -12,7 +12,6 @@
             <MenuItem Header="_Load Logs..." Click="Open_Click"></MenuItem>
             <!--<MenuItem Header="Sync Logs" Click="Sync_Click"></MenuItem>-->
         </Menu>
-        <TextBox AcceptsReturn="True" />
         <Grid Margin="5" DockPanel.Dock="Top">
             <Grid Name="logGrid" Background="AliceBlue">
             </Grid>

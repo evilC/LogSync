@@ -8,6 +8,11 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
+/*
+Project -> LogSync Properties... -> Command-line args
+-loadlogs "..\..\..\Sample Data\Tachyon.ConsumerAPI.log" "..\..\..\Sample Data\Tachyon.CoreAPI.log"
+*/
+
 namespace LogSync.ViewModel
 {
     /// <summary>
@@ -17,11 +22,69 @@ namespace LogSync.ViewModel
     {
         private MainWindow mainWindow;
         private Dictionary<string, LogView> logViews = new Dictionary<string, LogView>();
-        private List<LogViewModel> logViewModels = new List<LogViewModel>();
+        private Dictionary<string, LogViewModel> logViewModels = new Dictionary<string, LogViewModel>();
 
-        public SyncedViewModel(MainWindow mw)
+        public SyncedViewModel(MainWindow mw, StartupEventArgs e)
         {
             mainWindow = mw;
+
+            var args = ProcessCommandLineArguments(e);
+
+            foreach (var arg in args)
+            {
+                switch (arg.Key.ToLower())
+                {
+                    case "-loadlogs":
+                        LoadLogs(arg.Value.ToArray());
+                        break;
+                    default:
+                        var str = string.Format("Invalid Argument '{0}'", arg);
+                        Console.WriteLine(str);
+                        throw new Exception(str);
+                }
+            }
+
+            mainWindow.Show();
+        }
+
+        private Dictionary<string, List<string>> ProcessCommandLineArguments(StartupEventArgs e)
+        {
+            var dict = new Dictionary<string, List<string>>();
+            var max = e.Args.Length;
+
+            int currentArg = 0;
+
+            while (currentArg < max)
+            {
+                if (e.Args[currentArg][0] == '-')
+                {
+                    var subArgs = GetNonPrefixedArgs(e, currentArg + 1);
+                    dict.Add(e.Args[currentArg], subArgs);
+                    currentArg += 1 + subArgs.Count;
+                }
+                else
+                {
+                    var str = string.Format("Error: Not expecting non-argument parameter '{0}'", e.Args[currentArg]);
+                    Console.WriteLine(str);
+                    throw new Exception(str);
+                }
+            }
+            return dict;
+        }
+
+        private List<string> GetNonPrefixedArgs(StartupEventArgs e, int offset)
+        {
+            var max = e.Args.Length;
+            var chunks = new List<string>();
+            for (int i = offset; i < max; i++)
+            {
+                if (e.Args[i][0] == '-')
+                {
+                    break;
+                }
+                chunks.Add(e.Args[i]);
+            }
+            return chunks;
         }
 
         public void LoadLogs(string[] logs)
@@ -69,7 +132,7 @@ namespace LogSync.ViewModel
             var logViewModel = new LogViewModel();
             logViewModel.LoadLog(logPath, logTitle);
             logViewModel.InitParse();
-            logViewModels.Add(logViewModel);
+            logViewModels.Add(logPath, logViewModel);
             return logViewModel;
         }
 
@@ -141,23 +204,28 @@ namespace LogSync.ViewModel
         /// </summary>
         private class ViewModelSyncer
         {
-            private List<LogViewModel> viewModels;
-            private List<bool> logsParsed = new List<bool>();
+            private Dictionary<string, LogViewModel> viewModels;
+            private Dictionary<string, bool> logsParsed = new Dictionary<string, bool>();
 
-            public ViewModelSyncer(List<LogViewModel> vms)
+            public ViewModelSyncer(Dictionary<string, LogViewModel> vms)
             {
                 viewModels = vms;
             }
 
             public void Sync()
             {
-                var chunker = new LogChunkComparer(viewModels.Count);
-                for (int i = 0; i < viewModels.Count; i++)
+                var logs = new List<string>();
+                foreach (var viewModel in viewModels)
                 {
-                    logsParsed.Add(false);
-                    viewModels[i].InitParse();
+                    logs.Add(viewModel.Key);
+                }
+                var chunker = new LogChunkComparer(logs.ToArray());
+                foreach (var viewModel in viewModels)
+                {
+                    logsParsed.Add(viewModel.Key, false);
+                    viewModel.Value.InitParse();
                     // Load the first chunk
-                    chunker.LoadChunk(i, viewModels[i].GetFirstLogParseData());
+                    chunker.LoadChunk(viewModel.Key, viewModel.Value.GetFirstLogParseData());
                 }
 
                 while (AreLogsWaitingToBeParsed())
@@ -167,30 +235,29 @@ namespace LogSync.ViewModel
                     // Find out what the max number of lines any log has with this timestamp
                     var max = chunker.GetMaxChunkLengthByTimestamp(thisTime);
 
-                    // Iterate through the logs
-                    for (int i = 0; i < viewModels.Count; i++)
+                    foreach (var viewModel in viewModels)
                     {
                         // Get the count of lines for this Timestamp (could be 0)
-                        var count = chunker.GetChunkCountByTimestamp(i, thisTime);
+                        var count = chunker.GetChunkCountByTimestamp(viewModel.Key, thisTime);
                         //var lines = chunker.GetChunkLinesByTimestamp(i, thisTime, max);
 
                         // Tell the ViewModel to add as many lines for this Timestamp as needed
-                        viewModels[i].AddLinesForTimestamp(thisTime, max);
+                        viewModel.Value.AddLinesForTimestamp(thisTime, max);
 
                         // If we used actual lines from the log (Not all blank ones)...
                         if (count > 0)
                         {
                             // Move on to the next line of this log
-                            viewModels[i].ParseNext();
-                            if (viewModels[i].IsFinished)
+                            viewModel.Value.ParseNext();
+                            if (viewModel.Value.IsFinished)
                             {
-                                logsParsed[i] = true;
-                                chunker.LoadChunk(i, new LogParseData() { IsFinished = true, Timestamp = DateTime.MaxValue });
+                                logsParsed[viewModel.Key] = true;
+                                chunker.LoadChunk(viewModel.Key, new LogParseData() { IsFinished = true, Timestamp = DateTime.MaxValue });
                             }
                             else
                             {
                                 // Reload the Chunk for this log
-                                chunker.LoadChunk(i, viewModels[i].GetCurrentLogParseData());
+                                chunker.LoadChunk(viewModel.Key, viewModel.Value.GetCurrentLogParseData());
                             }
                         }
 
@@ -200,9 +267,9 @@ namespace LogSync.ViewModel
 
             private bool AreLogsWaitingToBeParsed()
             {
-                for (int i = 0; i < logsParsed.Count; i++)
+                foreach (var viewModel in viewModels)
                 {
-                    if (logsParsed[i] == false)
+                    if (logsParsed[viewModel.Key] == false)
                     {
                         return true;
                     }
@@ -216,20 +283,20 @@ namespace LogSync.ViewModel
             /// </summary>
             private class LogChunkComparer
             {
-                public List<LogParseData> Chunks { get; set; }
+                public Dictionary<string, LogParseData> Chunks { get; set; }
 
-                public LogChunkComparer(int count)
+                public LogChunkComparer(string[] ids)
                 {
-                    Chunks = new List<LogParseData>();
-                    for (int i = 0; i < count; i++)
+                    Chunks = new Dictionary<string, LogParseData>();
+                    foreach (var chunkName in ids)
                     {
-                        Chunks.Add(new LogParseData());
+                        Chunks.Add(chunkName, new LogParseData());
                     }
                 }
 
-                public void LoadChunk(int i, LogParseData lpd)
+                public void LoadChunk(string id, LogParseData lpd)
                 {
-                    Chunks[i] = lpd;
+                    Chunks[id] = lpd;
                 }
 
                 /// <summary>
@@ -240,13 +307,14 @@ namespace LogSync.ViewModel
                 {
                     DateTime ts = DateTime.MaxValue;
 
-                    for (int i = 0; i < Chunks.Count; i++)
+                    foreach (var chunk in Chunks.Values)
                     {
-                        if (Chunks[i].Timestamp < ts)
+                        if (chunk.Timestamp < ts)
                         {
-                            ts = Chunks[i].Timestamp;
+                            ts = chunk.Timestamp;
                         }
                     }
+
                     return ts;
                 }
 
@@ -256,11 +324,11 @@ namespace LogSync.ViewModel
                 /// <param name="i">The index of the chunk</param>
                 /// <param name="ts">The timestamp of the chunk</param>
                 /// <returns></returns>
-                public int GetChunkCountByTimestamp(int i, DateTime ts)
+                public int GetChunkCountByTimestamp(string id, DateTime ts)
                 {
-                    if (Chunks[i].Timestamp == ts)
+                    if (Chunks[id].Timestamp == ts)
                     {
-                        return Chunks[i].LineCount;
+                        return Chunks[id].LineCount;
                     }
                     return 0;
                 }
@@ -273,9 +341,9 @@ namespace LogSync.ViewModel
                 public int GetMaxChunkLengthByTimestamp(DateTime ts)
                 {
                     int max = 0;
-                    for (int i = 0; i < Chunks.Count; i++)
+                    foreach (var chunk in Chunks)
                     {
-                        var thisLength = GetChunkCountByTimestamp(i, ts);
+                        var thisLength = GetChunkCountByTimestamp(chunk.Key, ts);
 
                         if (thisLength > max)
                         {
