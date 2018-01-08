@@ -58,6 +58,7 @@
     <Compile Include="Model\LogModel.cs" />
     <Compile Include="ViewModel\LogViewModel.cs" />
     <Compile Include="ViewModel\SyncedViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelSyncer.cs" />
     <Compile Include="View\LogView.xaml.cs">
       <DependentUpon>LogView.xaml</DependentUpon>
     </Compile>
