@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogSync.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,13 +21,13 @@ namespace LogSync.View
     /// </summary>
     public partial class LogView : UserControl
     {
-        private MainWindow mainWindow;  // A referece to the main window, so we can send events back to it
+        private SyncedViewModel logSync;
         private string id;                 // The id by which the main window knows this view
 
-        public LogView(MainWindow mw, string _id)
+        public LogView(SyncedViewModel ls, string _id)
         {
             InitializeComponent();
-            mainWindow = mw;
+            logSync = ls;
             id = _id;
         }
 
@@ -43,7 +44,7 @@ namespace LogSync.View
             if (e.VerticalChange == 0 ) { return; }
 
             // Notify the main window of the scroll, so it can scroll the other views to match
-            mainWindow.OnScrollChanged(id, e);
+            logSync.OnScrollChanged(id, e);
         }
         #endregion
 

@@ -38,7 +38,7 @@ namespace LogSync.ViewModel
 
             for (int i = 0; i < logs.Length; i++)
             {
-                var logViewObject = new LogView(mainWindow, logs[i]);
+                var logViewObject = new LogView(this, logs[i]);
                 logViews.Add(logs[i], logViewObject);
 
                 // Add a new Column to the Grid

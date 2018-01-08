@@ -39,26 +39,6 @@ namespace LogSync
         }
 
         /// <summary>
-        /// Creates LogViews from a list of logs
-        /// </summary>
-        /// <param name="logs"></param>
-        public void LoadLogs(string[] logs)
-        {
-            logSync.LoadLogs(logs);
-        }
-
-        /// <summary>
-        /// Called when one of the child windows scrolls
-        /// Tells all the other windows to scroll to match
-        /// </summary>
-        /// <param name="id">The id of the child window. A lookup to the logViews array</param>
-        /// <param name="e">The ScrollChangedEventArgs of the original scroll</param>
-        public void OnScrollChanged(string id, ScrollChangedEventArgs e)
-        {
-            logSync.OnScrollChanged(id, e);
-        }
-
-        /// <summary>
         /// Called when the user uses the UI to open logs
         /// </summary>
         /// <param name="sender"></param>
@@ -75,7 +55,7 @@ namespace LogSync
             {
                 return;
             }
-            LoadLogs(o.FileNames);
+            logSync.LoadLogs(o.FileNames);
         }
 
         private void Sync_Click(object sender, RoutedEventArgs e)
