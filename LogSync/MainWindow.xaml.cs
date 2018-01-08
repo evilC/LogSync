@@ -31,7 +31,8 @@ namespace LogSync
     {
         public SyncedViewModel logSync;
 
-        private List<LogView> logViews = new List<LogView>();
+        //private List<LogView> logViews = new List<LogView>();
+        private Dictionary<string, LogView> logViews = new Dictionary<string, LogView>();
 
         public MainWindow()
         {
@@ -51,22 +52,21 @@ namespace LogSync
             logGrid.ColumnDefinitions.Clear();
 
             // Create new views
-            logViews = new List<LogView>();
+            logViews = new Dictionary<string, LogView>();
 
             // Build Title names for logs
             var titles = GetLogTitles(logs);
 
             for (int i = 0; i < logs.Length; i++)
             {
-                // Create the View
-                var logViewObject = new LogView(this, i);
-                logViews.Add(logViewObject);
+                var logViewObject = new LogView(this, logs[i]);
+                logViews.Add(logs[i], logViewObject);
 
                 // Add a new Column to the Grid
-                var col = new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star ) };
+                var col = new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) };
                 logGrid.ColumnDefinitions.Add(col);
                 // Add the View to the Grid
-                Grid.SetRow(logViewObject, i);
+                //Grid.SetRow(logViewObject, 0);
                 Grid.SetColumn(logViewObject, i);
                 logGrid.Children.Add(logViewObject);
 
@@ -135,18 +135,16 @@ namespace LogSync
         /// </summary>
         /// <param name="id">The id of the child window. A lookup to the logViews array</param>
         /// <param name="e">The ScrollChangedEventArgs of the original scroll</param>
-        public void OnScrollChanged(int id, ScrollChangedEventArgs e)
+        public void OnScrollChanged(string id, ScrollChangedEventArgs e)
         {
             // Iterate through all views
-            for (int i = 0; i < logViews.Count; i++)
+            foreach (var logView in logViews)
             {
-                // Do not call scroll on the original window that generated it
-                if (i == id)
+                if (logView.Key == id)
                 {
                     continue;
                 }
-                // Tell the window to scroll
-                logViews[i].DoScroll(e);
+                logViews[logView.Key].DoScroll(e);
             }
         }
 

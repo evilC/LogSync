@@ -21,9 +21,9 @@ namespace LogSync.View
     public partial class LogView : UserControl
     {
         private MainWindow mainWindow;  // A referece to the main window, so we can send events back to it
-        private int id;                 // The id by which the main window knows this view
+        private string id;                 // The id by which the main window knows this view
 
-        public LogView(MainWindow mw, int _id)
+        public LogView(MainWindow mw, string _id)
         {
             InitializeComponent();
             mainWindow = mw;
