@@ -67,7 +67,7 @@ artifacts/
 *.tlh
 *.tmp
 *.tmp_proj
-*.log
+#*.log
 *.vspscc
 *.vssscc
 .builds
@@ -288,6 +288,3 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
-
-# Whitelist logs from Sample Data
-!Sample Data/*
