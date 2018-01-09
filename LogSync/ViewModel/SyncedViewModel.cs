@@ -51,7 +51,6 @@ namespace LogSync.ViewModel
         {
             var logViewModel = new LogViewModel();
             logViewModel.LoadLog(logPath, logTitle);
-            logViewModel.InitParse();
             logViewModels.Add(logPath, logViewModel);
             return logViewModel;
         }
@@ -84,8 +83,9 @@ namespace LogSync.ViewModel
                 if (!logViewModels.ContainsKey(logView.Key))
                 {
                     // Create the ViewModel
-                    var logViewModel = AddLog(logView.Key, titles[logView.Key]);
+                    AddLog(logView.Key, titles[logView.Key]);
                 }
+                logViewModels[logView.Key].InitParse();
                 i++;
             }
 
@@ -165,6 +165,16 @@ namespace LogSync.ViewModel
             }
         }
         #endregion
+
+        public void CloseView(string id)
+        {
+            if (logViews.ContainsKey(id))
+            {
+                logViews.Remove(id);
+                logViewModels.Remove(id);
+                SyncLogs();
+            }
+        }
 
         #region Command-Line Argument processing
         private void ProcessCommandLineArguments(StartupEventArgs e)
