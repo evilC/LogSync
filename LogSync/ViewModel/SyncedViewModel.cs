@@ -174,6 +174,7 @@ namespace LogSync.ViewModel
                 {
                     case "-loadlogs":
                         LoadLogs(arg.Value.ToArray());
+                        SyncLogs();
                         break;
                     default:
                         var str = string.Format("Invalid Argument '{0}'", arg);
