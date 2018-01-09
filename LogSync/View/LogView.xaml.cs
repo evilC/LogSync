@@ -46,6 +46,11 @@ namespace LogSync.View
             // Notify the main window of the scroll, so it can scroll the other views to match
             logSync.OnScrollChanged(id, e);
         }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            logSync.CloseView(id);
+        }
         #endregion
 
         #region Simulating events from other Views

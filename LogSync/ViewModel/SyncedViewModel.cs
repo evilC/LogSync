@@ -35,23 +35,11 @@ namespace LogSync.ViewModel
 
         public void LoadLogs(string[] logs)
         {
-            // Remove any old views
-            //mainWindow.logGrid.Children.Clear();
-            //mainWindow.logGrid.ColumnDefinitions.Clear();
-
-            // Create new views
-            //logViews = new Dictionary<string, LogView>();
-
-            // Build Title names for logs
-            //var titles = GetLogTitles(logs);
-
             for (int i = 0; i < logs.Length; i++)
             {
                 var logViewObject = new LogView(this, logs[i]);
                 logViews.Add(logs[i], logViewObject);
             }
-
-            //SyncLogs();
         }
 
         /// <summary>
@@ -63,7 +51,6 @@ namespace LogSync.ViewModel
         {
             var logViewModel = new LogViewModel();
             logViewModel.LoadLog(logPath, logTitle);
-            logViewModel.InitParse();
             logViewModels.Add(logPath, logViewModel);
             return logViewModel;
         }
@@ -79,6 +66,10 @@ namespace LogSync.ViewModel
             }
             var titles = GetLogTitles(logs);
 
+            // Remove any old views
+            mainWindow.logGrid.Children.Clear();
+            mainWindow.logGrid.ColumnDefinitions.Clear();
+
             foreach (var logView in logViews)
             {
                 // Add a new Column to the Grid
@@ -89,8 +80,12 @@ namespace LogSync.ViewModel
                 Grid.SetColumn(logView.Value, i);
                 mainWindow.logGrid.Children.Add(logView.Value);
 
-                // Create the ViewModel
-                var logViewModel = AddLog(logView.Key, titles[logView.Key]);
+                if (!logViewModels.ContainsKey(logView.Key))
+                {
+                    // Create the ViewModel
+                    AddLog(logView.Key, titles[logView.Key]);
+                }
+                logViewModels[logView.Key].InitParse();
                 i++;
             }
 
@@ -117,40 +112,43 @@ namespace LogSync.ViewModel
                     dict.Add(log, log);
                 }
             }
-            var pathChunks = new List<string[]>();
-            for (int i = 0; i < logs.Count; i++)
+            else
             {
-                string path = Path.GetFullPath(logs[i]);
-                pathChunks.Add(path.Split(Path.DirectorySeparatorChar));
-            }
+                var pathChunks = new List<string[]>();
+                for (int i = 0; i < logs.Count; i++)
+                {
+                    string path = Path.GetFullPath(logs[i]);
+                    pathChunks.Add(path.Split(Path.DirectorySeparatorChar));
+                }
 
-            var max = pathChunks.Count;
+                var max = pathChunks.Count;
 
-            // While the first element of each of the arrays in the list are equal, remove them
-            while (pathChunks.Where(path => path.Length == 0)               // Is there only the filename left?
-                .ToList().Count != max                                      // Abort if all paths only have filename left
-                &&
-                pathChunks.Where(path => path.FirstOrDefault() != null)     // Get the path from the paths...
-                    .Select(chunk => chunk.FirstOrDefault())                // Select the first element of each path array...
-                    .Distinct().Count() == 1)                               // If they are all identical...
-            {
-                // Remove the first element of each path array, as it is common to all logs
-                pathChunks.ForEach(path => path.ToList().RemoveAt(0));
+                // While the first element of each of the arrays in the list are equal, remove them
+                while (pathChunks.Where(path => path.Length == 0)               // Is there only the filename left?
+                    .ToList().Count != max                                      // Abort if all paths only have filename left
+                    &&
+                    pathChunks.Where(path => path.FirstOrDefault() != null)     // Get the path from the paths...
+                        .Select(chunk => chunk.FirstOrDefault())                // Select the first element of each path array...
+                        .Distinct().Count() == 1)                               // If they are all identical...
+                {
+                    // Remove the first element of each path array, as it is common to all logs
+                    pathChunks.ForEach(path => path.ToList().RemoveAt(0));
 
+                    for (int i = 0; i < pathChunks.Count; i++)
+                    {
+                        pathChunks[i] = pathChunks[i].Skip(1).ToArray();
+                    }
+                }
+
+                // Build output
                 for (int i = 0; i < pathChunks.Count; i++)
                 {
-                    pathChunks[i] = pathChunks[i].Skip(1).ToArray();
+                    dict.Add(logs[i], Path.Combine(pathChunks[i]));
                 }
+
             }
 
-            // Build output
-            var paths = new Dictionary<string, string>();
-            for (int i = 0; i < pathChunks.Count; i++)
-            {
-                paths.Add(logs[i], Path.Combine(pathChunks[i]));
-            }
-
-            return paths;
+            return dict;
         }
 
         #region View Synchronization
@@ -168,6 +166,16 @@ namespace LogSync.ViewModel
         }
         #endregion
 
+        public void CloseView(string id)
+        {
+            if (logViews.ContainsKey(id))
+            {
+                logViews.Remove(id);
+                logViewModels.Remove(id);
+                SyncLogs();
+            }
+        }
+
         #region Command-Line Argument processing
         private void ProcessCommandLineArguments(StartupEventArgs e)
         {
@@ -179,6 +187,7 @@ namespace LogSync.ViewModel
                 {
                     case "-loadlogs":
                         LoadLogs(arg.Value.ToArray());
+                        SyncLogs();
                         break;
                     default:
                         var str = string.Format("Invalid Argument '{0}'", arg);

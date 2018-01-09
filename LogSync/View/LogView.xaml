@@ -11,8 +11,10 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="{Binding LogTitle}">
-        </TextBlock>
+        <DockPanel Grid.Row="0" Margin="5">
+            <Button Click="Close_Click" DockPanel.Dock="Right">X</Button>
+            <TextBlock DockPanel.Dock="Right" Text="{Binding LogTitle}" Width="Auto"></TextBlock>
+        </DockPanel>
         <ListView Name="LogListView" Grid.Row="1" ItemsSource="{Binding ViewModelLines}" SelectionMode="Multiple" ScrollViewer.ScrollChanged="OnScrollChange">
             <ListView.ItemTemplate>
                 <DataTemplate>
