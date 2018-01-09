@@ -112,40 +112,43 @@ namespace LogSync.ViewModel
                     dict.Add(log, log);
                 }
             }
-            var pathChunks = new List<string[]>();
-            for (int i = 0; i < logs.Count; i++)
+            else
             {
-                string path = Path.GetFullPath(logs[i]);
-                pathChunks.Add(path.Split(Path.DirectorySeparatorChar));
-            }
+                var pathChunks = new List<string[]>();
+                for (int i = 0; i < logs.Count; i++)
+                {
+                    string path = Path.GetFullPath(logs[i]);
+                    pathChunks.Add(path.Split(Path.DirectorySeparatorChar));
+                }
 
-            var max = pathChunks.Count;
+                var max = pathChunks.Count;
 
-            // While the first element of each of the arrays in the list are equal, remove them
-            while (pathChunks.Where(path => path.Length == 0)               // Is there only the filename left?
-                .ToList().Count != max                                      // Abort if all paths only have filename left
-                &&
-                pathChunks.Where(path => path.FirstOrDefault() != null)     // Get the path from the paths...
-                    .Select(chunk => chunk.FirstOrDefault())                // Select the first element of each path array...
-                    .Distinct().Count() == 1)                               // If they are all identical...
-            {
-                // Remove the first element of each path array, as it is common to all logs
-                pathChunks.ForEach(path => path.ToList().RemoveAt(0));
+                // While the first element of each of the arrays in the list are equal, remove them
+                while (pathChunks.Where(path => path.Length == 0)               // Is there only the filename left?
+                    .ToList().Count != max                                      // Abort if all paths only have filename left
+                    &&
+                    pathChunks.Where(path => path.FirstOrDefault() != null)     // Get the path from the paths...
+                        .Select(chunk => chunk.FirstOrDefault())                // Select the first element of each path array...
+                        .Distinct().Count() == 1)                               // If they are all identical...
+                {
+                    // Remove the first element of each path array, as it is common to all logs
+                    pathChunks.ForEach(path => path.ToList().RemoveAt(0));
 
+                    for (int i = 0; i < pathChunks.Count; i++)
+                    {
+                        pathChunks[i] = pathChunks[i].Skip(1).ToArray();
+                    }
+                }
+
+                // Build output
                 for (int i = 0; i < pathChunks.Count; i++)
                 {
-                    pathChunks[i] = pathChunks[i].Skip(1).ToArray();
+                    dict.Add(logs[i], Path.Combine(pathChunks[i]));
                 }
+
             }
 
-            // Build output
-            var paths = new Dictionary<string, string>();
-            for (int i = 0; i < pathChunks.Count; i++)
-            {
-                paths.Add(logs[i], Path.Combine(pathChunks[i]));
-            }
-
-            return paths;
+            return dict;
         }
 
         #region View Synchronization
