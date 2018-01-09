@@ -35,23 +35,11 @@ namespace LogSync.ViewModel
 
         public void LoadLogs(string[] logs)
         {
-            // Remove any old views
-            //mainWindow.logGrid.Children.Clear();
-            //mainWindow.logGrid.ColumnDefinitions.Clear();
-
-            // Create new views
-            //logViews = new Dictionary<string, LogView>();
-
-            // Build Title names for logs
-            //var titles = GetLogTitles(logs);
-
             for (int i = 0; i < logs.Length; i++)
             {
                 var logViewObject = new LogView(this, logs[i]);
                 logViews.Add(logs[i], logViewObject);
             }
-
-            //SyncLogs();
         }
 
         /// <summary>
@@ -79,6 +67,10 @@ namespace LogSync.ViewModel
             }
             var titles = GetLogTitles(logs);
 
+            // Remove any old views
+            mainWindow.logGrid.Children.Clear();
+            mainWindow.logGrid.ColumnDefinitions.Clear();
+
             foreach (var logView in logViews)
             {
                 // Add a new Column to the Grid
@@ -89,8 +81,11 @@ namespace LogSync.ViewModel
                 Grid.SetColumn(logView.Value, i);
                 mainWindow.logGrid.Children.Add(logView.Value);
 
-                // Create the ViewModel
-                var logViewModel = AddLog(logView.Key, titles[logView.Key]);
+                if (!logViewModels.ContainsKey(logView.Key))
+                {
+                    // Create the ViewModel
+                    var logViewModel = AddLog(logView.Key, titles[logView.Key]);
+                }
                 i++;
             }
 
