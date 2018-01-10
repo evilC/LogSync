@@ -86,8 +86,6 @@ namespace LogSync.ViewModel
                     AddLog(logView.Key, titles[logView.Key]);
                 }
 
-                logViewModels[logView.Key].InitParse();
-
                 logView.Value.DataContext = logViewModels[logView.Key];
 
                 i++;
