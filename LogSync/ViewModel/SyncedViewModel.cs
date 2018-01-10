@@ -80,13 +80,11 @@ namespace LogSync.ViewModel
                 Grid.SetColumn(logView.Value, i);
                 mainWindow.logGrid.Children.Add(logView.Value);
 
-                if (logViewModels.ContainsKey(logView.Key))
+                if (!logViewModels.ContainsKey(logView.Key))
                 {
-                    // Delete old ViewModel if it exists
-                    logViewModels.Remove(logView.Key);
+                    // Create the ViewModel
+                    AddLog(logView.Key, titles[logView.Key]);
                 }
-                // Create the ViewModel
-                AddLog(logView.Key, titles[logView.Key]);
 
                 logViewModels[logView.Key].InitParse();
 
