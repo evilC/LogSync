@@ -17,7 +17,7 @@ namespace LogSync.ViewModel
     /// </summary>
     public class LogViewModel
     {
-        public ObservableCollection<LogLine> ViewModelLines { get; set; }
+        public ObservableCollection<LogLine> ViewModelLines { get; set; } = new ObservableCollection<LogLine>();
         public string LogTitle { get; set; }
 
         public bool IsFinished { get { return isFinished; } }
@@ -42,7 +42,7 @@ namespace LogSync.ViewModel
         {
             currentParseTime = logModel.LogLinesByTimestamp.FirstOrDefault().Key;
             isFinished = false;
-            ViewModelLines = new ObservableCollection<LogLine>();
+            ViewModelLines.Clear();
         }
 
         // Move on to the next parse line

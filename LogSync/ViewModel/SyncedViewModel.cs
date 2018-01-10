@@ -89,19 +89,14 @@ namespace LogSync.ViewModel
                 AddLog(logView.Key, titles[logView.Key]);
 
                 logViewModels[logView.Key].InitParse();
+
+                logView.Value.DataContext = logViewModels[logView.Key];
+
                 i++;
             }
 
             var syncer = new ViewModelSyncer(logViewModels);
             syncer.Sync();
-
-            foreach (var logView in logViews)
-            {
-                // ToDo: Why does this not work if I bind before I sync?
-
-                // Bind data to ViewModel
-                logView.Value.DataContext = logViewModels[logView.Key];
-            }
         }
 
         private Dictionary<string, string> GetLogTitles(List<string> logs)
