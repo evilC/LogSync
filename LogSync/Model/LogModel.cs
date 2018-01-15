@@ -21,8 +21,10 @@ namespace LogSync.Model
                 new[] { "\r", "\n" },
                 StringSplitOptions.None
             );
+            DateTime lastSeenDate = DateTime.MinValue;
+            DateTime ts;
 
-            var regex = new Regex(@"(?<datetime>(?<date>(?<year>\d+)-(?<month>\d+)-(?<day>\d+)) (?<time>(?<hours>\d+):(?<minutes>\d+):(?<seconds>\d+)(?<mssep>[,\.])(?<milliseconds>\d+))) (?<text>.*)");
+            var regex = new Regex(@"(?<datetime>(?<date>(?<year>\d+)-(?<month>\d+)-(?<day>\d+)) (?<time>(?<hours>\d+):(?<minutes>\d+):(?<seconds>\d+)(?<mssep>[,\.])(?<milliseconds>\d+)))?(?<timetextsep>\s+)?(?<text>.+)");
 
             logLinesByTimestamp = new SortedList<DateTime, List<string>>();
 
@@ -38,12 +40,25 @@ namespace LogSync.Model
                     {
                         continue;
                     }
-                    throw new Exception(string.Format("Line {0} of file '{1}' did not match Regex.\n{2}", i, path , lines[i]));
+                    // Line without a date. This can happen eg for exceptions.
+                    // Use the last seen DateTime if it is available
+                    if (lastSeenDate != DateTime.MinValue)
+                    {
+                        ts = lastSeenDate;
+                    }
+                    else
+                    {
+                        throw new Exception(string.Format("Line {0} of file '{1}' did not match Regex.\n{2}", i, path, lines[i]));
+                    }
                 }
-                DateTime ts = DateTime.ParseExact(
-                    lineDateStr, 
-                    string.Format("yyyy-MM-dd HH:mm:ss{0}fff", msSeparator), 
-                    CultureInfo.InvariantCulture);
+                else
+                {
+                    ts = DateTime.ParseExact(
+                        lineDateStr,
+                        string.Format("yyyy-MM-dd HH:mm:ss{0}fff", msSeparator),
+                        CultureInfo.InvariantCulture);
+                }
+                lastSeenDate = ts;
 
                 if (!logLinesByTimestamp.ContainsKey(ts))
                 {
