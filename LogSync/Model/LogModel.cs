@@ -33,7 +33,7 @@ namespace LogSync.Model
             for (int i = 0; i < lines.Length; i++)
             {
                 var logLine = ParseLine(lines[i]);
-                if (logLine.Timestamp != DateTime.MinValue)
+                if (logLine.Timestamp != null)
                 {
                     lastSeenDate = (DateTime)logLine.Timestamp;
                     break;
@@ -49,7 +49,7 @@ namespace LogSync.Model
             {
                 var logLine = ParseLine(lines[i]);
 
-                if (logLine.Timestamp == DateTime.MinValue)
+                if (logLine.Timestamp == null)
                 {
                     if (logLine.Text == string.Empty)
                     {
@@ -74,14 +74,14 @@ namespace LogSync.Model
 
         private LogLine ParseLine(string line)
         {
-            DateTime ts;
+            DateTime? ts;
             var match = regex.Match(line);
             string lineDateStr = match.Groups["datetime"].Value;
             string lineTextStr = match.Groups["text"].Value;
             string msSeparator = match.Groups["mssep"].Value;
             if (lineDateStr == string.Empty)
             {
-                ts = DateTime.MinValue;
+                ts = null;
             }
             else
             {
