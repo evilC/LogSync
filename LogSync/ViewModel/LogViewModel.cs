@@ -73,7 +73,7 @@ namespace LogSync.ViewModel
             }
             while (count < max)
             {
-                ViewModelLines.Add(new LogLine() { Timestamp = null, Text = null});
+                ViewModelLines.Add(new LogLine() { Timestamp = DateTime.MinValue, Text = string.Empty});
                 count++;
             }
         }

@@ -13,9 +13,12 @@ namespace LogSync.Model
     {
         public SortedList<DateTime, List<string>> LogLinesByTimestamp { get { return logLinesByTimestamp; } }
         private SortedList<DateTime, List<string>> logLinesByTimestamp;
+        static Regex regex = new Regex(@"(?<datetime>(?<date>(?<year>\d+)-(?<month>\d+)-(?<day>\d+)) (?<time>(?<hours>\d+):(?<minutes>\d+):(?<seconds>\d+)(?<mssep>[,\.])(?<milliseconds>\d+)))?(?<timetextsep>\s+)?(?<text>.+)");
+        private string logPath;
 
         public LogModel(string path)
         {
+            logPath = path;
             var text = File.ReadAllText(path);
             var lines = text.Split(
                 new[] { "\r", "\n" },
@@ -24,39 +27,40 @@ namespace LogSync.Model
             DateTime lastSeenDate = DateTime.MinValue;
             DateTime ts;
 
-            var regex = new Regex(@"(?<datetime>(?<date>(?<year>\d+)-(?<month>\d+)-(?<day>\d+)) (?<time>(?<hours>\d+):(?<minutes>\d+):(?<seconds>\d+)(?<mssep>[,\.])(?<milliseconds>\d+)))?(?<timetextsep>\s+)?(?<text>.+)");
-
             logLinesByTimestamp = new SortedList<DateTime, List<string>>();
 
+            // Find first timestamp
             for (int i = 0; i < lines.Length; i++)
             {
-                var match = regex.Match(lines[i]);
-                string lineDateStr = match.Groups["datetime"].Value;
-                string lineTextStr = match.Groups["text"].Value;
-                string msSeparator = match.Groups["mssep"].Value;
-                if (lineDateStr == string.Empty)
+                var logLine = ParseLine(lines[i]);
+                if (logLine.Timestamp != DateTime.MinValue)
                 {
-                    if (lineTextStr == string.Empty)
+                    lastSeenDate = logLine.Timestamp;
+                    break;
+                }
+            }
+            if (lastSeenDate == DateTime.MinValue)
+            {
+                throw new Exception(string.Format("Could not find any valid timestamps in file {0}", logPath));
+            }
+
+            // Parse the log
+            for (int i = 0; i < lines.Length; i++)
+            {
+                var logLine = ParseLine(lines[i]);
+
+                if (logLine.Timestamp == DateTime.MinValue)
+                {
+                    if (logLine.Text == string.Empty)
                     {
+                        // Completely blank line - ignore
                         continue;
                     }
-                    // Line without a date. This can happen eg for exceptions.
-                    // Use the last seen DateTime if it is available
-                    if (lastSeenDate != DateTime.MinValue)
-                    {
-                        ts = lastSeenDate;
-                    }
-                    else
-                    {
-                        throw new Exception(string.Format("Line {0} of file '{1}' did not match Regex.\n{2}", i, path, lines[i]));
-                    }
+                    ts = lastSeenDate;
                 }
                 else
                 {
-                    ts = DateTime.ParseExact(
-                        lineDateStr,
-                        string.Format("yyyy-MM-dd HH:mm:ss{0}fff", msSeparator),
-                        CultureInfo.InvariantCulture);
+                    ts = logLine.Timestamp;
                 }
                 lastSeenDate = ts;
 
@@ -64,14 +68,35 @@ namespace LogSync.Model
                 {
                     logLinesByTimestamp.Add(ts, new List<string>());
                 }
-                logLinesByTimestamp[ts].Add(lineTextStr);
+                logLinesByTimestamp[ts].Add(logLine.Text);
             }
+        }
+
+        private LogLine ParseLine(string line)
+        {
+            DateTime ts;
+            var match = regex.Match(line);
+            string lineDateStr = match.Groups["datetime"].Value;
+            string lineTextStr = match.Groups["text"].Value;
+            string msSeparator = match.Groups["mssep"].Value;
+            if (lineDateStr == string.Empty)
+            {
+                ts = DateTime.MinValue;
+            }
+            else
+            {
+                ts = DateTime.ParseExact(
+                    lineDateStr,
+                    string.Format("yyyy-MM-dd HH:mm:ss{0}fff", msSeparator),
+                    CultureInfo.InvariantCulture);
+            }
+            return new LogLine() { Timestamp = ts, Text = lineTextStr };
         }
     }
 
     public class LogLine
     {
-        public DateTime? Timestamp { get; set; }
+        public DateTime Timestamp { get; set; }
         public string Text { get; set; }
     }
 }
