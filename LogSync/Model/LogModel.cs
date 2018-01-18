@@ -35,7 +35,7 @@ namespace LogSync.Model
                 var logLine = ParseLine(lines[i]);
                 if (logLine.Timestamp != DateTime.MinValue)
                 {
-                    lastSeenDate = logLine.Timestamp;
+                    lastSeenDate = (DateTime)logLine.Timestamp;
                     break;
                 }
             }
@@ -60,9 +60,9 @@ namespace LogSync.Model
                 }
                 else
                 {
-                    ts = logLine.Timestamp;
+                    ts = (DateTime)logLine.Timestamp;
                 }
-                lastSeenDate = ts;
+                //lastSeenDate = ts;
 
                 if (!logLinesByTimestamp.ContainsKey(ts))
                 {
@@ -96,7 +96,7 @@ namespace LogSync.Model
 
     public class LogLine
     {
-        public DateTime Timestamp { get; set; }
+        public DateTime? Timestamp { get; set; }
         public string Text { get; set; }
     }
 }
