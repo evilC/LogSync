@@ -13,7 +13,7 @@ namespace LogSync.Model
     {
         public SortedList<DateTime, List<string>> LogLinesByTimestamp { get { return logLinesByTimestamp; } }
         private SortedList<DateTime, List<string>> logLinesByTimestamp;
-        static Regex regex = new Regex(@"(?<datetime>(?<date>(?<year>\d+)-(?<month>\d+)-(?<day>\d+)) (?<time>(?<hours>\d+):(?<minutes>\d+):(?<seconds>\d+)(?<mssep>[,\.])(?<milliseconds>\d+)))?(?<timetextsep>\s+)?(?<text>.+)");
+        static Regex regex = new Regex(@"(.*?)?(?<datetime>(?<date>(?<year>\d+)-(?<month>\d+)-(?<day>\d+)) (?<time>(?<hours>\d+):(?<minutes>\d+):(?<seconds>\d+)(?<mssep>[,\.])(?<milliseconds>\d+)))(?<timetextsep>\s+)?(?<text>.+)");
         private string logPath;
 
         public LogModel(string path)
