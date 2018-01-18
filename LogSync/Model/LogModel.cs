@@ -21,7 +21,7 @@ namespace LogSync.Model
             logPath = path;
             var text = File.ReadAllText(path);
             var lines = text.Split(
-                new[] { "\r", "\n" },
+                new[] { "\r\n", "\r", "\n" },
                 StringSplitOptions.None
             );
             DateTime lastSeenDate = DateTime.MinValue;
