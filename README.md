@@ -1,7 +1,7 @@
 # LogSync
 A tool to view multiple logs, synchronized in time and with synced scrollbars
 
-![Preview GIF](https://i.imgur.com/Dv7KQgy.gif)  
+![Preview GIF](https://i.imgur.com/hbhfZ3p.gif)  
 
 ## About
 LogSync is aimed at scenarios where you have multiple logs (Say from a client-server application) and wish to view them together 
@@ -25,7 +25,9 @@ This will be configurable at some point in the future.
 1. Double-click LogSync.exe
 2. Click `Load Logs...`
 3. Select the log(s) you wish to view.  
-You can multi-select using shift, ctrl etc
+You can multi-select using shift, ctrl etc  
+4. Click `Sync Logs`  
+5. After Syncing, you can remove logs by clicking the `X` next to their name, or add new logs by going back to step (2)
 
 ### Command Line
 The following command-line parameters are available
