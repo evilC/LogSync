@@ -13,7 +13,7 @@ namespace LogSync.Model
     {
         public SortedList<DateTime, List<string>> LogLinesByTimestamp { get { return logLinesByTimestamp; } }
         private SortedList<DateTime, List<string>> logLinesByTimestamp;
-        static Regex regex = new Regex(@"(.*?)?(?<datetime>(?<date>(?<year>\d+)-(?<month>\d+)-(?<day>\d+)) (?<time>(?<hours>\d+):(?<minutes>\d+):(?<seconds>\d+)(?<mssep>[,\.])(?<milliseconds>\d+)))(?<timetextsep>\s+)?(?<text>.+)");
+        static Regex regex = new Regex(@"(.*?)?(?<datetime>(?<date>(?<year>\d+)-(?<month>\d+)-(?<day>\d+)) (?<time>(?<hours>\d+):(?<minutes>\d+):(?<seconds>\d+)((?<mssep>[,\.])(?<milliseconds>\d+))?))(?<timetextsep>\s+?)?(?<text>.*)");
         private string logPath;
 
         public LogModel(string path)
@@ -75,20 +75,34 @@ namespace LogSync.Model
         private LogLine ParseLine(string line)
         {
             DateTime? ts;
+            var formatStr = "yyyy-MM-dd HH:mm:ss";
             var match = regex.Match(line);
             string lineDateStr = match.Groups["datetime"].Value;
             string lineTextStr = match.Groups["text"].Value;
             string msSeparator = match.Groups["mssep"].Value;
+            string msValue = match.Groups["milliseconds"].Value;
+            if (!string.IsNullOrEmpty(msValue) && !string.IsNullOrEmpty(msSeparator))
+            {
+                formatStr += $"{msSeparator}fff";
+            }
             if (lineDateStr == string.Empty)
             {
                 ts = null;
             }
             else
             {
-                ts = DateTime.ParseExact(
-                    lineDateStr,
-                    string.Format("yyyy-MM-dd HH:mm:ss{0}fff", msSeparator),
-                    CultureInfo.InvariantCulture);
+                try
+                {
+                    ts = DateTime.ParseExact(
+                        lineDateStr,
+                        //string.Format("yyyy-MM-dd HH:mm:ss{0}fff", msSeparator),
+                        formatStr,
+                        CultureInfo.InvariantCulture);
+                }
+                catch
+                {
+                    ts = null;
+                }
             }
             return new LogLine() { Timestamp = ts, Text = lineTextStr };
         }
