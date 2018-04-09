@@ -47,12 +47,20 @@ namespace LogSync.ViewModel
         /// </summary>
         /// <param name="logPath">The path to the log file</param>
         /// <returns>The ViewModel to DataBind to</returns>
-        public LogViewModel AddLog(string logPath, string logTitle)
+        public bool AddLog(string logPath, string logTitle)
         {
             var logViewModel = new LogViewModel();
-            logViewModel.LoadLog(logPath, logTitle);
-            logViewModels.Add(logPath, logViewModel);
-            return logViewModel;
+            try
+            {
+                logViewModel.LoadLog(logPath, logTitle);
+                logViewModels.Add(logPath, logViewModel);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            
         }
 
         public void SyncLogs()
@@ -72,6 +80,17 @@ namespace LogSync.ViewModel
 
             foreach (var logView in logViews)
             {
+                if (!logViewModels.ContainsKey(logView.Key))
+                {
+                    // Create the ViewModel
+                    if (!AddLog(logView.Key, titles[logView.Key]))
+                    {
+                        // Log failed to load
+                        // ToDo: Should use exceptions rather than a bool to signify *why* this log could not be loaded (eg file not found, not a log etc)
+                        continue;
+                    }
+                }
+
                 // Add a new Column to the Grid
                 var col = new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) };
                 mainWindow.logGrid.ColumnDefinitions.Add(col);
@@ -79,12 +98,6 @@ namespace LogSync.ViewModel
                 //Grid.SetRow(logViewObject, 0);
                 Grid.SetColumn(logView.Value, i);
                 mainWindow.logGrid.Children.Add(logView.Value);
-
-                if (!logViewModels.ContainsKey(logView.Key))
-                {
-                    // Create the ViewModel
-                    AddLog(logView.Key, titles[logView.Key]);
-                }
 
                 logView.Value.DataContext = logViewModels[logView.Key];
 
@@ -149,7 +162,10 @@ namespace LogSync.ViewModel
         public void OnScrollChanged(string id, ScrollChangedEventArgs e)
         {
             // Iterate through all views
-            foreach (var logView in logViews)
+            // Note that here, not all views may be visible
+            // eg the log selected may be empty.
+            // So we iterate logViewModels, which are all the visible logs
+            foreach (var logView in logViewModels)
             {
                 if (logView.Key == id)
                 {
