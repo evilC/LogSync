@@ -1,0 +1,19 @@
+﻿<Window x:Class="LogSync.View.SearchView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogSync.View"
+        mc:Ignorable="d"
+        Title="Search" Height="110" Width="300"
+        FocusManager.FocusedElement="{Binding ElementName=SearchTerm}"
+        >
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox Name="SearchTerm" Grid.Row="0"></TextBox>
+        <Button Click="Button_Click" Grid.Row="1" IsDefault="True">OK</Button>
+    </Grid>
+</Window>

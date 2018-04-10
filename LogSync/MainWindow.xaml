@@ -5,12 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogSync"
         xmlns:views = "clr-namespace:LogSync.View"
+        xmlns:self="clr-namespace:LogSync"
         mc:Ignorable="d"
         Title="LogSync">
+    <Window.CommandBindings>
+        <CommandBinding Command="self:CustomCommands.SearchForwards" CanExecute="SearchCommand_CanExecute" Executed="SearchForwardsCommand_Executed"/>
+        <CommandBinding Command="self:CustomCommands.SearchBackwards" CanExecute="SearchCommand_CanExecute" Executed="SearchBackwardsCommand_Executed"/>
+    </Window.CommandBindings>
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_Load Logs..." Click="Open_Click"></MenuItem>
             <MenuItem Header="Sync Logs" Click="Sync_Click"></MenuItem>
+            <MenuItem Header="Search">
+                <MenuItem Header="Forwards..." Command="self:CustomCommands.SearchForwards"></MenuItem>
+                <MenuItem Header="Back..." Command="self:CustomCommands.SearchBackwards"></MenuItem>
+            </MenuItem>
         </Menu>
         <Grid Margin="5" DockPanel.Dock="Top">
             <Grid Name="logGrid" Background="AliceBlue">

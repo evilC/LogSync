@@ -24,6 +24,9 @@ namespace LogSync.ViewModel
         private Dictionary<string, LogView> logViews = new Dictionary<string, LogView>();
         private Dictionary<string, LogViewModel> logViewModels = new Dictionary<string, LogViewModel>();
 
+        private string lastSearchTerm;
+        private int lastSearchResultIndex = -1;
+
         public SyncedViewModel(MainWindow mw, StartupEventArgs e)
         {
             mainWindow = mw;
@@ -144,6 +147,38 @@ namespace LogSync.ViewModel
 
             return dict;
         }
+
+        #region Search
+        public void Search(string text, string logPath)
+        {
+            var startPos = text == lastSearchTerm ? lastSearchResultIndex + 1 : 0;
+            lastSearchTerm = text;
+            if (logViewModels.ContainsKey(logPath))
+            {
+                var logViewModel = logViewModels[logPath];
+                var lineNum = logViewModel.Search(text, startPos);
+                if (lineNum != -1)
+                {
+                    lastSearchResultIndex = lineNum;
+                    var logLine = logViewModel.ViewModelLines[lineNum];
+                    logViews[logViewModel.LogPath].LogListView.SelectedItem = logLine;
+                    logViews[logViewModel.LogPath].LogListView.ScrollIntoView(logLine);
+                }
+            }
+        }
+
+        public string GetFocusedLog()
+        {
+            foreach (var logViewModel in logViewModels.Values)
+            {
+                if (logViews[logViewModel.LogPath].LogListView.IsKeyboardFocusWithin)
+                {
+                    return logViewModel.LogPath;
+                }
+            }
+            return null;
+        }
+        #endregion
 
         #region View Synchronization
         public void OnScrollChanged(string id, ScrollChangedEventArgs e)

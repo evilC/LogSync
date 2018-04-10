@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace LogSync.ViewModel
 {
@@ -19,11 +20,17 @@ namespace LogSync.ViewModel
     {
         public ObservableCollection<LogLine> ViewModelLines { get; set; } = new ObservableCollection<LogLine>();
         public string LogTitle { get; set; }
+        public string LogPath { get { return logPath; } }
+
+        private string logPath;
 
         public bool IsFinished { get { return isFinished; } }
 
         private DateTime currentParseTime;
         private bool isFinished = false;
+
+        private string lastSearchTerm;
+        private int lastSearchResultIndex = -1;
 
         private LogModel logModel;
 
@@ -34,6 +41,7 @@ namespace LogSync.ViewModel
         public void LoadLog(string path, string title)
         {
             LogTitle = title;
+            logPath = path;
             logModel = new LogModel(path);
         }
 
@@ -110,6 +118,28 @@ namespace LogSync.ViewModel
         {
             var max = logModel.LogLinesByTimestamp.Count;
             return (i < max);
+        }
+
+        public int Search(string text, int startPos = 0)
+        {
+            //var startPos = text == lastSearchTerm ? lastSearchResultIndex + 1 : 0;
+            lastSearchTerm = text;
+
+            for (int i = startPos; i < ViewModelLines.Count; i++)
+            {
+                var line = ViewModelLines[i].Text;
+                if (line.IndexOf(text, StringComparison.OrdinalIgnoreCase) > 0)
+                {
+                    //return ViewModelLines[i];
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        private static bool LineMatches()
+        {
+            return true;
         }
     }
 
