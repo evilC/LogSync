@@ -106,9 +106,9 @@
       <Project>{bb5a5235-30ef-4266-8e6a-c0fab9f51a2a}</Project>
       <Name>LogSync.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LogSyncer\LogSyncer.csproj">
+    <ProjectReference Include="..\LogSync.Synchronization\LogSync.Synchronization.csproj">
       <Project>{220f0de2-afbf-418d-bd1e-03ca5851ae41}</Project>
-      <Name>LogSyncer</Name>
+      <Name>LogSync.Synchronization</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

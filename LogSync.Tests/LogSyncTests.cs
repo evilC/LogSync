@@ -1,23 +1,27 @@
-﻿using NUnit.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using LogSync.DataAccess;
+using LogSync.DataAccess.Tests;
 using LogSync.Model;
+using LogSync.Synchronization;
+using NUnit.Framework;
 
-namespace LogSync.DataAccess.Tests
+namespace LogSync.Tests
 {
     [TestFixture]
-    public class TestClass1
+    public class LogSyncTests
     {
         private static readonly List<string> Numbers = new List<string>() {"Zero", "One", "Two", "Three", "Four", "Five", "Six"};
+        private static readonly List<string> LogNames = new List<string>() {"Even", "Odd"};
         private static List<List<string>> _logs;
 
-        public TestClass1()
+        private readonly Dictionary<string, ParsedLog> _parsedLogs;
+        private readonly MockFileParser _parser;
+
+        public LogSyncTests()
         {
+            _parser = new MockFileParser();
             _logs = new List<List<string>>() {new List<string>(), new List<string>()};
             for (var i = 1; i < 7; i++)
             {
@@ -26,13 +30,18 @@ namespace LogSync.DataAccess.Tests
                 if (!IsDoubleEntry(i)) continue;
                 _logs[dict].Add(BuildRawLine(i, true));
             }
+
+            _parsedLogs = new Dictionary<string, ParsedLog>();
+            for (var i = 0; i < 2; i++)
+            {
+                _parsedLogs.Add($"{LogNames[i]}", _parser.ParseRawLines(_logs[i]));
+            }
         }
 
         [Test]
         public void MockFileParserTest()
         {
-            var parser = new MockFileParser();
-            var logs = new List<ParsedLog>() {parser.ParseRawLines(_logs[0]), parser.ParseRawLines(_logs[1]) };
+            var logs = new List<ParsedLog>() { _parser.ParseRawLines(_logs[0]), _parser.ParseRawLines(_logs[1]) };
 
             for (var i = 1; i < 7; i++)
             {
@@ -89,6 +98,38 @@ namespace LogSync.DataAccess.Tests
                 logs[dict].RemoveAt(0);
                 Assert.That(lines, Is.EqualTo(BuildRawLine(i, true)));
             }
+        }
+
+        [Test]
+        public void LogSyncerTest()
+        {
+            var syncer = new LogSyncer(new LogChunker());
+            var logs = syncer.SyncLogs(_parsedLogs);
+
+            for (var logNum = 0; logNum < 2; logNum++)
+            {
+                var log = logs[LogNames[logNum]];
+                Assert.That(log.Chunks.Count, Is.EqualTo(6));
+                for (var chunkNum = 1; chunkNum < 7; chunkNum++)
+                {
+                    var evenOdd = chunkNum % 2;
+                    var expectedDate = DateTime.MinValue.AddSeconds(chunkNum);
+                    var isDoubleEntry = IsDoubleEntry(chunkNum);
+                    var expectedLines = isDoubleEntry ? 2 : 1;
+                    Assert.That(log.Chunks.ContainsKey(expectedDate));
+                    var chunk = log.Chunks[expectedDate];
+                    Assert.That(chunk.Lines.Count, Is.EqualTo(expectedLines));
+
+                    var expectedString = evenOdd == logNum ? BuildLineText(chunkNum) : string.Empty;
+                    Assert.That(chunk.Lines[0], Is.EqualTo(expectedString));
+                    if (!isDoubleEntry) continue;
+
+                    expectedString = evenOdd == logNum ? BuildLineText(chunkNum, true) : string.Empty;
+                    Assert.That(chunk.Lines[1], Is.EqualTo(expectedString));
+                }
+            }
+
+            
         }
 
         private static string BuildRawLine(int index, bool again = false)

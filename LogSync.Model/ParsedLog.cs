@@ -8,11 +8,11 @@ namespace LogSync.Model
 {
     public class ParsedLog
     {
-        public IDictionary<DateTime, LogChunk> Chunks { get; set; }
+        public SortedList<DateTime, LogChunk> Chunks { get; set; }
 
         public ParsedLog()
         {
-            Chunks = new Dictionary<DateTime, LogChunk>();
+            Chunks = new SortedList<DateTime, LogChunk>();
         }
     }
 }

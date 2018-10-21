@@ -4,7 +4,7 @@ using LogSync.Model;
 
 namespace LogSync.DataAccess
 {
-    public class MockFileParser : IFileParser
+    public class FileParser : IFileParser
     {
         public ParsedLog ParseRawLines(List<string> rawLines)
         {

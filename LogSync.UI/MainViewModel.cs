@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LogSync.DataAccess;
 using LogSync.Model;
-using LogSyncer;
+using LogSync.Synchronization;
 
 namespace LogSync.UI
 {

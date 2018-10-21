@@ -7,8 +7,8 @@
     <ProjectGuid>{220F0DE2-AFBF-418D-BD1E-03CA5851AE41}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogSyncer</RootNamespace>
-    <AssemblyName>LogSyncer</AssemblyName>
+    <RootNamespace>LogSync.Synchronization</RootNamespace>
+    <AssemblyName>LogSync.Synchronization</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultSyncer.cs" />
+    <Compile Include="ILogChunker.cs" />
+    <Compile Include="LogChunker.cs" />
+    <Compile Include="LogSyncer.cs" />
     <Compile Include="ILogSyncer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -44,7 +44,7 @@
     <Compile Include="FileReader.cs" />
     <Compile Include="IFileParser.cs" />
     <Compile Include="IFileReader.cs" />
-    <Compile Include="MockFileParser.cs" />
+    <Compile Include="FileParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
