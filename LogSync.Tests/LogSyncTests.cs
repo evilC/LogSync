@@ -26,7 +26,12 @@ namespace LogSync.Tests
             for (var i = 1; i < 7; i++)
             {
                 var dict = i % 2;
-                _logs[dict].Add(BuildRawLine(i));
+                var text = BuildRawLine(i);
+                _logs[dict].Add(text);
+                if (IsPresentInAllLogs(i))
+                {
+                    _logs[1 - dict].Add(text);
+                }
                 if (!IsDoubleEntry(i)) continue;
                 _logs[dict].Add(BuildRawLine(i, true));
             }
@@ -115,16 +120,19 @@ namespace LogSync.Tests
                     var evenOdd = chunkNum % 2;
                     var expectedDate = DateTime.MinValue.AddSeconds(chunkNum);
                     var isDoubleEntry = IsDoubleEntry(chunkNum);
+                    var expectingEmptyLine = ExpectingEmptyLine(evenOdd, logNum, chunkNum);
                     var expectedLines = isDoubleEntry ? 2 : 1;
+
                     Assert.That(log.Chunks.ContainsKey(expectedDate));
                     var chunk = log.Chunks[expectedDate];
                     Assert.That(chunk.Lines.Count, Is.EqualTo(expectedLines));
 
-                    var expectedString = evenOdd == logNum ? BuildLineText(chunkNum) : string.Empty;
+                    var expectedString = expectingEmptyLine ? BuildLineText(chunkNum) : string.Empty;
                     Assert.That(chunk.Lines[0], Is.EqualTo(expectedString));
+
                     if (!isDoubleEntry) continue;
 
-                    expectedString = evenOdd == logNum ? BuildLineText(chunkNum, true) : string.Empty;
+                    expectedString = expectingEmptyLine ? BuildLineText(chunkNum, true) : string.Empty;
                     Assert.That(chunk.Lines[1], Is.EqualTo(expectedString));
                 }
             }
@@ -147,6 +155,16 @@ namespace LogSync.Tests
         private static bool IsDoubleEntry(int i)
         {
             return (i == 3 || i == 4);
+        }
+
+        private static bool IsPresentInAllLogs(int i)
+        {
+            return (i == 1 || i == 7);
+        }
+
+        private static bool ExpectingEmptyLine(int evenOdd, int logNum, int i)
+        {
+            return evenOdd == logNum || IsPresentInAllLogs(i);
         }
     }
 }
