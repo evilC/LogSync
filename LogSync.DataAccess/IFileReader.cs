@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogSync.DataAccess
 {
-    interface IFileReader
+    public interface IFileReader
     {
         List<string> GetFileRawLines(string path);
     }

@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Data", "Sample Data"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogSync.DataAccess.Tests", "LogSync.DataAccess.Tests\LogSync.DataAccess.Tests.csproj", "{7AE4B490-E0D0-447B-B7A6-C7C8B44BED3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogSyncer", "LogSyncer\LogSyncer.csproj", "{220F0DE2-AFBF-418D-BD1E-03CA5851AE41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{7AE4B490-E0D0-447B-B7A6-C7C8B44BED3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AE4B490-E0D0-447B-B7A6-C7C8B44BED3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AE4B490-E0D0-447B-B7A6-C7C8B44BED3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{220F0DE2-AFBF-418D-BD1E-03CA5851AE41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{220F0DE2-AFBF-418D-BD1E-03CA5851AE41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{220F0DE2-AFBF-418D-BD1E-03CA5851AE41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{220F0DE2-AFBF-418D-BD1E-03CA5851AE41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
