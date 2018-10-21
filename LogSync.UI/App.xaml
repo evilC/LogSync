@@ -1,8 +1,8 @@
-﻿<Application x:Class="LogSync.App"
+﻿<Application x:Class="LogSync.UI.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:LogSync"
-             Startup="Application_Startup">
+             xmlns:local="clr-namespace:LogSync.UI"
+             StartupUri="MainWindow.xaml">
     <Application.Resources>
          
     </Application.Resources>

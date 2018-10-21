@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LogSync.Properties
+namespace LogSync.UI.Properties
 {
 
 

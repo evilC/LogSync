@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogSync", "LogSync\LogSync.csproj", "{7C0569E8-2F1F-411E-A9C5-F04FF5CF2791}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogSync.UI", "LogSync.UI\LogSync.UI.csproj", "{8312A454-D792-4AEF-887F-8E5CFE70C301}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogSync.Model", "LogSync.Model\LogSync.Model.csproj", "{BB5A5235-30EF-4266-8E6A-C0FAB9F51A2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogSync.DataAccess", "LogSync.DataAccess\LogSync.DataAccess.csproj", "{23A7C5C7-3B8E-4CA6-A220-B3F9DDD1A434}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Data", "Sample Data", "{2362610F-C8B1-4A17-8C07-D82870BAEE77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogSync.DataAccess.Tests", "LogSync.DataAccess.Tests\LogSync.DataAccess.Tests.csproj", "{7AE4B490-E0D0-447B-B7A6-C7C8B44BED3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +19,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7C0569E8-2F1F-411E-A9C5-F04FF5CF2791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C0569E8-2F1F-411E-A9C5-F04FF5CF2791}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C0569E8-2F1F-411E-A9C5-F04FF5CF2791}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C0569E8-2F1F-411E-A9C5-F04FF5CF2791}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8312A454-D792-4AEF-887F-8E5CFE70C301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8312A454-D792-4AEF-887F-8E5CFE70C301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8312A454-D792-4AEF-887F-8E5CFE70C301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8312A454-D792-4AEF-887F-8E5CFE70C301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB5A5235-30EF-4266-8E6A-C0FAB9F51A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5A5235-30EF-4266-8E6A-C0FAB9F51A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5A5235-30EF-4266-8E6A-C0FAB9F51A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5A5235-30EF-4266-8E6A-C0FAB9F51A2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23A7C5C7-3B8E-4CA6-A220-B3F9DDD1A434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23A7C5C7-3B8E-4CA6-A220-B3F9DDD1A434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23A7C5C7-3B8E-4CA6-A220-B3F9DDD1A434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A7C5C7-3B8E-4CA6-A220-B3F9DDD1A434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AE4B490-E0D0-447B-B7A6-C7C8B44BED3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE4B490-E0D0-447B-B7A6-C7C8B44BED3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE4B490-E0D0-447B-B7A6-C7C8B44BED3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE4B490-E0D0-447B-B7A6-C7C8B44BED3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
